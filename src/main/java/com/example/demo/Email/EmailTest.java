@@ -14,7 +14,7 @@ public class EmailTest {
 		//these steps are executed if an item is out of stock
 		EmailConfig mail= new EmailConfig();
 		JavaMailSender sender=mail.getJavaMailSender();
-		SimpleMailMessage msg=mail.emailTemplate();
+		SimpleMailMessage msg=mail.emailLayout();
 		sender.send(msg);
 		//email.sendEmail(null, null, null);
 	}
