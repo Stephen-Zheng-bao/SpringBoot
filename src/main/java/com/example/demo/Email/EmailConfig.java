@@ -39,6 +39,7 @@ package com.example.demo.Email;
 			SimpleMailMessage msg = new SimpleMailMessage();
 			msg.setTo("rigodonamariah20@gmail.com"); //who to send email to? Pass "to" as a parameter if it's gonna be different everytime? should be automatic though, so maybe just hardcode to send email to admin?
 			msg.setFrom("statusjewellery4@gmail.com");
+			msg.setSubject("Stock alert");
 			msg.setText("Item is out of stock !!"); //need to state name of item
 		    return msg;
 		}
