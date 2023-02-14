@@ -15,7 +15,7 @@ public class User {
     private String name;
     private String email;
     private String password;
-
+    private String roles;
     public User(String stephen, String s, String s1) {
     }
 
@@ -65,4 +65,12 @@ public class User {
                 ", password='" + password + '\'' +
                 '}';
     }
+
+	public String getRoles() {
+		return roles;
+	}
+
+	public void setRoles(String roles) {
+		this.roles = roles;
+	}
 }

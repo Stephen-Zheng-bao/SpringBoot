@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-
 public class UserController {
 
 
@@ -43,6 +42,8 @@ public class UserController {
 
     @PostMapping(value = "/add")
     public String createUser(@ModelAttribute User users, Model model, BindingResult bindingResult) {
+    	System.out.println(users);
+    	users.setRoles("USER");
         User user = userService.createUser(users);
         return "redirect:/index";
     }
