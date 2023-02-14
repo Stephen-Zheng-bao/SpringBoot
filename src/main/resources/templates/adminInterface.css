@@ -1,0 +1,68 @@
+
+.header{
+    margin-left: 300px; /**same as width of side bar**/
+    /**add background colour and padding later + font**/
+}
+
+.SideBar {
+height: 100%;
+width: 300px;
+position: fixed;
+top: 0;
+left: 0;
+background-color: #dda9a9;
+padding-top: 20px;
+}
+
+
+.SideBar a {
+padding: 10px 10px 10px 16px;
+text-decoration:wavy;
+font-size: 20px;
+color: #131313;
+display: block;
+}
+
+.SideBar a:hover {
+
+background-color: antiquewhite;
+}
+
+
+/**
+.sideItem{
+    background-color:aqua;
+}**/
+
+
+.main{
+    margin-left: 300px;
+}
+
+
+ 
+  .revenue{
+    background-color:bisque;
+    ;
+    width: 35%;
+    float: left;
+    height: 100px;
+    text-align: center;
+  }
+  
+  .sales{
+    background-color: bisque;
+    width: 35%;
+    float: right;
+    height: 100px;
+    text-align: center;
+  }
+
+ 
+
+
+
+
+
+
+

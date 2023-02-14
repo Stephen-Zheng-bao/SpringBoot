@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Interface</title>
+    <link rel="stylesheet" href="adminInterface.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>Hello [Admin Name], welcome back</h1>
+    </div>
+    
+    <div class="SideBar">
+        <br>
+        LOGO
+        <br>
+        <div class= "sideItem"><a href="#Orders">View Orders</a></div> <!--can add bootstrap icon later & put proper links-->
+        <a href="#ManageOrders">Manage Orders</a>
+        <a href="#Reports"> Reports</a>
+        <a href="#CustomerDetails">Customers</a>
+        <a href="#Vendors">Vendors</a>
+        <br><br><br>
+        <a href="#SignOut">Sign Out</a>
+    </div>
+
+   
+<div class="main">
+    <div class='business'>
+        <h2>Business Performance</h2>
+        <div class='revenue'>
+            <h3>Total Revenue</h3>
+            <body id="revenue">£1000</body> <!--will update automatically based on data from database-->
+        </div>
+        <div class='sales'>
+           <h3>Total Sales</h3>
+           <body id="sales">500</body> <!--will update automatically based on data from database-->
+        </div>
+    </div>
+<br><br><br><br><br><br><br><br><br><hr>
+    <div class="inventory">
+        <h1>Inventory Management</h1>
+    </div>
+</div>
+</body>
+</html>
