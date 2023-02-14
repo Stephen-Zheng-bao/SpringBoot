@@ -14,7 +14,7 @@
     <div class="SideBar">
         <br>
         LOGO
-        <br>
+        <br><br><br>
         <div class= "sideItem"><a href="#Orders">View Orders</a></div> <!--can add bootstrap icon later & put proper links-->
         <a href="#ManageOrders">Manage Orders</a>
         <a href="#Reports"> Reports</a>
@@ -40,6 +40,37 @@
 <br><br><br><br><br><br><br><br><br><hr>
     <div class="inventory">
         <h1>Inventory Management</h1>
+        <table> <!--edit later to reflect what database contains-->
+            <tr>
+                <th>
+                    <input type="text" placeholder="name of product">
+                </th>
+                <th>
+                    <input type="text" placeholder="description">
+                </th>
+                <th>
+                    <input type="number" placeholder="price">
+                </th>
+
+                <th>
+                    <input type="image" placeholder="image"> <!--is this the appropriate input type?-->
+                </th>
+                <th>
+                    <input type="text" placeholder="category"> <!--can change to drop down menu-->
+                </th>
+                <th>
+                    <input type="number" placeholder="stock level">
+                </th>
+                <td>
+                <form>
+                    <button type="button">Add Product</button> <!--when button is clicked, a method is called that adds product to database-->
+                    </form>
+                </td>
+            </tr>   
+        </table>
+       
+        <!-- will have a table showing all products from database-->
+
     </div>
 </div>
 </body>

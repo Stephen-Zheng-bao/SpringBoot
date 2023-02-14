@@ -43,7 +43,7 @@ background-color: antiquewhite;
  
   .revenue{
     background-color:bisque;
-    ;
+  
     width: 35%;
     float: left;
     height: 100px;
@@ -58,6 +58,10 @@ background-color: antiquewhite;
     text-align: center;
   }
 
+ hr{
+  
+  color: black;
+ }
  
 
 
