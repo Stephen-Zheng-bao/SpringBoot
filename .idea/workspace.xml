@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85e89682-10e1-4d71-a799-27c8e74687d5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="85e89682-10e1-4d71-a799-27c8e74687d5" name="Changes" comment="Now able to Add data and delete data from the HTML page while also seeing the document">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/User/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/User/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/User/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/User/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Welcome.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +19,7 @@
       <list>
         <option value="HTML File" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -55,10 +54,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\demo\src\main\resources\templates\css" />
+      <recent name="C:\xampp\htdocs\demo\src\main\resources\static\css" />
+      <recent name="C:\xampp\htdocs\demo\src\main\resources\static" />
+      <recent name="C:\xampp\htdocs\demo\src\main\resources\templates" />
+    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.DemoApplication">
     <configuration name="DemoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -104,8 +112,22 @@
       <workItem from="1675597629123" duration="5527000" />
       <workItem from="1675770421336" duration="426000" />
       <workItem from="1675847318278" duration="4201000" />
-      <workItem from="1676213663675" duration="8334000" />
+      <workItem from="1676213663675" duration="9511000" />
+      <workItem from="1676234360728" duration="1042000" />
+      <workItem from="1676285660980" duration="595000" />
+      <workItem from="1676289036448" duration="3374000" />
+      <workItem from="1676310410999" duration="1916000" />
+      <workItem from="1676404544153" duration="4549000" />
+      <workItem from="1676452606768" duration="2674000" />
     </task>
+    <task id="LOCAL-00001" summary="Now able to Add data and delete data from the HTML page while also seeing the document">
+      <created>1676222879271</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676222879271</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,5 +146,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Now able to Add data and delete data from the HTML page while also seeing the document" />
+    <option name="LAST_COMMIT_MESSAGE" value="Now able to Add data and delete data from the HTML page while also seeing the document" />
   </component>
 </project>
