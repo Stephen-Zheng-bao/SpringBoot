@@ -312,7 +312,7 @@
     pointer-events: none;
 }
 
-.Orders{
+.Orders,  .Customers {
     position: relative;
     display: grid;
     min-height: 300px;
@@ -362,4 +362,13 @@
     border-radius: 4px;
     font-size: 14px;
     font-weight: 500;
+  }
+
+  .Customers table thead td {
+    font-weight: 600;
+  }
+
+  .Customers table tbody tr:hover {
+    background: var(--blue);
+    color: var(--white);
   }

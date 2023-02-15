@@ -1,11 +1,136 @@
-!DOCTYPE html>
-<html xmlns:th="https://www.thymeleaf.org">
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Admin Interface</title>
-    <link rel="stylesheet" href="adminInterface.css">
+    <meta hhtp-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers</title>
+    <link rel="stylesheet" href="Admin.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Khojki&display=swap" rel="stylesheet">
+    
 </head>
 <body>
- PAGE SHOWING DETAILS OF CUSTOMERS. ADMIN CANNOT SEE THEIR PASSWORD
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li id="logo">STATUS   <!--insert pic of logo-->     </li>
+    
+                <ul>
+                    <li> 
+                        <a href="Admin.html">
+                            <span class="icon"><i class="bi bi-house"></i> Dashboard</span>
+                        </a></li>
+                    <li>
+                    <li>
+                        
+                        <a href="Orders.html">
+                            <span class="icon"><i class="bi bi-cart-dash"></i>Orders</span></a></li> <!--check video link pu inspiration-->
+    
+                   <li> <a href="Reports.html">
+                    <span class="icon">
+                    <i class="bi bi-file-text"></i> Reports</span></a> </li>
+                  <li>  <a href="Customers.html"><span class="icon"><i class="bi bi-people"></i>Customers</span></a></li>
+                  <li>  <a href="Vendors.html"><span class="icon"><i class="bi bi-truck"></i>Vendors</span></a></li>
+                  <li>  <a href="#"><span class="icon"><i class="bi bi-box-arrow-right"></i>Sign out</span></a></li>
+                  <li> <a href="Help.html"><span class="icon"><i class="bi bi-info-circle"></i>Help</span></a></li>
+                
+                </ul>
+            </ul>
+    
+            <script>
+                function openNav() {
+                  document.getElementById("navigation").style.width = "250px";
+                }
+                
+                function closeNav() {
+                  document.getElementById("navigation").style.width = "0";
+                }
+                </script>
+           
+        </div>
+       
+    </div>
+    
+    <div class="main">
+        <div class="topbar">
+            <div class="toggle"><i onclick="openNav()" class="bi bi-list"></i></div>
+            <!--
+            <script>
+                // Menu Toggle NOT WORKING!!!!!!
+                function toggle(){
+            let toggle = document.querySelector(".toggle");
+            let navigation = document.querySelector(".navigation");
+            let main = document.querySelector(".main");
+            
+            toggle.onclick = function () {
+              navigation.classList.toggle("active");
+              main.classList.toggle("active");
+            };
+        };
+            </script>-->
+            <script>
+                function openNav() {
+                  document.getElementById("navigation").style.width = "250px";
+                }
+                
+                function closeNav() {
+                  document.getElementById("navigation").style.width = "0";
+                }
+                </script>
+           
+            <div class="search">
+                <label>
+                    <input type="text" placeholder="Search">
+                    <i class="bi bi-search"></i></div>
+                </label>
+            
+            
+    
+        </div>
+        
+    </div>
+<div class="Customers">
+    <div class="cardHeader">
+        <h2>Customer Details</h2>
+        
+    </div>
+    <table>
+        <thead id="column">
+            <tr>
+                <td>Name</td>
+                <td>Email</td>
+                <td>Address</td>
+                <td>Telephone</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Customer 1</td>
+                <td>Email1</td>
+                <td>Address1</td>
+                <td>Telephone1</td>
+            </tr>
+
+            <tr>
+                <td>Customer 2</td>
+                <td>Email2</td>
+                <td>Address2</td>
+                <td>Telephone2</td>
+            </tr>
+
+            <tr>
+                <td>Customer 2</td>
+                <td>Email2</td>
+                <td>Address2</td>
+                <td>Telephone2</td>
+            </tr>
+
+   
 </body>
 </html>
