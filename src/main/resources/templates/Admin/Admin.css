@@ -6,51 +6,6 @@
 
 }
 
-/**
-.SideBar {
-    height: 100%;
-    width: 300px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #524e4e;
-    padding-top: 20px;
-    
-    }
-
-    
-    .SideBar a {
-    padding: 10px 10px 10px 16px;
-    text-decoration:wavy;
-    font-size: 20px;
-    color: #f5e0e0;
-    display: block;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-
-    }
-    
-    .SideBar a:hover::before{
-        content: "";
-        position:absolute;
-        right:0;
-        top: -50px;
-        width: 50px;
-        height:50px;
-        border-radius: 50px;
-        box-shadow:35px 35px 0 10px var(--white);
-        background-color: transparent;
-        pointer-events: none;
-
-    }
-
-    
-    .SideBar a:hover {
-    
-    background-color: rgb(170, 139, 223);
-    }
-*/
-
 :root {
   
     --blue: #5271ff;
@@ -330,9 +285,7 @@
   }
 
 
-.Products tr:hover{
- background: gray;
-}
+
 
 #column{
     pointer-events: none;
@@ -392,12 +345,4 @@
     font-weight: 500;
   }
 
-  /**
-  .Customers table thead td {
-    font-weight: 600;
-  }
 
-  .Customers table tbody tr:hover {
-    background: var(--blue);
-    color: var(--white);
-  }**/
