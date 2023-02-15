@@ -32,7 +32,7 @@ public class SecurityConfig {
 	public SecurityFilterChain SecurityFilterChain(HttpSecurity http) throws Exception{
 		System.out.println("This is a test");
 		return http.csrf().disable()
-			.authorizeHttpRequests().requestMatchers("/admin").authenticated()
+			.authorizeHttpRequests().requestMatchers("/admin/").authenticated()
 			.and()
 			.authorizeHttpRequests().anyRequest().permitAll()
 			.and()
