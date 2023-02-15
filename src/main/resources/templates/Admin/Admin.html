@@ -13,17 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Khojki&display=swap" rel="stylesheet">
  
 <!--<script scr="scr/main/resources/templates/Admin/Admin.js"></script> Cannot link js file. so wrote js in html-->
-<script>
-    // Menu Toggle NOT WORKING!!!!!!
-let toggle = document.querySelector(".toggle");
-let navigation = document.querySelector(".navigation");
-let main = document.querySelector(".main");
 
-toggle.onclick = function () {
-  navigation.classList.toggle("active");
-  main.classList.toggle("active");
-};
-</script>
 
 </head>
 <!-- https://www.youtube.com/watch?v=5n-tiNha5kw--><!--delete or reference!!-->
@@ -50,6 +40,10 @@ toggle.onclick = function () {
                 <li id="logo">STATUS   <!--insert pic of logo-->     </li>
 
                 <ul>
+                    <li> 
+                        <a href="Admin.html">
+                            <span class="icon"><i class="bi bi-house"></i> Dashboard</span>
+                        </a></li>
                     <li>
                         
                         <a href="Orders.html">
@@ -60,27 +54,64 @@ toggle.onclick = function () {
                     <i class="bi bi-file-text"></i> Reports</span></a> </li>
                   <li>  <a href="Customers.html"><span class="icon"><i class="bi bi-people"></i>Customers</span></a></li>
                   <li>  <a href="Vendors.html"><span class="icon"><i class="bi bi-truck"></i>Vendors</span></a></li>
-                  <li>  <a href="#"><span class="icon"><i class="bi bi-truck"></i>Sign out</span></a></li>
+                  <li>  <a href="#"><span class="icon"><i class="bi bi-box-arrow-right"></i></i>Sign out</span></a></li>
                   <li> <a href="Help.html"><span class="icon"><i class="bi bi-info-circle"></i>Help</span></a></li>
                 
                 </ul>
             </ul>
+
+            <script>
+                function openNav() {
+                  document.getElementById("navigation").style.width = "250px";
+                }
+                
+                function closeNav() {
+                  document.getElementById("navigation").style.width = "0";
+                }
+                </script>
+           
         </div>
+       
     </div>
     
     <div class="main">
         <div class="topbar">
-            <div class="toggle"><i class="bi bi-list"></i></div>
+            <div class="toggle"><i onclick="openNav()" class="bi bi-list"></i></div>
+            <!--
+            <script>
+                // Menu Toggle NOT WORKING!!!!!!
+                function toggle(){
+            let toggle = document.querySelector(".toggle");
+            let navigation = document.querySelector(".navigation");
+            let main = document.querySelector(".main");
+            
+            toggle.onclick = function () {
+              navigation.classList.toggle("active");
+              main.classList.toggle("active");
+            };
+        };
+            </script>-->
+            <script>
+                function openNav() {
+                  document.getElementById("navigation").style.width = "250px";
+                }
+                
+                function closeNav() {
+                  document.getElementById("navigation").style.width = "0";
+                }
+                </script>
+           
             <div class="search">
                 <label>
                     <input type="text" placeholder="Search">
                     <i class="bi bi-search"></i></div>
                 </label>
-            <div class="user">
-                <!--image link-->
-            </div>
+            
+            
 
         </div>
+        
+       
 
 
 
@@ -110,11 +141,36 @@ toggle.onclick = function () {
         </div>
     </div>
 
+    
+    
     <div class="cardHeader">
         <h1>Inventory Management</h1>
         
+        <div class="dropdown">
+                   
+            <i width="20px" class="bi bi-filter-circle" onclick="myFunction()">Filter</i>
+        <div id="myDropdown" class="dropdown-content">
+          <ul>
+            <li><input type="checkbox">Necklace</li>
+            <li><input type="checkbox">Ring</li>
+            <li><input type="checkbox">Piercing</li>
+            <li><input type="checkbox">Bracelet</li>
+            <li><input type="checkbox">Watches</li>
+          </ul>
+        </div>
+      </div>
+      
+      <script>
+      /* When the user clicks on the button,
+      toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      </script>
         <p>note: these are the products from database</p>
     </div>
+
+    
     <div class="ProductTable">
        
         
