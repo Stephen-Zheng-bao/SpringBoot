@@ -18,27 +18,12 @@
 </head>
 <!-- https://www.youtube.com/watch?v=5n-tiNha5kw--><!--delete or reference!!-->
 <body>
-    <!--
-    <div class="SideBar">
-        <br>
-        LOGO
-        <br><br><br>
-        <div class= "sideItem">
-        <a href="Orders.html"><i class="bi bi-cart-dash"></i>Orders</a>
-        <a href="Reports.html"><i class="bi bi-file-text"></i> Reports</a>
-        <a href="Customers.html"><i class="bi bi-people"></i>Customers</a>
-        <a href="Vendors.html"><i class="bi bi-truck"></i>Vendors</a>
-        <a href="Vendors.html"><i class="bi bi-info-circle"></i>Help</a>
-        
-         
-        <a href="Vendors.html"><i class="bi bi-box-arrow-right"></i></i>Sign Out</a>
-    </div>-->
-
     <div class="container">
         <div class="nav">
             <ul>
-                     <li id="logo">STATUS   <!--insert pic of logo--></li><br><br>
- 
+                    <!-- <li id="logo"><img src="STATUS_FINAL_TRANSPARENT.png" style="width:300px; height:100px;">  </li><br><br>-->
+                    <h2>  Hello Admin!</h2>
+                    <br><br>
                     <li>  <a href="Admin.html"> <span id="navItem" class="icon">Dashboard</span><i class="bi bi-house"></i> </a></li>
                     <li><a href="Orders.html"><span id="navItem" class="icon">Orders</span><i class="bi bi-cart-dash"></i></a></li> 
                     <li> <a href="Reports.html"> <span id="navItem" class="icon">  Reports</span><i class="bi bi-file-text"></i></a> </li>
@@ -65,6 +50,7 @@
     </div>
     
     <div class="mainSection">
+        
         <div class="bar">
             <div class="toggle"><i onclick="openNav()" class="bi bi-list"></i></div>
             <!--
@@ -90,6 +76,8 @@
                   document.getElementById("nav").style.width = "0";
                 }
                 </script>
+            
+            <img src="STATUS_FINAL_TRANSPARENT.png" style="width:350px; height:180px;">  
            
             <div class="search">
                 <label>
@@ -140,7 +128,7 @@
             <h2>Products</h2>
             
         </div>
-        
+        <!--
         <div class="dropdown">
                    
             <i width="20px" class="bi bi-filter-circle" onclick="myFunction()">Filter</i>
@@ -154,7 +142,7 @@
           </ul>
         </div>
       </div> 
-      
+    -->
       <script>
       /* When the user clicks on the button,
       toggle between hiding and showing the dropdown content */
@@ -170,28 +158,17 @@
        
         
         <table> <!--edit later to reflect what database contains-->
-            <tr>
-                <th>
-                    <input type="text" placeholder="name of product">
-                </th>
-                <th>
-                    <input type="text" placeholder="description">
-                </th>
-                <th>
-                    <input type="number" placeholder="price">
-                </th>
 
-                <th>
-                    <input type="image" placeholder="image"> <!--is this the appropriate input type?-->
-                </th>
-                <th>
-                    <input type="text" placeholder="category"> <!--can change to drop down menu-->
-                </th>
-                <th>
-                    <input type="number" placeholder="stock level">
-                </th>
-                <th><button type="button">Add Product</button></th>
-            </tr>   
+            <tr>
+                <td><input type="text" placeholder="name of product"></td>
+                <td>  <input type="text" placeholder="description"></td>
+                <td><input type="number" placeholder="price"></td>
+                <td><input type="image" placeholder="image"></td>
+                <td> <input type="text" placeholder="category"></td>
+                <td><input type="number" placeholder="stock level"></td>
+                <td><button type="button" style="width:85px;">Add Product</button></td>
+            
+            </tr>
         </table>
     </div>
 
