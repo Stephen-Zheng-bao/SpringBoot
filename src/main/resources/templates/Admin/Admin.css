@@ -1,0 +1,271 @@
+*{
+    font-family: 'Noto Serif Khojki', serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+
+/**
+.SideBar {
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #524e4e;
+    padding-top: 20px;
+    
+    }
+
+    
+    .SideBar a {
+    padding: 10px 10px 10px 16px;
+    text-decoration:wavy;
+    font-size: 20px;
+    color: #f5e0e0;
+    display: block;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+    }
+    
+    .SideBar a:hover::before{
+        content: "";
+        position:absolute;
+        right:0;
+        top: -50px;
+        width: 50px;
+        height:50px;
+        border-radius: 50px;
+        box-shadow:35px 35px 0 10px var(--white);
+        background-color: transparent;
+        pointer-events: none;
+
+    }
+
+    
+    .SideBar a:hover {
+    
+    background-color: rgb(170, 139, 223);
+    }
+*/
+
+:root {
+    --blue: #2a2185;
+    --white: #fff;
+    --gray: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+  }
+  
+  body {
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+.container {
+    position: relative;
+    width: 100%;
+  }
+
+.navigation {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: var(--blue);
+    
+    overflow: hidden;
+    
+  }
+
+  .navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+
+  .navigation ul li:hover {
+  background-color:#999;
+}
+
+#logo{
+    pointer-events: none;
+}
+  .navigation.active {
+    width: 80px;
+  }
+
+  .navigation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+    text-align: center;
+  }
+
+  .navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 75px;
+  text-align: center;
+}
+  /**
+  .navigation ul.pages {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 75px;
+    text-align: center;
+  }**/
+
+
+
+  .main {
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: 0.5s;
+  }
+
+  .topbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+  }
+  
+  .toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+  }
+  
+  .search {
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+  }
+  
+  .search label {
+    position: relative;
+    width: 100%;
+  }
+  
+  .search label input {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid var(--black2);
+  }
+  
+  .search label i {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: 1.2rem;
+  }
+
+
+  .cardBox {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+  }
+
+  .h1{
+    text-align: center;
+  }
+  .cardBox .card {
+    position: relative;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  }
+  
+  .cardBox .card .numbers {
+    position: relative;
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: var(--blue);
+  }
+  
+  .cardBox .card .cardName {
+    color: var(--black2);
+    font-size: 1.1rem;
+    margin-top: 5px;
+  }
+  
+  .cardBox .card .iconBx {
+    font-size: 3.5rem;
+    color: var(--black2);
+  }
+  
+  .cardBox .card:hover {
+    background: var(--blue);
+  }
+  .cardBox .card:hover .numbers,
+  .cardBox .card:hover .cardName,
+  .cardBox .card:hover .iconBx {
+    color: var(--white);
+  }
+  
+ .ProductTable {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+    /* margin-top: 10px; */
+  }
+
+.ProductTable table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.Products{
+    text-align: center;
+    
+}
+
+.Products tr{
+    border-bottom: 1px solid black;
+}
+
+.Products tr:hover{
+ background: purple;
+}
+
+#column{
+    pointer-events: none;
+}
