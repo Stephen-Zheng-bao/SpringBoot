@@ -22,40 +22,30 @@ Status (--processing, out for delivery,delivered)
 Manage order (change status) -->
 
 
+ 
 <div class="container">
-    <div class="navigation">
+    <div class="nav">
         <ul>
-            <li id="logo">STATUS   <!--insert pic of logo-->     </li>
+                 <li id="logo">STATUS   <!--insert pic of logo--></li><br><br>
 
-            <ul>
-                <li> 
-                    <a href="Admin.html">
-                        <span class="icon"><i class="bi bi-house"></i> Dashboard</span>
-                    </a></li>
-                <li>
-                <li>
-                    
-                    <a href="Orders.html">
-                        <span class="icon"><i class="bi bi-cart-dash"></i>Orders</span></a></li> <!--check video link pu inspiration-->
-
-               <li> <a href="Reports.html">
-                <span class="icon">
-                <i class="bi bi-file-text"></i> Reports</span></a> </li>
-              <li>  <a href="Customers.html"><span class="icon"><i class="bi bi-people"></i>Customers</span></a></li>
-              <li>  <a href="Vendors.html"><span class="icon"><i class="bi bi-truck"></i>Vendors</span></a></li>
-              <li>  <a href="#"><span class="icon"><i class="bi bi-box-arrow-right"></i>Sign out</span></a></li>
-              <li> <a href="Help.html"><span class="icon"><i class="bi bi-info-circle"></i>Help</span></a></li>
+                <li>  <a href="Admin.html"> <span id="navItem" class="icon">Dashboard</span><i class="bi bi-house"></i> </a></li>
+                <li><a href="Orders.html"><span id="navItem" class="icon">Orders</span><i class="bi bi-cart-dash"></i></a></li> 
+                <li> <a href="Reports.html"> <span id="navItem" class="icon">  Reports</span><i class="bi bi-file-text"></i></a> </li>
+                <li>  <a href="Customers.html"><span id="navItem" class="icon">Customers</span><i class="bi bi-people"></i></a></li>
+                <li>  <a href="Vendors.html"><span id="navItem" class="icon">Vendors</span><i class="bi bi-truck"></i></a></li>
+                <li>  <a href="#"><span id="navItem" class="icon"></i>Sign out</span><i class="bi bi-box-arrow-right"></i></a></li>
+                <li> <a href="Help.html"><span id="navItem" class="icon">Help</span><i class="bi bi-info-circle"></i></a></li>
             
-            </ul>
+           
         </ul>
 
         <script>
             function openNav() {
-              document.getElementById("navigation").style.width = "250px";
+              document.getElementById("nav").style.width = "250px";
             }
             
             function closeNav() {
-              document.getElementById("navigation").style.width = "0";
+              document.getElementById("nav").style.width = "0";
             }
             </script>
        
@@ -63,16 +53,16 @@ Manage order (change status) -->
    
 </div>
 
-<div class="main">
-    <div class="topbar">
+<div class="mainSection">
+    <div class="bar">
         <div class="toggle"><i onclick="openNav()" class="bi bi-list"></i></div>
         <!--
         <script>
             // Menu Toggle NOT WORKING!!!!!!
             function toggle(){
         let toggle = document.querySelector(".toggle");
-        let navigation = document.querySelector(".navigation");
-        let main = document.querySelector(".main");
+        let navigation = document.querySelector(".nav");
+        let main = document.querySelector(".mainSection");
         
         toggle.onclick = function () {
           navigation.classList.toggle("active");
@@ -82,28 +72,29 @@ Manage order (change status) -->
         </script>-->
         <script>
             function openNav() {
-              document.getElementById("navigation").style.width = "250px";
+              document.getElementById("nav").style.width = "250px";
             }
             
             function closeNav() {
-              document.getElementById("navigation").style.width = "0";
+              document.getElementById("nav").style.width = "0";
             }
             </script>
        
         <div class="search">
             <label>
                 <input type="text" placeholder="Search">
-                <i class="bi bi-search"></i></div>
+                <i class="bi bi-search"></i>
             </label>
+        </div>
         
         
 
     </div>
     
-</div>
+   
 
-<div class="Orders">
-    <div class="cardHeader">
+<div class="TableDesign">
+    <div class="Header">
         <h2>Orders</h2>
         
     </div>
@@ -121,14 +112,14 @@ Manage order (change status) -->
             <tr>
                 <td>Name 1</td>
                 <td>£100</td>
-                <td><span class="status delivered">Delivered</span></td>
+                <td><span class="delivered">Delivered</span></td>
                 <td><button type="button">Change Order Status</button></td>
             </tr>
 
             <tr>
                 <td>Product 2</td>
                 <td>£499</td>
-                <td><span class="status processing">Processing</span></td>
+                <td><span class="processing">Processing</span></td>
                 <td><button type="button">Change Order Status</button></td>
                
             </tr>
@@ -136,9 +127,12 @@ Manage order (change status) -->
             <tr>
                 <td>Product 3</td>
                 <td>£200</td>
-                <td><span class="status out-for-delivery">Out for delivery</span></td>
+                <td><span class=" out-for-delivery">Out for delivery</span></td>
                 <td><button type="button">Change Order Status</button></td>
             </tr>
+        </tbody>
+    </table>
+</div>
 
    
 </body>

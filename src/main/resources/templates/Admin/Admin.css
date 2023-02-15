@@ -52,70 +52,93 @@
 */
 
 :root {
-    --blue: #2a2185;
-    --white: #fff;
-    --gray: #f5f5f5;
-    --black1: #222;
+  
+    --blue: #5271ff;
+    --white: #f6f6f6;;
+    --gray: #5c5a5a;
+    --black1: #000000;
     --black2: #999;
+    --TurquoiseBlue: #5ce1e6;
+    
+
+
   }
   
+  /**
   body {
     min-height: 100vh;
     overflow-x: hidden;
-  }
+  }**/
 
 .container {
     position: relative;
     width: 100%;
+    height: 100%;
   }
 
-.navigation {
+.nav {
     position: fixed;
     width: 300px;
     height: 100%;
-    background: var(--blue);
-    
+    background-color: #5271ff;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 5px;
     overflow: hidden;
-    
+    color:#f6f6f6;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
+ 
 
-  .navigation ul li {
+
+  .nav ul li {
     position: relative;
     width: 100%;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
     list-style: none;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
   }
 
-  .navigation ul li:hover {
-  background-color:#999;
+  .nav ul li:hover {
+  background-color:black;
 }
 
 #logo{
     pointer-events: none;
 }
-  .navigation.active {
-    width: 80px;
-  }
 
-  .navigation ul li a {
+/*
+  .nav.active {
+    width: 80px;
+  }*/
+
+  .nav ul li a {
     position: relative;
     display: block;
     width: 100%;
     display: flex;
     text-decoration: none;
-    color: var(--white);
+    color: white;
+    height: 50px;
+    
+    margin-bottom: 15px;
     text-align: center;
+   
   }
 
-  .navigation ul li a .icon {
+  /**
+  .nav ul li a .icon {
   position: relative;
   display: block;
-  min-width: 60px;
-  height: 60px;
-  line-height: 75px;
-  text-align: center;
-}
+  height: 50px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}**/
+
+
   /**
   .navigation ul.pages {
     position: relative;
@@ -128,39 +151,42 @@
 
 
 
-  .main {
+  .mainSection {
     position: absolute;
-    width: calc(100% - 300px);
-    left: 300px;
-    min-height: 100vh;
-    background: var(--white);
-    transition: 0.5s;
+    width: calc(100% - 310px);
+    left: 310px;
+    background-color:#f6f6f6;
+    height: 100%;
+  
   }
 
-  .topbar {
+  .bar {
     width: 100%;
-    height: 60px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 10px;
   }
+
   
   .toggle {
     position: relative;
-    width: 60px;
+    width: 50px;
     height: 60px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-size: 2.5rem;
+    align-items: left;
+    font-size: 2rem;
     cursor: pointer;
   }
   
   .search {
     position: relative;
-    width: 400px;
+    width: 350px;
     margin: 0 10px;
+    
+    
   }
   
   .search label {
@@ -170,25 +196,27 @@
   
   .search label input {
     width: 100%;
-    height: 40px;
-    border-radius: 40px;
-    padding: 5px 20px;
+    height: 50px;
+    border-radius: 50px;
+    padding: 10px 20px;
     padding-left: 35px;
-    font-size: 18px;
-    outline: none;
-    border: 1px solid var(--black2);
+    font-size: 20px;
+    outline:#000000;
+    border: 5px solid var(--black2);
+    
   }
   
   .search label i {
     position: absolute;
-    top: 0;
+    top: -7px;
     left: 10px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    
+
   }
 
-  .dropbtn:hover, .dropbtn:focus {
-    background-color: #3e8e41;
-  }
+
+  /*
   
   #myInput {
     box-sizing: border-box;
@@ -201,19 +229,21 @@
     border-bottom: 1px solid #ddd;
   }
   
-  #myInput:focus {outline: 3px solid #ddd;}
+  #myInput:focus {outline: 3px solid #ddd;} */
   
   .dropdown {
     position: relative;
     display: inline-block;
-    float:right;
+    margin-left: 900px;
+    margin-top: 50px;
+    width: 100px;
   }
   
   .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f6f6f6;
-    min-width: 230px;
+    min-width: 100px;
     overflow: auto;
     border: 1px solid #ddd;
     z-index: 1;
@@ -221,123 +251,121 @@
   
   .dropdown-content a {
     color: black;
-    padding: 12px 16px;
+    padding: 10px 20px;
     text-decoration: none;
     display: block;
+  }
+
+  .dropdown:hover, .dropdown:focus {
+    background-color: #5271ff;;
+   
+    
   }
   
  
   
   .show {display: block;}
-  .cardBox {
+  .Cards {
     position: relative;
-    width: 100%;
-    padding: 20px;
+    width: 150%;
+    padding: 30px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
+    grid-gap: 35px;
   }
 
   .h1{
     text-align: center;
   }
-  .cardBox .card {
+  .Cards .card {
     position: relative;
-    background: var(--white);
-    padding: 30px;
-    border-radius: 20px;
+    background-color:aliceblue;
+    padding: 35px;
+    border-radius: 22px;
     display: flex;
     justify-content: space-between;
     cursor: pointer;
-    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 1);
   }
   
-  .cardBox .card .numbers {
+  .Cards .card .figure {
     position: relative;
     font-weight: 500;
-    font-size: 2.5rem;
-    color: var(--blue);
+    font-size:3rem;
+    color:#064dad;
   }
   
-  .cardBox .card .cardName {
-    color: var(--black2);
-    font-size: 1.1rem;
+  .Cards .card .cardName {
+    color:#5c5a5a;
+    font-size: 1.5rem;
     margin-top: 5px;
   }
   
-  .cardBox .card .iconBx {
+  .Cards .card .CardIcon{
     font-size: 3.5rem;
     color: var(--black2);
   }
   
-  .cardBox .card:hover {
-    background: var(--blue);
+  .Cards .card:hover {
+    background: gray;
   }
-  .cardBox .card:hover .numbers,
-  .cardBox .card:hover .cardName,
-  .cardBox .card:hover .iconBx {
-    color: var(--white);
+  .Cards .card:hover .figure,
+  .Cards .card:hover .cardName,
+  .Cards .card:hover .CardIcon {
+    color: beige;
   }
   
  .ProductTable {
-    position: relative;
+    
     width: 100%;
-    padding: 20px;
+    padding: 25px;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-gap: 30px;
-    /* margin-top: 10px; */
-  }
-
-.ProductTable table{
-    width: 100%;
+    grid-gap: 25px;
+    background-color:#f6f6f6 ;
     border-collapse: collapse;
-    margin-top: 10px;
-}
-
-.Products{
+    margin-top: 15px;
     text-align: center;
     
-}
+  }
 
-.Products tr{
-    border-bottom: 1px solid black;
-}
 
 .Products tr:hover{
- background: purple;
+ background: gray;
 }
 
 #column{
     pointer-events: none;
 }
 
-.Orders,  .Customers {
+.TableDesign {
     position: relative;
     display: grid;
-    min-height: 300px;
+   /** min-height: 300px;*/
     background: var(--white);
     padding: 20px;
-    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 1);
     border-radius: 20px;
-    margin-left: 300px;
+    
 }
 
-.cardHeader h2 {
+
+
+.Header h2 {
     font-weight: 300;
     color:var(--blue);
   }
 
-  .Orders table thead td {
+  .TableDesign table thead td {
     font-weight: 600;
   }
 
-  .Orders table tbody tr:hover {
+  .TableDesign table tbody tr:hover {
     background: var(--blue);
     color: var(--white);
   }
   
-  .status.delivered {
+  .delivered {
     padding: 2px 4px;
     background: #8de02c;
     color: var(--white);
@@ -346,7 +374,7 @@
     font-weight: 500;
   }
 
-  .status.processing {
+  .processing {
     padding: 2px 4px;
     background: #1795ce;
     color: var(--white);
@@ -355,7 +383,7 @@
     font-weight: 500;
   }
 
-  .status.out-for-delivery {
+  .out-for-delivery {
     padding: 2px 4px;
     background: #e9b10a;
     color: var(--white);
@@ -364,6 +392,7 @@
     font-weight: 500;
   }
 
+  /**
   .Customers table thead td {
     font-weight: 600;
   }
@@ -371,4 +400,4 @@
   .Customers table tbody tr:hover {
     background: var(--blue);
     color: var(--white);
-  }
+  }**/
