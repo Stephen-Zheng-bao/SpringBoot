@@ -4,9 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85e89682-10e1-4d71-a799-27c8e74687d5" name="Changes" comment="Now able to Add data and delete data from the HTML page while also seeing the document">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/main.css" afterDir="false" />
+    <list default="true" id="85e89682-10e1-4d71-a799-27c8e74687d5" name="Changes" comment="Css working now">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Products/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db.migration/V1__Create_table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db.migration/V2__Create_Value.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsedImages/ManNWomen.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsedImages/earrings.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsedImages/emeralds.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsedImages/fb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsedImages/ig.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsedImages/payment.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsedImages/rings.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsedImages/rings2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsedImages/twitter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsedImages/twodiamonds.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Products/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Products/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Products/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Products/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Products/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Products/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/User/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/User/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Welcome.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +36,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Class" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -118,7 +136,13 @@
       <workItem from="1676289036448" duration="3374000" />
       <workItem from="1676310410999" duration="1916000" />
       <workItem from="1676404544153" duration="4549000" />
-      <workItem from="1676452606768" duration="2674000" />
+      <workItem from="1676452606768" duration="7450000" />
+      <workItem from="1676803465183" duration="3502000" />
+      <workItem from="1676807775460" duration="469000" />
+      <workItem from="1676808308687" duration="184000" />
+      <workItem from="1676810356629" duration="485000" />
+      <workItem from="1676827235428" duration="1424000" />
+      <workItem from="1676840632833" duration="5428000" />
     </task>
     <task id="LOCAL-00001" summary="Now able to Add data and delete data from the HTML page while also seeing the document">
       <created>1676222879271</created>
@@ -127,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676222879271</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Css working now">
+      <created>1676456076580</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676456076580</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +180,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Now able to Add data and delete data from the HTML page while also seeing the document" />
-    <option name="LAST_COMMIT_MESSAGE" value="Now able to Add data and delete data from the HTML page while also seeing the document" />
+    <MESSAGE value="Css working now" />
+    <option name="LAST_COMMIT_MESSAGE" value="Css working now" />
   </component>
 </project>
