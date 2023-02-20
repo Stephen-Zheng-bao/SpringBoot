@@ -84,6 +84,10 @@
    
   }
 
+  .nav h2 a{
+    color: white;
+  }
+
   /**
   .nav ul li a .icon {
   position: relative;
