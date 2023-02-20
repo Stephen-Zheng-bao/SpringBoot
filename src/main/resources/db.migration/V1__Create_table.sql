@@ -51,6 +51,9 @@ ALTER TABLE `basket`
 ALTER TABLE `basket`
     ADD FOREIGN KEY (`ProductID`) REFERENCES product(ProductID);
 
+
 ALTER TABLE `past_order`
-    ADD PRIMARY KEY (`OrderID`);
+    ADD FOREIGN KEY (`UserID`) REFERENCES user(UserID);
+ALTER TABLE `past_order`
+    ADD FOREIGN KEY (`ProductID`) REFERENCES product(ProductID);
 

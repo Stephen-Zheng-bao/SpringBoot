@@ -1,9 +1,9 @@
-package com.example.demo.Orders;
-
+package com.example.demo.Basket;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+
 @Repository
-public interface OrdersRepository extends JpaRepository<Orders,Integer> {
+public interface BasketRepository extends JpaRepository<Basket,Integer> {
 }
