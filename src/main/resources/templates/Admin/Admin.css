@@ -378,7 +378,8 @@
 .services p{
   position:relative;
   margin-left: 160px;
-  
+  font-size: large;
+  color: var(--black1);
  
 }
 
