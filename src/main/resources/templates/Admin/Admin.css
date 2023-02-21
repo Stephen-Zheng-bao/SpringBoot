@@ -351,4 +351,34 @@
     font-weight: 500;
   }
 
+  .info img{
+    border-radius: 50%;
+    height:200px;
+    width:200px;
+  }
+
+  .Account h2{
+    font-weight: bold;
+    position: relative;
+    margin-left:300px;
+    margin-top: -175px;
+  }
+
+.services{
+  position: relative;
+  margin-top: 18%;
+}
+
+.services img{
+  width: 150px;
+  height: 90px;
+  margin-top: 10px;
+}
+
+.services p{
+  position:relative;
+  margin-left: 160px;
+  
+ 
+}
 
