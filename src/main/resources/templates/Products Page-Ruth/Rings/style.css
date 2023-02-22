@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body{
+    background-color: white;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.header{
+    width: 100%;
+    text-align: center;
+}
+
+.header h1{
+    font-size: 4em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.products{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.section{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    text-align: center;
+    text-transform: uppercase;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.product{
+   position: relative;
+   background-color: lightgray;
+   width: 350px;
+   height: 100%;
+   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); 
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 20px 20px 40px;
+   border-radius: 10px;
+   transition: 0.3s;
+}
+
+.product:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.image{
+    width: 100%;
+    height: 60%;
+    display: grid;
+    place-items: center;
+}
+
+.image img{
+    width: 300px;
+    height: 200px;
+}
+
+.namePrice{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.namePrice h3{
+    font-size: 1.5em;
+    text-transform: capitalize;
+    color: #000000;
+}
+
+.namePrice span{
+    font-size: 1.3em;
+    color: blue;
+}
+
+.product p{
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.buy{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.buy button{
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: none;
+    background-color: grey;
+    color: #ffffff;
+    font-size: 18px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.buy button:hover{
+    transform: scale(1.1);
+}
+
+.grid-cell {
+         text-align: center;
+        vertical-align: middle;   
+}     
+
+.grid {     
+    display: grid;     
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;     
+    border: 1px white;   
+}   
+
+.grid-cell {     
+    border: 1px white;   
+}
