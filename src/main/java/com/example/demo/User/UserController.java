@@ -3,6 +3,7 @@ package com.example.demo.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
@@ -47,7 +48,6 @@ public class UserController {
         User user = userService.createUser(users);
         return "redirect:/index";
     }
-
     @RequestMapping(value = "delete",method = RequestMethod.POST)
     public String deleteUser(@RequestParam String UserId) {
         userService.deleteUser(Integer.parseInt(UserId));
