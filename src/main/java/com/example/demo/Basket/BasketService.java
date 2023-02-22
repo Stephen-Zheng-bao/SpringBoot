@@ -14,4 +14,10 @@ public class BasketService {
     public BasketService(BasketRepository basketRepository){
         this.BasketRepository = basketRepository;
     }
+
+	public void getBasket(int userID) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

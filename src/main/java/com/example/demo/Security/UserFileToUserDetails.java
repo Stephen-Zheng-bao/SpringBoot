@@ -12,11 +12,13 @@ import org.springframework.security.core.userdetails.UserDetails;
 import com.example.demo.User.User;
 
 public class UserFileToUserDetails implements UserDetails{
-	private String name;
+	private int UserID;
+	private String email;
 	private String password;
 	private List<GrantedAuthority> authorites;
 	public UserFileToUserDetails(User user) {
-		name=user.getName();
+		UserID = user.getUserID();
+		email=user.getEmail();
 		password=user.getPassword();
 		authorites=Arrays.stream(user.getRoles().split(","))
 				.map(SimpleGrantedAuthority::new)
@@ -34,11 +36,10 @@ public class UserFileToUserDetails implements UserDetails{
 		// TODO Auto-generated method stub
 		return password;
 	}
-
 	@Override
 	public String getUsername() {
 		// TODO Auto-generated method stub
-		return name;
+		return email;
 	}
 
 	@Override
