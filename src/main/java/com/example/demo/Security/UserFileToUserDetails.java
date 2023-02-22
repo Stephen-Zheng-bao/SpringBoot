@@ -25,6 +25,7 @@ public class UserFileToUserDetails implements UserDetails{
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		// TODO Auto-generated method stub
+		System.out.println(authorites);
 		return authorites;
 	}
 
