@@ -31,4 +31,17 @@ public class UserService {
     public void deleteUser(int users) {
         userRepository.deleteById(users);
     }
+
+
+
+	public void updateRole(Integer userID, String role) {
+		// TODO Auto-generated method stub
+		User user = userRepository.findById(userID).get();
+		String temp = user.getRoles();
+		temp=temp+","+role;
+		System.out.println(temp);
+		user.setRoles(temp);
+		userRepository.save(user);
+		
+	}
 }

@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,6 +32,7 @@ public class AdminController {
 		this.orderService = orderService;
 		
 	}
+	@PreAuthorize("hasAuthority('ADMIN')")
 	@GetMapping("/admin")
 	public String Admin() {
 		return "/admin/admin";
@@ -58,7 +60,12 @@ public class AdminController {
 		productCast.setPrice(price);
 		productCast.setDescription(description);
 		productService.updateProduct(productCast);
-		return "/admin"; 
+		return "/admin/admin"; 
+	}
+	@PostMapping("/admin/updateRole")
+	public String updateRole(@RequestParam String role, @RequestParam String userID) {
+		userService.updateRole(Integer.parseInt(userID),role);
+		return "/admin/admin";
 	}
 	@PostMapping("/admin/deleteProduct")
     public String deleteProduct(@RequestParam String ProductId) {
