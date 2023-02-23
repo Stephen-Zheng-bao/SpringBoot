@@ -1,0 +1,59 @@
+<!-- Code to add the filter bar -->
+
+<div class="grid">
+  <div class="grid-cell">  
+       <nav>
+          <a href="#featured">Featured Products</a>
+        </nav>    
+  </div>   
+  <div class="grid-cell">     
+      <div class="grid-cell">  
+          <nav>
+             <a href="#new-arrivals">New Arrivals</a>
+          </nav>    
+       </div>
+   </div>   
+   <div class="grid-cell">     
+       <div class="grid-cell">  
+            <nav>
+                <a href="#best-sellers">Best Sellers</a>
+            </nav>    
+        </div>  
+    </div>
+ </div>
+           
+<!-- code for section 1 -->
+            
+<div class = section>
+      <section id="new-arrivals">
+           <h2>New Arrivals</h2>
+ </div>
+ 
+ <!-- code for products -->
+ 
+      </section>
+      
+      
+<!-- code for section 2 -->
+            
+<div class = section>
+      <section id="featured">
+           <h2>Featured Products</h2>
+ </div>
+ 
+ <!-- code for products -->
+ 
+      </section>
+      
+  
+  
+ <!-- code for section 3 -->
+            
+<div class = section>
+      <section id="best-sellers">
+           <h2>Best Sellers</h2>
+ </div>
+ 
+ <!-- code for products -->
+ 
+      </section>

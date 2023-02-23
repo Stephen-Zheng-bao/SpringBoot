@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basket</title>
+	<link rel="stylesheet" type="text/css" href="BasketStyle.css">
+</head>
+<body>
+	<div class="container">
+		<h1>BASKET</h1>
+		<table>
+			<thead>
+				<tr>
+					<th>Product</th>
+					<th>Price</th>
+					<th>Quantity</th>
+					<th>Total</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<img class="product-image" src="product1.jpg">
+						Product 1
+					</td>
+					<td>£10.99</td>
+					<td>
+						<input type="range" min="1" max="10" value="1" class="quantity-slider">
+						<span class="quantity">1</span>
+					</td>
+					<td>£10.99</td>
+				</tr>
+				<tr>
+					<td>
+						<img class="product-image" src="product2.jpg">
+						Product 2
+					</td>
+					<td>£19.99</td>
+					<td>
+						<input type="range" min="1" max="10" value="1" class="quantity-slider">
+						<span class="quantity">1</span>
+					</td>
+					<td>£19.99</td>
+				</tr>
+				<tr>
+					<td>
+						<img class="product-image" src="product3.jpg">
+						Product 3
+					</td>
+					<td>£8.99</td>
+					<td>
+						<input type="range" min="1" max="10" value="1" class="quantity-slider">
+						<span class="quantity">1</span>
+					</td>
+					<td>£8.99</td>
+				</tr>
+			</tbody>
+		</table>
+		<button class="checkout-btn">Checkout</button>
+		<p class="empty-message">Your basket is currently empty.</p>
+	</div>
+
+	<script>
+		// Update quantity display when slider is moved
+		const quantitySliders = document.querySelectorAll('.quantity-slider');
+		quantitySliders.forEach(slider => {
+			slider.addEventListener('input', () => {
+				const quantityDisplay = slider.nextElementSibling;
+				quantityDisplay.textContent = slider.value;
+			});
+		});
+	</script>
+</body>
+</html>
