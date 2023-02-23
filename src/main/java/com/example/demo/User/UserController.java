@@ -40,7 +40,11 @@ public class UserController {
         model.addAttribute("user", new User());
         return "Welcome";
     }
-
+    @GetMapping("/testGet")
+    @ResponseBody
+    public List<User> filterUser(@RequestParam String name){
+    	return userService.fetchByName(name);
+    }
     @PostMapping(value = "/add")
     public String createUser(@ModelAttribute User users, Model model, BindingResult bindingResult) {
     	System.out.println(users);

@@ -17,7 +17,7 @@ public class UserFileDetailsService implements UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		// TODO Auto-generated method stub
-		Optional<User> userInfo = repo.findByName(username);
+		Optional<User> userInfo = repo.findByEmail(username);
 		return userInfo.map(UserFileToUserDetails::new)
 			.orElseThrow(()->new UsernameNotFoundException("User Not Found"));
 	}

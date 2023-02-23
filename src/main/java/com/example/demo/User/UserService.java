@@ -50,7 +50,14 @@ public class UserService {
 
 	public Integer findByEmail(String userEmail) {
 		// TODO Auto-generated method stub
-		User user = userRepository.findByName(userEmail).get();
+		User user = userRepository.findByEmail(userEmail).get();
 		return user.getUserID();
+	}
+
+
+
+	public List<User> fetchByName(String name) {
+		return userRepository.findByName(name);
+		
 	}
 }

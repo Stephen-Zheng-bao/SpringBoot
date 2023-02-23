@@ -12,8 +12,8 @@ public class Product {
     @GeneratedValue(strategy =  GenerationType.SEQUENCE, generator = "prod_seq")
 
     private String ProductID;
-    private String ProductName;
-    private String ProductType;
+    private String productName;
+    private String productType;
     private String Image;
     private String Description;
     private String Stock;
@@ -23,8 +23,8 @@ public class Product {
 
     public Product(String productID, String productName, String productType, String image, String description, String stock, String price, String gender, String manufactureDate) {
         ProductID = productID;
-        ProductName = productName;
-        ProductType = productType;
+        this.productName = productName;
+        this.productType = productType;
         Image = image;
         Description = description;
         Stock = stock;
@@ -46,19 +46,19 @@ public class Product {
     }
 
     public String getProductName() {
-        return ProductName;
+        return productName;
     }
 
     public void setProductName(String productName) {
-        ProductName = productName;
+        this.productName = productName;
     }
 
     public String getProductType() {
-        return ProductType;
+        return productType;
     }
 
     public void setProductType(String productType) {
-        ProductType = productType;
+        this.productType = productType;
     }
 
     public String getImage() {
@@ -113,8 +113,8 @@ public class Product {
     public String toString() {
         return "Product{" +
                 "ProductID='" + ProductID + '\'' +
-                ", ProductName='" + ProductName + '\'' +
-                ", ProductType='" + ProductType + '\'' +
+                ", ProductName='" + productName + '\'' +
+                ", ProductType='" + productType + '\'' +
                 ", Image='" + Image + '\'' +
                 ", Description='" + Description + '\'' +
                 ", Stock='" + Stock + '\'' +

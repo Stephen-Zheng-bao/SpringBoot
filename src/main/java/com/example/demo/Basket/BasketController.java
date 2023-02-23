@@ -25,7 +25,6 @@ private final UserService userService;
 		String userEmail = user.getPrincipal().toString();
 		int userID = userService.findByEmail(userEmail);
 		basketService.getBasket(userID);
-		
     	return "index";
 		
     	

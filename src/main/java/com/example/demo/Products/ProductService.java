@@ -1,6 +1,7 @@
 package com.example.demo.Products;
 
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,12 @@ public class ProductService {
     }
     public Optional<Product> fetchByID(Integer id) {
     	return productRepository.findById(id);
+    }
+    public List<Product> fetchByType(String type){
+    	return productRepository.findByProductType(type);
+    }
+    public List<Product> fetchByName(String name){
+    	return productRepository.findByProductName(name);
     }
 }
 
