@@ -11,14 +11,14 @@ public class Basket {
     @Id
     @SequenceGenerator(name = "bask_seq",sequenceName = "bask_seq",allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "bask_seq")
-    private Integer OrdersID;
+    private Integer BasketID;
     private Integer UserID;
     private Integer ProductID;
     private Integer Quantity;
     private String Price;
 
-    public Basket(Integer ordersID, Integer userID, Integer productID, Integer quantity, String price) {
-        OrdersID = ordersID;
+    public Basket(Integer basketID, Integer userID, Integer productID, Integer quantity, String price) {
+        BasketID = basketID;
         UserID = userID;
         ProductID = productID;
         Quantity = quantity;
@@ -30,11 +30,11 @@ public class Basket {
     }
 
     public Integer getOrdersID() {
-        return OrdersID;
+        return BasketID;
     }
 
     public void setOrdersID(Integer ordersID) {
-        OrdersID = ordersID;
+        BasketID = ordersID;
     }
 
     public Integer getUserID() {
@@ -72,7 +72,7 @@ public class Basket {
     @Override
     public String toString() {
         return "Basket{" +
-                "OrdersID=" + OrdersID +
+                "OrdersID=" + BasketID +
                 ", UserID=" + UserID +
                 ", ProductID=" + ProductID +
                 ", Quantity=" + Quantity +

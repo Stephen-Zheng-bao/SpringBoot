@@ -1,31 +1,36 @@
-
-  </div><!DOCTYPE html>
+<!DOCTYPE html>
   <html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>HTML 5 Boilerplate</title>
       <link rel="stylesheet" href="homestyle.css">
+      <link rel = "stylesheet" th:href = "@{/css/homestyle.css}">
+      <link rel = "stylesheet" th:href = "@{/css/nav.css}">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     </head>
+
+
     <body>
       
       <script src="script.js"></script>
+      <header th:insert="~{Fragment/navbar :: copy}"></header>
       <div class="wrapper" >
-        <div class="Welcome">   
-          <div  id="welc-main"style="color:white;position:relative;">Welcome to Status </div>
+        <div class="Welcome">
+          <div  id="welc-main" style="color:white;position:relative;">Welcome to Status </div>
             <div id ="welc" style="position:absolute;top:0;width:100%;">Where dreams come true</div>
-        
+
          </div>
          <div class="container">
-          
-                  <img src="ImagesHomePage/earrings.jpg" >
-                  <img src="ImagesHomePage/rings2.jpg" >
-                  <img src="ImagesHomePage/emeralds.jpg" >
-                  <img src="ImagesHomePage/ManNWomen.jpg" >
-                  <img src="ImagesHomePage/rings.jpg" >
-                  <img src="ImagesHomePage/twodiamonds.jpg">
+
+           <img th:src="@{images/ImagesHomePage/earrings.jpg}" >
+           <img th:src="@{images/ImagesHomePage/rings2.jpg}" >
+           <img th:src="@{images/ImagesHomePage/emeralds.jpg}" >
+           <img th:src="@{images/ImagesHomePage/ManNWomen.jpg}" >
+           <img th:src="@{images/ImagesHomePage/rings.jpg}" >
+           <img th:src="@{images/ImagesHomePage/twodiamonds.jpg}">
           </div>
           
        </div>     

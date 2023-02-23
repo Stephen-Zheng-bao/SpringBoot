@@ -4,7 +4,7 @@ package com.example.demo.Orders;
 import jakarta.persistence.*;
 
 @Entity
-@Table
+@Table(name = "past_order")
 public class Orders {
     @Id
     @SequenceGenerator(name = "orde_seq",sequenceName = "orde_seq",allocationSize = 1)

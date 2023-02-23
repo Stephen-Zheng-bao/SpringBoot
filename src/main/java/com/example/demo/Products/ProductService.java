@@ -28,5 +28,7 @@ public class ProductService {
     public List<Product> fetchByName(String name){
     	return productRepository.findByProductName(name);
     }
+    public List<Product> getProduct(){return productRepository.findAll();}
+
 }
 
