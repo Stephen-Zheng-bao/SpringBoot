@@ -5,7 +5,7 @@ import javax.swing.*;
 import jakarta.persistence.*;
 
 @Entity
-@Table
+@Table(name = "user")
 public class User {
     @Id
     @SequenceGenerator(name = "user_seq",sequenceName = "user_seq",allocationSize = 1)

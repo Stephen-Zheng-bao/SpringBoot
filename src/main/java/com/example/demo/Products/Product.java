@@ -4,7 +4,7 @@ package com.example.demo.Products;
 import jakarta.persistence.*;
 
 @Entity
-@Table
+@Table(name = "product")
 public class Product {
 
     @Id
@@ -19,9 +19,8 @@ public class Product {
     private String Stock;
     private String Price;
     private String Gender;
-    private String ManufactureDate;
 
-    public Product(String productID, String productName, String productType, String image, String description, String stock, String price, String gender, String manufactureDate) {
+    public Product(String productID, String productName, String productType, String image, String description, String stock, String price, String gender) {
         ProductID = productID;
         ProductName = productName;
         ProductType = productType;
@@ -30,7 +29,6 @@ public class Product {
         Stock = stock;
         Price = price;
         Gender = gender;
-        ManufactureDate = manufactureDate;
     }
 
     public Product(){
@@ -101,13 +99,6 @@ public class Product {
         Gender = gender;
     }
 
-    public String getManufactureDate() {
-        return ManufactureDate;
-    }
-
-    public void setManufactureDate(String manufactureDate) {
-        ManufactureDate = manufactureDate;
-    }
 
     @Override
     public String toString() {
@@ -120,7 +111,6 @@ public class Product {
                 ", Stock='" + Stock + '\'' +
                 ", Price='" + Price + '\'' +
                 ", Gender='" + Gender + '\'' +
-                ", ManufactureDate='" + ManufactureDate + '\'' +
                 '}';
     }
 

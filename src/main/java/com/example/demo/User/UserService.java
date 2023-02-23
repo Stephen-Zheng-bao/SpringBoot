@@ -5,7 +5,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class UserService {
@@ -44,13 +43,5 @@ public class UserService {
 		user.setRoles(temp);
 		userRepository.save(user);
 		
-	}
-
-
-
-	public Integer findByEmail(String userEmail) {
-		// TODO Auto-generated method stub
-		User user = userRepository.findByName(userEmail).get();
-		return user.getUserID();
 	}
 }
