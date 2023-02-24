@@ -62,11 +62,11 @@ public class AdminController {
 		productService.updateProduct(productCast);
 		return "/admin/admin"; 
 	}
-	/*@PostMapping("/admin/updateRole")
+	@PostMapping("/admin/updateRole")
 	public String updateRole(@RequestParam String role, @RequestParam String userID) {
 		userService.updateRole(Integer.parseInt(userID),role);
 		return "/admin/admin";
-	}*/
+	}
 	@PostMapping("/admin/deleteProduct")
     public String deleteProduct(@RequestParam String ProductId) {
        // ProductService.deleteProduct(Integer.parseInt(ProductId));

@@ -1,6 +1,8 @@
 package com.example.demo.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -58,5 +60,10 @@ public class UserService {
 	public List<User> fetchByName(String name) {
 		return userRepository.findByName(name);
 		
+	}
+	public Integer getIDOfCurrentUser(){
+		Authentication user = SecurityContextHolder.getContext().getAuthentication();
+		String userEmail = user.getName();
+		return findByEmail(userEmail);
 	}
 }

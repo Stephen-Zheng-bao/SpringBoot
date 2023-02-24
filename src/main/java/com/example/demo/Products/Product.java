@@ -11,7 +11,7 @@ public class Product {
     @SequenceGenerator(name = "prod_seq",sequenceName = "prod_seq",allocationSize = 1)
     @GeneratedValue(strategy =  GenerationType.SEQUENCE, generator = "prod_seq")
 
-    private String ProductID;
+    private String productID;
     private String productName;
     private String productType;
     private String Image;
@@ -21,7 +21,7 @@ public class Product {
     private String Gender;
 
     public Product(String productID, String productName, String productType, String image, String description, String stock, String price, String gender) {
-        ProductID = productID;
+        this.productID = productID;
         this.productName = productName;
         this.productType = productType;
         Image = image;
@@ -36,11 +36,11 @@ public class Product {
     }
 
     public String getProductID() {
-        return ProductID;
+        return productID;
     }
 
     public void setProductID(String productID) {
-        ProductID = productID;
+        this.productID = productID;
     }
 
     public String getProductName() {
@@ -103,7 +103,7 @@ public class Product {
     @Override
     public String toString() {
         return "Product{" +
-                "ProductID='" + ProductID + '\'' +
+                "ProductID='" + productID + '\'' +
                 ", ProductName='" + productName + '\'' +
                 ", ProductType='" + productType + '\'' +
                 ", Image='" + Image + '\'' +

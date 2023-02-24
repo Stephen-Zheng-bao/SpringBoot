@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.User.UserService;
@@ -21,13 +23,21 @@ private final UserService userService;
 		this.userService = userService;
     }
 
-    public String addToBasket(@RequestParam String productID) {
-		Authentication user = SecurityContextHolder.getContext().getAuthentication();
-		String userEmail = user.getPrincipal().toString();
-		int userID = userService.findByEmail(userEmail);
-		basketService.getBasket(userID);
-    	return "index";
-		
-    	
+    @GetMapping("/getBasket")
+    public String getBasket() {
+		int userID = userService.getIDOfCurrentUser();
+		System.out.println(basketService.getBasket(userID).get(0).getProduct());
+        return "Admin/admin";
     }
+    @PostMapping("/addToBasket")
+        public String addToBasket(@RequestParam String productID, @RequestParam String quantity, @RequestParam String price ){
+        Basket itemAdd = new Basket();
+        itemAdd.setProductID(Integer.valueOf(productID));
+        itemAdd.setQuantity(Integer.valueOf(quantity));
+        itemAdd.setUserID(userService.getIDOfCurrentUser());
+        itemAdd.setPrice(price);
+        basketService.createBasket(itemAdd);
+        return ("redirect:/");
+    }
+
 }
