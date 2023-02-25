@@ -11,14 +11,14 @@ public class User {
     @SequenceGenerator(name = "user_seq",sequenceName = "user_seq",allocationSize = 1)
     @GeneratedValue(strategy =  GenerationType.SEQUENCE, generator = "user_seq")
 
-    private Integer UserID;
+    private Integer userID;
     private String name;
     private String email;
     private String password;
     private String roles;
 
     public User(Integer userID, String name, String email, String password, String roles) {
-        UserID = userID;
+        this.userID = userID;
         this.name = name;
         this.email = email;
         this.password = password;
@@ -29,11 +29,11 @@ public class User {
     }
 
     public Integer getUserID() {
-        return UserID;
+        return userID;
     }
 
     public void setUserID(Integer userID) {
-        UserID = userID;
+        userID = userID;
     }
 
     public String getName() {
@@ -71,7 +71,7 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "UserID=" + UserID +
+                "UserID=" + userID +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +

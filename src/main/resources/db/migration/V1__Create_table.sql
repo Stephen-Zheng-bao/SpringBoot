@@ -1,43 +1,43 @@
 CREATE TABLE user
 (
-    UserID   int(11) NOT NULL AUTO_INCREMENT,
-    Name     text    NOT NULL,
-    Email    text    NOT NULL,
-    Password text    NOT NULL,
-    Roles    varchar(255) DEFAULT NULL,
-    PRIMARY KEY (UserID)
+    userID   int(11) NOT NULL AUTO_INCREMENT,
+    name     text    NOT NULL,
+    email    text    NOT NULL,
+    password text    NOT NULL,
+    roles    varchar(255) DEFAULT NULL,
+    PRIMARY KEY (userID)
 );
 CREATE TABLE product (
-                         ProductID int(11) NOT NULL AUTO_INCREMENT,
-                         ProductName text NOT NULL,
-                         ProductType text NOT NULL,
-                         Image text NOT NULL,
-                         Description longtext NOT NULL,
-                         Stock int(11) NOT NULL,
-                         Price double NOT NULL,
-                         Gender text NOT NULL,
-                         PRIMARY KEY (ProductID)
+                         productID int(11) NOT NULL AUTO_INCREMENT,
+                         product_name text NOT NULL,
+                         product_type text NOT NULL,
+                         image text NOT NULL,
+                         description longtext NOT NULL,
+                         stock int(11) NOT NULL,
+                         price double NOT NULL,
+                         gender text NOT NULL,
+                         PRIMARY KEY (productID)
 );
 
 CREATE TABLE basket (
-                          BasketID int(11) NOT NULL AUTO_INCREMENT,
-                          UserID int(11) NOT NULL,
-                          ProductID int(11) NOT NULL,
-                          Quantity int(11) NOT NULL,
-                          Price int(11) NOT NULL,
-                          PRIMARY KEY (BasketID)
+                          basketID int(11) NOT NULL AUTO_INCREMENT,
+                          userID int(11) NOT NULL,
+                          productID int(11) NOT NULL,
+                          quantity int(11) NOT NULL,
+                          price int(11) NOT NULL,
+                          PRIMARY KEY (basketID)
 );
 
 
 
 CREATE TABLE past_order(
-                              OrderID int(11) NOT NULL AUTO_INCREMENT,
-                              UserID int(11) NOT NULL,
-                              ProductID int(11) NOT NULL,
-                              Quantity int(11) NOT NULL,
-                              Price int(11) NOT NULL,
-                              Status int(11) NOT NULL,
-                              PRIMARY KEY(OrderID)
+                              orderID int(11) NOT NULL AUTO_INCREMENT,
+                              userID int(11) NOT NULL,
+                              productID int(11) NOT NULL,
+                              quantity int(11) NOT NULL,
+                              price int(11) NOT NULL,
+                              status int(11) NOT NULL,
+                              PRIMARY KEY(orderID)
 );
 
 
@@ -46,13 +46,13 @@ CREATE TABLE past_order(
 
 
 ALTER TABLE basket
-    ADD FOREIGN KEY (UserID) REFERENCES user(UserID);
+    ADD FOREIGN KEY (userID) REFERENCES user(userID);
 ALTER TABLE basket
-    ADD FOREIGN KEY (ProductID) REFERENCES product(ProductID);
+    ADD FOREIGN KEY (productID) REFERENCES product(productID);
 
 
 ALTER TABLE past_order
-    ADD FOREIGN KEY (UserID) REFERENCES user(UserID);
+    ADD FOREIGN KEY (userID) REFERENCES user(userID);
 ALTER TABLE past_order
-    ADD FOREIGN KEY (ProductID) REFERENCES product(ProductID);
+    ADD FOREIGN KEY (productID) REFERENCES product(productID);
 
