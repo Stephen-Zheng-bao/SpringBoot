@@ -1,22 +1,11 @@
-
-v<!DOCTYPE html>
-<head>
-<html lang="en">
-      <meta name = "viewport" content="with=device-width, initial-scale=1.0">
-         <title>STATUS</title>
-         <link rel="Stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-         <link rel = "stylesheet" href="contact.styles.css">
-      </head>
-      <header>
-        <img class="logo" src="https://media.discordapp.net/attachments/1071505588044968038/1075014674346672138/statusLOGO.png" width="40px" height="40px"/>      <nav>
-          <ul>
-            <li>Home</li>
-            <li>Products</li>
-            <li>Contact Us</li>
-            <li>About us</li>
-          </ul>
-        </nav>
-       
-
-      </header>
-      <!-- nav bar-->
+ <!-- contact us body-->
+<body> 
+    <section class = "Contact">
+        <div class  = "content">
+            <h2> Contact Us</h2>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
