@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <html xmlns:th="https://www.thymeleaf.org">
+    <link th:href="@{/css/Admin.css}"  rel="stylesheet">
+</head>
+    <header th:fragment="copy">
+<div class="container">
+    <div class="nav">
+        <ul>
+            <!-- <li id="logo"><img src="STATUS_FINAL_TRANSPARENT.png" style="width:300px; height:100px;">  </li><br><br>-->
+            <h2> <a th:href="@{/admin/accounts}"> <span id ="navItem" class="icon"> <i class="bi bi-person-circle"></i></span></a> Hello Admin!</h2>
+            <br><br>
+            <li>  <a th:href="@{/admin}"> <span id="navItem" class="icon">Dashboard</span><i class="bi bi-house"></i> </a></li>
+            <li><a th:href="@{/admin/orders}"><span id="navItem" class="icon">Orders</span><i class="bi bi-cart-dash"></i></a></li>
+
+            <li>  <a th:href="@{/admin/customers}"><span id="navItem" class="icon">Customers</span><i class="bi bi-people"></i></a></li>
+            <li>  <a th:href="@{/admin/vendors}"><span id="navItem" class="icon">Vendors</span><i class="bi bi-truck"></i></a></li>
+            <li>  <a th:href="@{/logout}"><span id="navItem" class="icon"></i>Sign out</span><i class="bi bi-box-arrow-right"></i></a></li>
+            <!--   <li> <a href="Help.html"><span id="navItem" class="icon">Help</span><i class="bi bi-info-circle"></i></a></li> -->
+
+
+        </ul>
+
+
+
+    </div>
+
+</div>

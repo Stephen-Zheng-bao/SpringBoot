@@ -1,46 +1,21 @@
 <!DOCTYPE html>
 <html>
+<html xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta hhtp-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Interface</title>
-    <link rel="stylesheet" href="../../static/css/Admin.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <!--google fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Khojki&display=swap" rel="stylesheet">
- 
+
+    <link th:href="@{/css/Admin.css}"  rel="stylesheet">
+    <link href="Admin.css"  rel="stylesheet">
 <!--<script scr="scr/main/resources/templates/Admin/Admin.js"></script> Cannot link js file. so wrote js in html-->
 
 
 </head>
 
 <body>
-    <div class="container">
-        <div class="nav">
-            <ul>
-                    <!-- <li id="logo"><img src="STATUS_FINAL_TRANSPARENT.png" style="width:300px; height:100px;">  </li><br><br>-->
-                    <h2> <a href= "Account.html"> <span id ="navItem" class="icon"> <i class="bi bi-person-circle"></i></span></a> Hello Admin!</h2>
-                    <br><br>
-                    <li>  <a href="Admin.html"> <span id="navItem" class="icon">Dashboard</span><i class="bi bi-house"></i> </a></li>
-                    <li><a href="Orders.html"><span id="navItem" class="icon">Orders</span><i class="bi bi-cart-dash"></i></a></li> 
-    
-                    <li>  <a href="Customers.html"><span id="navItem" class="icon">Customers</span><i class="bi bi-people"></i></a></li>
-                    <li>  <a href="Vendors.html"><span id="navItem" class="icon">Vendors</span><i class="bi bi-truck"></i></a></li>
-                    <li>  <a href="#"><span id="navItem" class="icon"></i>Sign out</span><i class="bi bi-box-arrow-right"></i></a></li>
-                  <!--  <li> <a href="Help.html"><span id="navItem" class="icon">Help</span><i class="bi bi-info-circle"></i></a></li> -->
-                
-               
-            </ul>
-
-           
-           
-        </div>
-       
-    </div>
-    
+    <header th:insert="~{Fragment/adminNav :: copy}"></header>
     <div class="mainSection">
         
         <div class="bar">

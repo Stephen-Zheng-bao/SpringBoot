@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="https://www.thymeleaf.org">
 <head>
-    <html xmlns:th="https://www.thymeleaf.org">
     <link th:href="@{/css/Admin.css}"  rel="stylesheet">
     <link href="Admin.css"  rel="stylesheet">
     <meta charset="UTF-8">
@@ -9,35 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Interface</title>
 
- 
-
-
-
 </head>
 
 <body>
-    <div class="container">
-        <div class="nav">
-            <ul>
-                    <!-- <li id="logo"><img src="STATUS_FINAL_TRANSPARENT.png" style="width:300px; height:100px;">  </li><br><br>-->
-                    <h2> <a href= "Account.html"> <span id ="navItem" class="icon"> <i class="bi bi-person-circle"></i></span></a> Hello Admin!</h2>
-                    <br><br>
-                    <li>  <a href="Admin.html"> <span id="navItem" class="icon">Dashboard</span><i class="bi bi-house"></i> </a></li>
-                    <li><a href="Orders.html"><span id="navItem" class="icon">Orders</span><i class="bi bi-cart-dash"></i></a></li> 
-      
-                    <li>  <a href="Customers.html"><span id="navItem" class="icon">Customers</span><i class="bi bi-people"></i></a></li>
-                    <li>  <a href="Vendors.html"><span id="navItem" class="icon">Vendors</span><i class="bi bi-truck"></i></a></li>
-                    <li>  <a href="#"><span id="navItem" class="icon"></i>Sign out</span><i class="bi bi-box-arrow-right"></i></a></li>
-                   <!-- <li> <a href="Help.html"><span id="navItem" class="icon">Help</span><i class="bi bi-info-circle"></i></a></li> -->
-                
-               
-            </ul>
-
-            
-           
-        </div>
-       
-    </div>
+<header th:insert="~{Fragment/adminNav :: copy}"></header>
     
     <div class="mainSection">
         
@@ -103,76 +77,47 @@
 
     
     <div class="ProductTable">
-       
-        
-        <table> <!--edit later to reflect what database contains-->
 
-            <tr>
-                <td><input type="text" placeholder="name of product"></td>
-                <td>  <input type="text" placeholder="description"></td>
-                <td><input type="number" placeholder="price"></td>
-                <td><input type="image" placeholder="image"></td>
-                <td> <input type="text" placeholder="category"></td>
-                <td><input type="number" placeholder="stock level"></td>
-                <td><button type="button" style="width:85px;">Add Product</button></td>
-            
-            </tr>
-        </table>
+
+        <form method="post" th:action="@{/admin/productAdd}" th:object="${prodcut}">
+            <input id="productName" placeholder="name" type="text" th:field="*{productName}">
+            <input id="productType" placeholder="productType" type="text" th:field="*{productType}">
+            <input id="price" placeholder="Price" type="text" th:field="*{price}">
+            <input id="image" placeholder="Image" type="text" th:field="*{image}">
+            <input id="description" placeholder="Description" type="text" th:field="*{description}">
+            <input id="stock" placeholder="Stock" type="text" th:field="*{stock}">
+            <input id="gender" placeholder="Stock" type="text" th:field="*{gender}">
+            <input type="submit">
+        </form>
     </div>
 
         
         <div class="TableDesign">
         <table>
-           
-               
                 <thead id="column">
                     <tr>
+                        <td>ID</td>
                         <td>Name</td>
-                        <td>Description</td>
+                        <td>Type</td>
                         <td>Price</td>
                         <td>Image</td>
-                        <td>Category</td>
-                        <td>Stock Level</td>
+                        <td>Description</td>
+                        <td>Stock</td>
                         <td>Delete</td>
-                        <td>Modify</td>
                     </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    
-                    <td>Name 1</td>
-                    <td>description 1</td>
-                    <td>£100</td>
-                    <td>Image1</td>
-                    <td>Category</td>
-                    <td>5</td>
-                   <td><button type="button">Modify</button></td> 
-                   <td><button type="button">Delete</button></td> 
-                  </tr>
-
-                  <tr>
-                    
-                    <td>Name 2</td>
-                    <td>description 2</td>
-                    <td>£100</td>
-                    <td>Image2</td>
-                    <td>Category</td>
-                    <td>10</td>
-                   <td><button type="button">Modify</button></td> 
-                   <td><button type="button">Delete</button></td> 
-                  </tr>
-
-                  <tr>
-                    
-                    <td>Name 3</td>
-                    <td>description 3</td>
-                    <td>£100</td>
-                    <td>Image3</td>
-                    <td>Category</td>
-                    <td>30</td>
-                   <td><button type="button">Modify</button></td> 
-                   <td><button type="button">Delete</button></td> 
-                  </tr>
+                <tr th:each="product : ${products}">
+                    <input type="hidden" name="id" th:value="${product.productID}">
+                    <td th:text="${product.productID}"></td>
+                    <td th:text="${product.productName}"></td>
+                    <td th:text="${product.productType}"></td>
+                    <td th:text="${product.Price}"></td>
+                    <td th:text="${product.Image}"></td>
+                    <td th:text="${product.Description}"></td>
+                    <td th:text="${product.Stock}"></td>
+                    <td></td>
+                </tr>
                 </tbody>
               </table>
             </div>
@@ -182,4 +127,3 @@
     
 
 </body>
-</html>

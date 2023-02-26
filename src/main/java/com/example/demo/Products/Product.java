@@ -11,7 +11,7 @@ public class Product {
     @SequenceGenerator(name = "prod_seq",sequenceName = "prod_seq",allocationSize = 1)
     @GeneratedValue(strategy =  GenerationType.SEQUENCE, generator = "prod_seq")
 
-    private String productID;
+    private Integer productID;
     private String productName;
     private String productType;
     private String image;
@@ -20,7 +20,7 @@ public class Product {
     private String price;
     private String gender;
 
-    public Product(String productID, String productName, String productType, String image, String description, String stock, String price, String gender) {
+    public Product(Integer productID, String productName, String productType, String image, String description, String stock, String price, String gender) {
         this.productID = productID;
         this.productName = productName;
         this.productType = productType;
@@ -35,11 +35,11 @@ public class Product {
 
     }
 
-    public String getProductID() {
+    public Integer getProductID() {
         return productID;
     }
 
-    public void setProductID(String productID) {
+    public void setProductID(Integer productID) {
         this.productID = productID;
     }
 

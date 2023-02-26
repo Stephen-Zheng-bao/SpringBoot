@@ -1,15 +1,14 @@
 package com.example.demo.Products;
 
+import com.example.demo.User.User;
 import com.example.demo.User.UserService;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -45,9 +44,13 @@ import java.util.List;
         }*/
 
         @GetMapping(value = "/product")
-        public String getUsers(Model model) {
+        public String product(Model model) {
             List<Product> product = productService.getProduct();
             model.addAttribute("product", product);
             return "Product/jewellery";
     }
+
+
+
+
 }

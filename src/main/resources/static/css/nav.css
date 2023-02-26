@@ -45,7 +45,6 @@ li:hover {
 
 .wrapper {
   overflow: hidden;
-
   width: 95%;
   margin: auto;
   left: 30px;
@@ -55,12 +54,7 @@ li:hover {
   border-color: beige;
 }
 
-.container {
-  filter: grayscale(100%);
-  display: flex;
-  animation: slide 1s 1;
-  animation-direction: alternate;
-}
+
 
 .container:hover {
   filter: grayscale(0%);

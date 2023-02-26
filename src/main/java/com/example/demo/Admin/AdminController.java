@@ -8,11 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
 
 import com.example.demo.Orders.OrdersService;
 import com.example.demo.Products.Product;
@@ -33,24 +30,46 @@ public class AdminController {
 		
 	}
 	@PreAuthorize("hasAuthority('ADMIN')")
+
 	@GetMapping("/admin")
-	public String Admin() {
-		return "/admin/admin";
+	public String Admin(Model model) {
+		List<Product> products = productService.getProduct();
+		model.addAttribute("products", products);
+		model.addAttribute("prodcut", new Product());
+		return "/admin/Admin";
 	}
+
+	@PostMapping(value = "/admin/productAdd")
+	public String createUser(@ModelAttribute Product product, Model model, BindingResult bindingResult) {
+		System.out.println(product);
+		Product products = productService.createProduct(product);
+		return "redirect:/admin";}
+
+
+
 	@GetMapping("/admin/orders")
 	public String Orders(Model model) {
         List<Orders> orders = orderService.getOrders();
-        model.addAttribute("products", orders);
-        model.addAttribute("user", new Orders());
-		return "/admin/Orders";
+        model.addAttribute("orders", orders);
+        model.addAttribute("order", new Orders());
+		return "/Admin/Orders";
 	}
-	@GetMapping("/admin/Customers")
+	@GetMapping("/admin/customers")
 	public String Customers(Model model) {
         List<User> users = userService.getUsers();
         model.addAttribute("users", users);
         model.addAttribute("user", new User());
-		return "/admin/Customers";
-	}
+		return "/Admin/Customers";}
+
+	@GetMapping("/admin/accounts")
+	public String Account(Model model) {
+		return "/Admin/Account";}
+
+	@GetMapping("/admin/vendors")
+	public String Vender(Model model) {
+		return "/Admin/Vendors";}
+
+
 	@PostMapping("/admin/updateProduct")
 	public String updateProduct(@RequestParam String ProductId ,@RequestParam String productName,@RequestParam String description, @RequestParam String price) {
 		//TODO Add Update Product Logic
@@ -60,16 +79,20 @@ public class AdminController {
 		productCast.setPrice(price);
 		productCast.setDescription(description);
 		productService.updateProduct(productCast);
-		return "/admin/admin"; 
+		return "/Admin/admin";
 	}
 	@PostMapping("/admin/updateRole")
 	public String updateRole(@RequestParam String role, @RequestParam String userID) {
 		userService.updateRole(Integer.parseInt(userID),role);
-		return "/admin/admin";
+		return "/Admin/admin";
 	}
 	@PostMapping("/admin/deleteProduct")
     public String deleteProduct(@RequestParam String ProductId) {
-       // ProductService.deleteProduct(Integer.parseInt(ProductId));
-        return "redirect:/admin";
+       productService.deleteProduct(Integer.parseInt(ProductId));
+        return "redirect:/Admin";
     }
+
+
+
+
 }

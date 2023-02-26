@@ -16,6 +16,7 @@ public class ProductService {
     public ProductService(ProductRepository productRepository) {
         this.productRepository = productRepository;
     }
+    public Product createProduct(Product product){return this.productRepository.save(product);}
     public void updateProduct(Product product) {
     	productRepository.save(product);
     }
@@ -30,5 +31,7 @@ public class ProductService {
     }
     public List<Product> getProduct(){return productRepository.findAll();}
 
+    public void deleteProduct(int parseInt) {productRepository.deleteById(parseInt);
+    }
 }
 
