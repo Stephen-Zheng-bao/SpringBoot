@@ -64,3 +64,32 @@ v<!DOCTYPE html>
             JAVA SCRIPT-->
           </div>
           
+ <div class="footer-container">
+            <ul class="footer-item">
+              <h4>We</h4>
+              <li>Hallmark guide</li>
+              <li>Stainless Steel</li>
+              <li>Lab grown</li>
+              <li>Moissanite</li>
+              <li>Gem</li>
+                <!--Footer section 1-->
+            </ul>
+            <ul class="footer-item">
+              <h4>Are</h4>
+              <li>Innovation</li>
+              <li>Creativity</li>
+              <li>Unique</li>
+              <li>Timeless</li>
+              <li>Sentimental</li>
+                <!--Footer section 2-->
+            </ul>
+            <ul class="footer-item">
+              <h4>Timeless.</h4>
+              <li>About Us</li>
+              <li>Watches</li>
+              <li>Earrings</li>
+              <li>Necklaces</li>
+              <li>Pendants</li>
+                <!--Footer section 3-->
+            </ul>
+          </div>
