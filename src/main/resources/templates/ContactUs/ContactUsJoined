@@ -9,3 +9,18 @@
             <br>
             <br>
         </div>
+<div class = "container">
+            <div class = "ContactForm">
+                <form> <h2> Process Enquiry here</h2>
+                <div class="InputInfo">
+                    <input type = "text" name =""  required = "required">
+                    <span> Type Your Name....</span>
+                </div>
+                <div class="InputInfo">
+                    <input type = "text" name =""  required = "required">
+                    <span>Type Your Email....</span>
+                </div>
+                <div class="InputInfo">
+                    <input type = "text" name =""  required = "required">
+                    <span> Type Your Phone Number....</span>
+                </div>
