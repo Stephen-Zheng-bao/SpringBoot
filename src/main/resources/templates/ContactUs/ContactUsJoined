@@ -1,35 +1,48 @@
- <!-- contact us body-->
-<body> 
-    <section class = "Contact">
-        <div class  = "content">
-            <h2> Contact Us</h2>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-        </div>
-<div class = "container">
-            <div class = "ContactForm">
-                <form> <h2> Process Enquiry here</h2>
-                <div class="InputInfo">
-                    <input type = "text" name =""  required = "required">
-                    <span> Type Your Name....</span>
+
+v<!DOCTYPE html>
+<head>
+<html lang="en">
+      <meta name = "viewport" content="with=device-width, initial-scale=1.0">
+         <title>STATUS</title>
+         <link rel="Stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+         <link rel = "stylesheet" href="contact.styles.css">
+      </head>
+      <header>
+        <img class="logo" src="https://media.discordapp.net/attachments/1071505588044968038/1075014674346672138/statusLOGO.png" width="40px" height="40px"/>      <nav>
+          <ul>
+            <li>Home</li>
+            <li>Products</li>
+            <li>Contact Us</li>
+            <li>About us</li>
+          </ul>
+        </nav>
+       
+
+      </header>
+      <!-- nav bar-->
+      <div class="InputBox">
+                    <textarea required = "required"></textarea>
+                    <span> Type Your Message....</span>
                 </div>
-                <div class="InputInfo">
-                    <input type = "text" name =""  required = "required">
-                    <span>Type Your Email....</span>
+                <div class = "InputBox">
+                    <input type = "submit" name="" value = "Send">
                 </div>
-                <div class="InputInfo">
-                    <input type = "text" name =""  required = "required">
-                    <span> Type Your Phone Number....</span>
-                </div>
- <div class = "MainForm">
-            <div class = "contactInfo">
-                <div class = "box">
-                    <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                </form>
+            </div>
+            <div class = "box">
+                    <div class ="icon"><i class="fa fa-phone" aria-hidden="true"></i>
                     </div>
                     <div class = "text">
-                        <h3>Location</h3>
+                        <h3>Call us</h3>
                     </div>
                 </div>
+                           <div class = "box">
+                    <div class ="icon"><i class="fa fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <div class = "text">
+                        <h3>General Enquiries</h3>
+                        <p>Support@Sports4Us.com</p> 
+                    </div>
+                </div>
+            </div>
+    </div>
