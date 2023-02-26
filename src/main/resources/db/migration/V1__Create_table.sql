@@ -32,14 +32,26 @@ CREATE TABLE basket (
 
 CREATE TABLE past_order(
                               orderID int(11) NOT NULL AUTO_INCREMENT,
+                              order_number int(11) NOT NULL,
                               userID int(11) NOT NULL,
                               productID int(11) NOT NULL,
                               quantity int(11) NOT NULL,
                               price int(11) NOT NULL,
-                              status int(11) NOT NULL,
+                              status text NOT NULL,
                               PRIMARY KEY(orderID)
 );
-
+CREATE TABLE `prod_seq` (
+    `next_val` bigint(20) DEFAULT NULL
+);
+CREATE TABLE `bask_seq` (
+    `next_val` bigint(20) DEFAULT NULL
+);
+CREATE TABLE `orde_seq` (
+    `next_val` bigint(20) DEFAULT NULL
+);
+CREATE TABLE `user_seq` (
+    `next_val` bigint(20) DEFAULT NULL
+);
 
 
 

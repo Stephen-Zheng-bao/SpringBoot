@@ -8,6 +8,14 @@ import jakarta.persistence.*;
 
 public class Basket {
 
+    public Integer getBasketID() {
+        return basketID;
+    }
+
+    public void setBasketID(Integer basketID) {
+        this.basketID = basketID;
+    }
+
     @Id
     @SequenceGenerator(name = "bask_seq",sequenceName = "bask_seq",allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "bask_seq")

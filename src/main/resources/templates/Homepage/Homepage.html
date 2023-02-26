@@ -6,6 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>HTML 5 Boilerplate</title>
+      <link rel="stylesheet" href="homestyle.css">
       <link rel = "stylesheet" th:href = "@{/css/homestyle.css}">
       <link rel = "stylesheet" th:href = "@{/css/nav.css}">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -33,58 +34,110 @@
           </div>
           
        </div>     
-        <div class="randomiser">
-          
-          <script type="text/javascript">
-            rndmSlogan = function () {
-              var sales = new Array();
-              sales[0] = "Free Bracelet reconditioning";
-              sales[1] = "Highest grade diamonds";
-              sales[2] = "Official Hallmark"
-              sales[3] = "5 year warranty";
-              var rand = Math.floor(Math.random()*sales.length);
-              document.write(sales[rand]);
-            }
-            rndmSlogan();
-      </script>
-        </div>
-        
-    </body>
- 
+  <div class="randomiser">
 
-         
-    <footer>
-      <div class="footer-container">
-        <ul class="footer-item">
-          <h4>We</h4>
-          <li>Hallmark guide</li>
-          <li>Stainless Steel</li>
-          <li>Lab grown</li>
-          <li>Moissanite</li>
-          <li>Gem</li>
-        </ul>
-        <ul class="footer-item">
-          <h4>Are</h4>
-          <li>Innovation</li>
-          <li>Creativity</li>
-          <li>Unique</li>
-          <li>Timeless</li>
-          <li>Sentimental</li>
-        </ul>
-        <ul class="footer-item">
-          <h4>Timeless.</h4>
-          <li>About Us</li>
-          <li>Watches</li>
-          <li>Earrings</li>
-          <li>Necklaces</li>
-          <li>Pendants</li>
-        </ul>
+    <script type="text/javascript">
+      rndmSlogan = function () {
+        var sales = new Array();
+        sales[0] = "Free Bracelet reconditioning";
+        sales[1] = "Highest grade diamonds";
+        sales[2] = "Official Hallmark"
+        sales[3] = "5 year warranty";
+        var rand = Math.floor(Math.random() * sales.length);
+        document.write(sales[rand]);
+      }
+      rndmSlogan();
+
+      
+    </script>
+  </div>
+  <div class="para-1-container">
+    <div class="img-wrapper1">
+      <img th:src="@{images/ImagesHomePage/jeweler.jpeg}" alt="aaa" width="500px" height="270px">
+    </div>
+    <div class="para-1">
+      <h1>From us. To You</h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates assumenda iusto rerum nam unde molestiae
+        obcaecati totam, dolorum vero quae odio tenetur explicabo, atque architecto quisquam laboriosam tempora veniam.
+        Numquam?</p>
+    </div>
+  </div>
+
+  <div class="slider-container">
+    <div class="slider-wrapper">
+      <div class="slider-item">
+        <img src="https://github.com/Stephen-Zheng-bao/SpringBoot/blob/main/src/main/resources/templates/Product/images/Bracelet1.jpg?raw=true" alt="Product 1">
+        <p>Product 1</p>
       </div>
-      <div class="copyright">
-        <h3>CopyRight</h3>
-        <p>Established in 2023, 'Status' was established by gem specialist
-          located in the United Kingdom offering services to international
-          customers at unbeatable prices.</p>
-      </div>                 
-    </footer>
-  </html>
+      <div class="slider-item">
+        <img src="https://github.com/Stephen-Zheng-bao/SpringBoot/blob/main/src/main/resources/templates/Product/images/Bracelet2.jpg?raw=true" alt="Product 2">
+        <p>Product 2</p>
+      </div>
+      <div class="slider-item">
+        <img src="https://github.com/Stephen-Zheng-bao/SpringBoot/blob/main/src/main/resources/templates/Product/images/Bracelet4.jpg?raw=true" alt="Product 3">
+        <p>Product 3</p>
+      </div>
+      <div class="slider-item">
+        <img src="https://github.com/Stephen-Zheng-bao/SpringBoot/blob/main/src/main/resources/templates/Product/images/Watch1.jpg?raw=true" alt="Product 4">
+        <p>Product 4</p>
+      </div>
+      <div class="slider-item">
+        <img src="https://github.com/Stephen-Zheng-bao/SpringBoot/blob/main/src/main/resources/templates/Product/images/Watch4.jpg?raw=true" alt="Product 5">
+        <p>Product 5</p>
+      </div>
+      <div class="slider-item">
+        <img src="https://github.com/Stephen-Zheng-bao/SpringBoot/blob/main/src/main/resources/templates/Product/images/Watch5.jpg?raw=true" alt="Product 6">
+        <p>Product 6</p>
+      </div>
+      <div class="slider-item">
+        <img src="https://github.com/Stephen-Zheng-bao/SpringBoot/blob/main/src/main/resources/templates/Product/images/Bracelet6.jpg?raw=true" alt="Product 7">
+        <p>Product 7</p>
+      </div>
+        
+      </div>
+    <button class="slider-button slider-button-left">&lt;</button>
+    <button class="slider-button slider-button-right">&gt;</button>
+  </div>
+  
+
+
+  <div class="footer">
+    <div class="footer-container">
+      <ul class="footer-item">
+        <h4>We</h4>
+        <li>Hallmark guide</li>
+        <li>Stainless Steel</li>
+        <li>Lab grown</li>
+        <li>Moissanite</li>
+        <li>Gem</li>
+      </ul>
+      <ul class="footer-item">
+        <h4>Are</h4>
+        <li>Innovation</li>
+        <li>Creativity</li>
+        <li>Unique</li>
+        <li>Timeless</li>
+        <li>Sentimental</li>
+      </ul>
+      <ul class="footer-item">
+        <h4>Timeless.</h4>
+        <li>About Us</li>
+        <li>Watches</li>
+        <li>Earrings</li>
+        <li>Necklaces</li>
+        <li>Pendants</li>
+      </ul>
+    </div>
+    <div class="copyright">
+      <h3>CopyRight</h3>
+      <p>Established in 2023, 'Status' was established by gem specialist
+        located in the United Kingdom offering services to international
+        customers at unbeatable prices.</p>
+    </div>
+  </div>
+
+</body>
+
+
+
+</html>

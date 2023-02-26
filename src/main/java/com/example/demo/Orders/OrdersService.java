@@ -23,4 +23,19 @@ public class OrdersService {
 	public List<Orders> getOrders() {
 		return ordersRepository.findAll();
 	}
+
+    public int getNewID() {
+        return ordersRepository.getPreviousID() + 1;
+    }
+
+    public void saveOrder(Orders order) {
+        ordersRepository.save(order);
+    }
+
+    public void updateOrder(int orderID, String status) {
+        Orders order = ordersRepository.findById(orderID).get();
+        order.setStatus(status);
+        ordersRepository.save(order);
+
+    }
 }

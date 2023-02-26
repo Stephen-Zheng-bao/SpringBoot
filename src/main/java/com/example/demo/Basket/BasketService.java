@@ -28,7 +28,7 @@ public class BasketService {
         ArrayList<basketItem> currentBasket = new ArrayList<basketItem>();
 
         for (Basket item: userBasket){
-            currentBasket.add(new basketItem(productReposiory.findByProductID(item.getProductID().toString()),item.getQuantity()));
+            currentBasket.add(new basketItem(item.getBasketID(),productReposiory.findByProductID(item.getProductID().toString()),item.getQuantity()));
         }
         return currentBasket;
 
@@ -36,5 +36,9 @@ public class BasketService {
 
     public void createBasket(Basket itemAdd) {
         basketRepository.save(itemAdd);
+    }
+
+    public void delete(int basketID) {
+        basketRepository.deleteById(basketID);
     }
 }

@@ -20,10 +20,6 @@ public class UserController {
         this.userService = userService;
     }
 
-/*   @RequestMapping(value = "/welcome")
-    public List<User> getUser() {
-        return userService.getUser();
-    }*/
 
 
 
