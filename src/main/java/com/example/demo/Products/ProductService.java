@@ -27,7 +27,7 @@ public class ProductService {
     	return productRepository.findByProductType(type);
     }
     public List<Product> fetchByName(String name){
-    	return productRepository.findByProductName(name);
+    	return productRepository.findByProductNameContains(name);
     }
     public List<Product> getProduct(){return productRepository.findAll();}
 
