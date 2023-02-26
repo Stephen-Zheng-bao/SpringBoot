@@ -27,17 +27,18 @@ import java.util.List;
         public ProductController(ProductService productService) {
             this.productService = productService;
         }
-        @PostMapping("/filter")
-        public String filter(@RequestParam String type,Model model) {
-            List<Product> product = productService.fetchByType(type);
-            model.addAttribute("product", product);
-            return "Product/jewellery";
+        @GetMapping("/filter")
+        @ResponseBody
+        public List<Product> filter(@RequestParam String type) {
+        	return productService.fetchByType(type);
         }
-        @PostMapping("/search")
-        public String search(@PathVariable("name") @RequestParam String name,Model model) {
-            List<Product> product = productService.fetchByName(name);
-            model.addAttribute("product", product);
-            return "Product/jewellery";
+        @GetMapping("/search")
+        @ResponseBody
+        public List<Product> search(@RequestParam String name) {
+
+            System.out.println(name);
+            System.out.println(productService.fetchByName(name));
+            return productService.fetchByName(name);
         }
 
         /*@GetMapping(value = "/product")
