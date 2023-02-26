@@ -54,6 +54,11 @@ public class AdminController {
         model.addAttribute("order", new Orders());
 		return "/Admin/Orders";
 	}
+	@PostMapping("/admin/updateOrder")
+	public String updateOrder(@RequestParam String status ,@RequestParam String orderID){
+		orderService.updateOrder(Integer.parseInt(orderID),status);
+		return "/Admin/Orders";
+	}
 	@GetMapping("/admin/customers")
 	public String Customers(Model model) {
         List<User> users = userService.getUsers();
