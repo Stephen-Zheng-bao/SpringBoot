@@ -1,15 +1,12 @@
 
-<!--Made by Ehsan and Viktorija-->
-
-<!DOCTYPE html>
+v<!DOCTYPE html>
 <head>
 <html lang="en">
       <meta name = "viewport" content="with=device-width, initial-scale=1.0">
-         <title>STATUS tm</title>
+         <title>STATUS</title>
          <link rel="Stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
          <link rel = "stylesheet" href="contact.styles.css">
       </head>
-      <!--the navbar -->
       <header>
         <img class="logo" src="https://media.discordapp.net/attachments/1071505588044968038/1075014674346672138/statusLOGO.png" width="40px" height="40px"/>      <nav>
           <ul>
@@ -19,124 +16,38 @@
             <li>About us</li>
           </ul>
         </nav>
-       <!--the navbar -->
+       
 
       </header>
-      <!-- contact us body-->
-<body> 
-    <section class = "Contact">
-        <div class  = "content">
-            <h2> Contact Us</h2>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-        </div>
-        <div class = "container">
-            <div class = "ContactForm">
-                <form> <h2> Process Enquiry here</h2>
-                <div class="InputInfo">
-                    <input type = "text" name =""  required = "required">
-                    <span> Type Your Name....</span>
-                </div>
-                <div class="InputInfo">
-                    <input type = "text" name =""  required = "required">
-                    <span>Type Your Email....</span>
-                </div>
-                <div class="InputInfo">
-                    <input type = "text" name =""  required = "required">
-                    <span> Type Your Phone Number....</span>
-                </div>
-                <div class="InputInfo">
+      <!-- nav bar-->
+      <div class="InputBox">
                     <textarea required = "required"></textarea>
                     <span> Type Your Message....</span>
                 </div>
-                <div class = "InputInfo">
+                <div class = "InputBox">
                     <input type = "submit" name="" value = "Send">
                 </div>
                 </form>
             </div>
-        <div class = "MainForm">
-            <div class = "contactInfo">
-                <div class = "box">
-                    <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i>
-                    </div>
-                    <div class = "text">
-                        <h3>Location</h3>
-                    </div>
-                </div>
-                <div class = "box">
+            <div class = "box">
                     <div class ="icon"><i class="fa fa-phone" aria-hidden="true"></i>
                     </div>
                     <div class = "text">
                         <h3>Call us</h3>
                     </div>
                 </div>
-                <div class = "box">
+                           <div class = "box">
                     <div class ="icon"><i class="fa fa-envelope" aria-hidden="true"></i>
                     </div>
                     <div class = "text">
                         <h3>General Enquiries</h3>
-                     
+                        <p>Support@Sports4Us.com</p> 
                     </div>
                 </div>
             </div>
     </div>
-    
-    
     <div class="Gmap"><div class="GmapCan"><iframe width="618" height="544" id="gmap_canvas" src="https://maps.google.com/maps?q=aston%20un&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></a><br><style>.mapouter{position:relative;text-align:right;height:544px;width:618px;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:544px;width:618px;}</style></div></div>    </section>
-    
-    
-    <footer>
-        <div class="slogan">
-            <script type="text/javascript">
-              rndmSlogan = function () {
-                var sales = new Array();
-                sales[0] = "Free Bracelet reconditioning";
-                sales[1] = "Highest grade diamonds";
-                sales[2] = "Official Hallmark";
-                sales[3] = "5 year warranty";
-                var rand = Math.floor(Math.random() * sales.length);
-                document.write(sales[rand]);
-              };
-              rndmSlogan();
-            </script>
-            <!--code to randomly generate sales to customers
-            JAVA SCRIPT-->
-          </div>
-          
-          
-          <div class="footer-container">
-            <ul class="footer-item">
-              <h4>We</h4>
-              <li>Hallmark guide</li>
-              <li>Stainless Steel</li>
-              <li>Lab grown</li>
-              <li>Moissanite</li>
-              <li>Gem</li>
-                <!--Footer section 1-->
-            </ul>
-            <ul class="footer-item">
-              <h4>Are</h4>
-              <li>Innovation</li>
-              <li>Creativity</li>
-              <li>Unique</li>
-              <li>Timeless</li>
-              <li>Sentimental</li>
-                <!--Footer section 2-->
-            </ul>
-            <ul class="footer-item">
-              <h4>Timeless.</h4>
-              <li>About Us</li>
-              <li>Watches</li>
-              <li>Earrings</li>
-              <li>Necklaces</li>
-              <li>Pendants</li>
-                <!--Footer section 3-->
-            </ul>
-          </div>
-          <div class="copyright">
+ <div class="copyright">
             <h3>CopyRight</h3>
             <p>Established in 2023, 'Status' was established by gem specialist
               located in the United Kingdom offering services to international
