@@ -1,6 +1,8 @@
 header {
 top: 0;
 position:fixed;
+  text-decoration: none;
+  list-style-type:none;
 }
 
 
