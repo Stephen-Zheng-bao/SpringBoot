@@ -46,3 +46,21 @@ v<!DOCTYPE html>
                 </div>
             </div>
     </div>
+  <footer>
+        <div class="slogan">
+            <script type="text/javascript">
+              rndmSlogan = function () {
+                var sales = new Array();
+                sales[0] = "Free Bracelet reconditioning";
+                sales[1] = "Highest grade diamonds";
+                sales[2] = "Official Hallmark";
+                sales[3] = "5 year warranty";
+                var rand = Math.floor(Math.random() * sales.length);
+                document.write(sales[rand]);
+              };
+              rndmSlogan();
+            </script>
+            <!--code to randomly generate sales to customers
+            JAVA SCRIPT-->
+          </div>
+          
