@@ -37,6 +37,8 @@ public class SecurityConfig {
 			.authorizeHttpRequests().anyRequest().permitAll()
 			.and()
 			.formLogin()
+				.loginPage("/login")
+				.usernameParameter("email")
 			.and()
 			.build();
 	}
