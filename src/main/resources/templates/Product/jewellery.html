@@ -13,15 +13,19 @@
     <header th:insert="~{Fragment/navbar :: copy}"></header>
 
         <div class = "container">
+
             <div class = "header">
                 <h1> Jewellery </h1>
             </div>
             <br>
             <div class = "sidebar">
-                <form>
+
+                <form th:action="@{search}" method="post">
                     <i class = "fas fa-search"></i>
-                    <input type = "text" name = "" id = "search-item" placeholder = "Search jewellery">
+                    <input type="text" th:name="name" placeholder= "Search jewellery" />
+                    <button type="submit">Search</button>
                 </form>
+
                 <br>
                 <button> Necklaces </button>
                 <button> Rings </button>

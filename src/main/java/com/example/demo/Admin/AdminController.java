@@ -80,16 +80,25 @@ public class AdminController {
 		productCast.setDescription(description);
 		productService.updateProduct(productCast);
 		return "/Admin/admin";
+
+
 	}
+
+	@RequestMapping(value = "/admin/delete",method = RequestMethod.POST)
+	public String delete_User(@RequestParam String UserId) {
+		userService.deleteUser(Integer.parseInt(UserId));
+		return "redirect:/admin/customers";
+	}
+
 	@PostMapping("/admin/updateRole")
 	public String updateRole(@RequestParam String role, @RequestParam String userID) {
 		userService.updateRole(Integer.parseInt(userID),role);
-		return "/Admin/admin";
+		return "redirect:/admin/customers";
 	}
 	@PostMapping("/admin/deleteProduct")
     public String deleteProduct(@RequestParam String ProductId) {
        productService.deleteProduct(Integer.parseInt(ProductId));
-        return "redirect:/Admin";
+        return "redirect:/admin/customers";
     }
 
 
