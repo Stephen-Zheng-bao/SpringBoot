@@ -35,7 +35,10 @@ import java.util.List;
         @GetMapping("/search")
         @ResponseBody
         public List<Product> search(@RequestParam String name) {
-        	return productService.fetchByName(name);
+
+            System.out.println(name);
+            System.out.println(productService.fetchByName(name));
+            return productService.fetchByName(name);
         }
 
         /*@GetMapping(value = "/product")
