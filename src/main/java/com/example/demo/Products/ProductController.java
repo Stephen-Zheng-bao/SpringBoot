@@ -32,13 +32,11 @@ import java.util.List;
         public List<Product> filter(@RequestParam String type) {
         	return productService.fetchByType(type);
         }
-        @GetMapping("/search")
-        @ResponseBody
-        public List<Product> search(@RequestParam String name) {
-
-            System.out.println(name);
-            System.out.println(productService.fetchByName(name));
-            return productService.fetchByName(name);
+        @PostMapping("/search")
+        public String search(@RequestParam String name,Model model) {
+            List<Product> product = productService.fetchByName(name);
+            model.addAttribute("product", product);
+            return "Product/jewellery";
         }
 
         /*@GetMapping(value = "/product")
