@@ -46,50 +46,16 @@ v<!DOCTYPE html>
                 </div>
             </div>
     </div>
-  <footer>
-        <div class="slogan">
-            <script type="text/javascript">
-              rndmSlogan = function () {
-                var sales = new Array();
-                sales[0] = "Free Bracelet reconditioning";
-                sales[1] = "Highest grade diamonds";
-                sales[2] = "Official Hallmark";
-                sales[3] = "5 year warranty";
-                var rand = Math.floor(Math.random() * sales.length);
-                document.write(sales[rand]);
-              };
-              rndmSlogan();
-            </script>
-            <!--code to randomly generate sales to customers
-            JAVA SCRIPT-->
+    <div class="Gmap"><div class="GmapCan"><iframe width="618" height="544" id="gmap_canvas" src="https://maps.google.com/maps?q=aston%20un&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></a><br><style>.mapouter{position:relative;text-align:right;height:544px;width:618px;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:544px;width:618px;}</style></div></div>    </section>
+ <div class="copyright">
+            <h3>CopyRight</h3>
+            <p>Established in 2023, 'Status' was established by gem specialist
+              located in the United Kingdom offering services to international
+              customers at unbeatable prices.</p>
+                <!--bottom footer copyright section-->
           </div>
-          
- <div class="footer-container">
-            <ul class="footer-item">
-              <h4>We</h4>
-              <li>Hallmark guide</li>
-              <li>Stainless Steel</li>
-              <li>Lab grown</li>
-              <li>Moissanite</li>
-              <li>Gem</li>
-                <!--Footer section 1-->
-            </ul>
-            <ul class="footer-item">
-              <h4>Are</h4>
-              <li>Innovation</li>
-              <li>Creativity</li>
-              <li>Unique</li>
-              <li>Timeless</li>
-              <li>Sentimental</li>
-                <!--Footer section 2-->
-            </ul>
-            <ul class="footer-item">
-              <h4>Timeless.</h4>
-              <li>About Us</li>
-              <li>Watches</li>
-              <li>Earrings</li>
-              <li>Necklaces</li>
-              <li>Pendants</li>
-                <!--Footer section 3-->
-            </ul>
-          </div>
+        
+    </footer>
+
+</body>
+</html>
