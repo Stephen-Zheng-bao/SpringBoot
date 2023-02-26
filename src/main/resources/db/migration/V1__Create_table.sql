@@ -40,7 +40,18 @@ CREATE TABLE past_order(
                               status text NOT NULL,
                               PRIMARY KEY(orderID)
 );
-
+CREATE TABLE `prod_seq` (
+    `next_val` bigint(20) DEFAULT NULL
+);
+CREATE TABLE `bask_seq` (
+    `next_val` bigint(20) DEFAULT NULL
+);
+CREATE TABLE `orde_seq` (
+    `next_val` bigint(20) DEFAULT NULL
+);
+CREATE TABLE `user_seq` (
+    `next_val` bigint(20) DEFAULT NULL
+);
 
 
 

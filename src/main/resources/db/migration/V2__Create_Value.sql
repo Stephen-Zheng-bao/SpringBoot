@@ -9,3 +9,11 @@ VALUES (1, 'test', 'test', '$2a$10$wszwmsVUhEJYvpm07jcX8uzrdbUrm5ipJZy5TBJW5yGLu
 
 INSERT INTO `past_order` (`orderID`, `order_number`, `userID`, `productID`, `quantity`, `price`, `status`)
 VALUES (1, '0', '1', '1', '0', '0', 'processing');
+INSERT INTO `prod_seq` (`next_val`)
+VALUES (3);
+INSERT INTO `user_seq` (`next_val`)
+VALUES (2);
+INSERT INTO `orde_seq` (`next_val`)
+VALUES (2);
+INSERT INTO `bask_seq` (`next_val`)
+VALUES (2);

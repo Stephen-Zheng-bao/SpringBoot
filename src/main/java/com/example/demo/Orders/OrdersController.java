@@ -26,7 +26,7 @@ public class OrdersController {
         this.userService = userService;
         this.basketService = basketService;
     }
-    @PostMapping("/checkout")
+    @GetMapping("/checkout")
     public String checkout(){
         int userID = userService.getIDOfCurrentUser();
         List<basketItem> basket = basketService.getBasket(userID);
@@ -41,6 +41,7 @@ public class OrdersController {
             order.setStatus("processing");
             order.setQuantity(item.getQuantity());
             ordersService.saveOrder(order);
+            basketService.delete(item.getBasketID());
         }
         return ("redirect:/");
     }
