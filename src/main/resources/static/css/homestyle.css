@@ -3,73 +3,86 @@
   padding: 0;
   font-family: "Open sanss", sans-serif;
   box-sizing: border-box;
+  
+}
+
+.footer {
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  
+}
+
+body {
+  background: linear-gradient(135deg,  #574432d7, #e8cba6);
 }
 
 a {
   text-decoration: none;
 }
-
   .container {
     display:flex;
     transition: 0.5s;
     filter: grayscale(100%);
    height: 500px;
-
+    
   }
   .container > img {
    width: auto;
-
+   
   }
-
+  
   .wrapper {
    overflow:hidden;
     width: 100%;
     margin: auto;
     left: 30px;
-
-    box-shadow: 2px 3px 15px;
-
+    min-width: 700px;
+    height: 400px;
   }
-
+  
  .container {
     filter: grayscale(100%);
-
+   
     animation: slide 15s infinite;
     animation-direction: alternate;
-
+    
   }
 
   .container:hover {
     filter: grayscale(0%);
-
-
+    
+    
   }
 
   @keyframes slide {
-
+    
     from{transform: translate(0,0);}
     to{transform: translate(-1800px,0);}
   }
 
   @-webkit-keyframes slide {
-
+    
     from{transform: translate(0,0);}
     to{transform: translate(-1800px,0);}
   }
 
   .randomiser {
-
-
+    
+    
     font-size: 25px;
     text-align: center;
-
-
+    
+    
     width: 100%;
     margin-top: 20px;
-
+    
   }
 
-  .welcome  {
+  .Welcome  {
     background-color:rgba(0, 0, 0, 0.401);
     position: absolute;
     z-index:1;
@@ -79,68 +92,53 @@ a {
     width: 100%;
     margin-top: 200px;
     color: rgb(255, 255, 255);
-    height: 50px;
+    height: 40px;
     white-space: nowrap;
     text-transform: uppercase;
-
-  }
+   }
 
   #welc-main {
     transition: opacity;
- opacity: 1;
+    opacity: 1;
+    animation: disappear 9s infinite alternate;
+    line-height: 0;  
+    margin-top: 20px;
+  }
+
+  @keyframes disappear{
+    0% {opacity: 1;
+    letter-spacing: normal;}
+    50% { opacity: 1;}
+    65%{opacity: 0;
+    letter-spacing: 20px;}
+    75%{ opacity: 0;}
+    100%{ opacity: 0;}
   }
 
   #welc {
     transition: opacity;
-opacity: 0;
-  }
-
-  .welcome:hover >  #welc{
-    transition-delay: 2s;
-  transition-duration: 2s;
-  color: rgb(255, 255, 255);
-  opacity: 1;
-  animation: squeeze 5s;
-  }
-
-  .welcome:hover >  #welc-main{
-
-    transition-duration: 2s;
-    color: rgb(255, 255, 255);
     opacity: 0;
-
-      }
-
-      @-webkit-keyframes squeeze{
-        from {letter-spacing: 30px;}
-        to{ letter-spacing: normal;}
-      }
+    animation: squeeze 9s infinite alternate;
+    line-height: 0; 
+    margin-top: 1px;
+  }
 
       @keyframes squeeze{
-        from {letter-spacing: 30px;}
-        to{ letter-spacing: normal;}
+        0% {opacity: 0;}
+        50% { opacity: 0;
+        letter-spacing: 10px;}
+        65%{opacity: 0;}
+        75%{ opacity: 1;}
+        100%{ opacity: 1;
+        letter-spacing: normal;}
       }
-  footer {
-    width: 100%;
-    background-color: white;
-    height: 75px;
-
-    width: 100%;
-    position:relative;
-    height: 140px;
-
-  }
+  
 
 
-  .payments {
-   position: absolute;
-   left: 0;
-   top: 20px;
-
-  }
-
+ 
+ 
   .footerText {
-  bottom: 0;
+  bottom: 0; 
   right: 0;
   position: absolute;
   font-size: 8px;
@@ -148,13 +146,13 @@ opacity: 0;
  }
 
  .socials {
-
+  
   right: 0;
   position: absolute;
-
+  
  }
 
-
+ 
  .footer-container{
   text-align: center;
   font-family: calibri;
@@ -186,7 +184,7 @@ opacity: 0;
 }
 .copyright{
   text-align: center;
-  padding: 25px 0;
+  padding: 35px 0;
 }
 
 .randomiser {
@@ -201,3 +199,76 @@ opacity: 0;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
+
+
+.para-1-container {
+  width: 100%;
+  background-color: rgb(247, 199, 144);
+  min-height: 200px;
+  display: flex;
+  text-align: center;
+}
+
+.para-1{
+  padding: 7px;
+  
+}
+
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 20px;
+}
+
+.slider-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform 0.4s ease-in-out;
+  width: 100%;
+  
+}
+
+.slider-item {
+  
+  margin-right: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.slider-item img {
+  width: auto;
+  height: auto;
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.slider-button-left {
+  left: 0;
+}
+
+.slider-button-right {
+  right: 0;
+}
+
+.slider-item img {
+  height: 200px;
+  width: 300px;
+  border-radius: 30px;
+}
+
+.slider-item {
+  background: beige;
+  border-radius: 30px;
+}
+
+
