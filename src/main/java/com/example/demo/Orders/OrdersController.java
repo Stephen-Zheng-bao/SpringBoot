@@ -3,12 +3,15 @@ package com.example.demo.Orders;
 
 import com.example.demo.Basket.BasketService;
 import com.example.demo.Basket.basketItem;
+import com.example.demo.Products.Product;
 import com.example.demo.User.UserService;
 import jakarta.persistence.criteria.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +28,13 @@ public class OrdersController {
         this.ordersService = ordersService;
         this.userService = userService;
         this.basketService = basketService;
+    }
+    @GetMapping("viewOrders")
+    @ResponseBody
+    public String viewOrder(Model model){
+        List<Orders> order = ordersService.getOrderByUserID(userService.getIDOfCurrentUser());
+        model.addAttribute("orders", order);
+        return "order";
     }
     @GetMapping("/checkout")
     public String checkout(){
