@@ -46,3 +46,8 @@ list-style-type:none;
   background-color: rgb(22, 30, 101);
   color: rgb(255, 255, 255);
 }
+
+#nav-ul li {
+text-decoration: none;
+list-style-type:none;
+}
