@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class MiscController {
 	@GetMapping("aboutus")
 	public String aboutus() {
-		return "/AboutUs/about";
+		return "AboutUs/about";
 	}
 	@GetMapping("contact")
 	public String contactus() {
