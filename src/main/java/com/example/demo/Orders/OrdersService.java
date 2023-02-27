@@ -38,4 +38,8 @@ public class OrdersService {
         ordersRepository.save(order);
 
     }
+
+    public List<Orders> getOrderByUserID(Integer idOfCurrentUser) {
+        return ordersRepository.findByUserID(idOfCurrentUser);
+    }
 }
