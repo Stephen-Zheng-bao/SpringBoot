@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85e89682-10e1-4d71-a799-27c8e74687d5" name="Changes" comment="Basket and Contact and Order pages complete (website functional state)">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Admin/AdminController.java" afterDir="false" />
+    <list default="true" id="85e89682-10e1-4d71-a799-27c8e74687d5" name="Changes" comment="admin working">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Aboutus/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/AboutUs/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/LeftOver/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/LeftOver/navbar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +144,8 @@
       <workItem from="1677155518912" duration="597000" />
       <workItem from="1677158182768" duration="11147000" />
       <workItem from="1677194162656" duration="286000" />
-      <workItem from="1677319823731" duration="36253000" />
+      <workItem from="1677319823731" duration="36458000" />
+      <workItem from="1677495186454" duration="1254000" />
     </task>
     <task id="LOCAL-00001" summary="Now able to Add data and delete data from the HTML page while also seeing the document">
       <created>1676222879271</created>
@@ -193,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677459787277</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="admin working">
+      <created>1677460079476</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1677460079476</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +244,7 @@
     <MESSAGE value="Completed admin section and login/register" />
     <MESSAGE value="Filter Kinda work" />
     <MESSAGE value="Basket and Contact and Order pages complete (website functional state)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basket and Contact and Order pages complete (website functional state)" />
+    <MESSAGE value="admin working" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin working" />
   </component>
 </project>
