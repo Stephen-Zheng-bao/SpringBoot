@@ -35,7 +35,7 @@ public class AdminController {
 	public String Admin(Model model) {
 		List<Product> products = productService.getProduct();
 		model.addAttribute("products", products);
-		model.addAttribute("prodcut", new Product());
+		model.addAttribute("product", new Product());
 		return "/admin/Admin";
 	}
 
