@@ -20,9 +20,10 @@ public class OrdersService {
         this.ordersRepository =  ordersRepository;
     }
 
-	public List<Orders> getOrders() {
-		return ordersRepository.findAll();
-	}
+
+    public List<Orders> getOrders() {
+        return ordersRepository.findAll();
+    }
 
     public int getNewID() {
         return ordersRepository.getPreviousID() + 1;
@@ -40,6 +41,6 @@ public class OrdersService {
     }
 
     public List<Orders> getOrderByUserID(Integer idOfCurrentUser) {
-        return ordersRepository.findByUserID(idOfCurrentUser);
+        return ordersRepository.findAllByUserID(idOfCurrentUser);
     }
 }

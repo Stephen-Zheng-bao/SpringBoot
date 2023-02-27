@@ -6,7 +6,7 @@
     <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Jewellery Page </title>
-    <link rel = "stylesheet" th:href = "@{/css/product.css}">
+    <link rel = "stylesheet" th:href = "@{/css/basket.css}">
     <link rel = "stylesheet" th:href = "@{/css/nav.css}">
 </head>
 <body>
@@ -16,32 +16,34 @@
     <h1>BASKET</h1>
     <table>
         <tr>
-            <th>ID</th>
+            <th>Image</th>
             <th>Name</th>
-            <th>Email</th>
-            <th>Password</th>
+            <th>Quantity</th>
+            <th>Price</th>
             <th>Delete</th>
+            <th>Update</th>
         </tr>
         <tr th:each="basket : ${baskets}">
-            <td th:text="${basket.image}"></td>
-            <td th:text="${basket.productName}"></td>
-            <td th:text="${basket.quantity}"></td>
-            <td th:text="${basket.price}"></td>
+            <td th:text="${basket.basketID}"></td>
+            <td th:text="${basket.product}"></td>
+            <td th:text="${basket.quantity}">
+                <input type="range" min="1" max="10" value="1" class="quantity-slider">
+                <span class="quantity">1</span>
+            </td>
+            <td th:text="${basket.basketID}"></td>
             <td>
-                <form th:action="@{delete}" method="post">
-                    <input type="hidden" th:name="UserId" th:value="${user.UserID}" />
+                <form th:action="@{deleteBasket}" method="post">
+                    <input type="hidden" th:name="UserId" th:value="${basket.basketID}" />
                     <button type="submit">Delete</button>
                 </form>
             </td>
             <td>
-                <form th:action="@{admin/updateRole}" method="post">
-                    <input type="hidden" th:name="userID" th:value="${user.UserID}" />
-                    <input type="hidden" th:name="role" th:value="ADMIN" />
-                    <button type="submit">Update</button>
-                </form>
             </td>
         </tr>
     </table>
+    <form th:action="@{checkout}" method="post">
+        <button type="submit">Buy</button>
+    </form>
 
 
 

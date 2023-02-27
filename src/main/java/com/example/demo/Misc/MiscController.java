@@ -9,9 +9,9 @@ public class MiscController {
 	public String aboutus() {
 		return "/AboutUs/about";
 	}
-	@GetMapping("contactus")
+	@GetMapping("contact")
 	public String contactus() {
-		return "contactus";
+		return "ContactUs/contactUs";
 	}
 	@GetMapping("navbar")
 	public String nav() {

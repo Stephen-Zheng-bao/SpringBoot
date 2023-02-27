@@ -7,6 +7,7 @@ import com.example.demo.Products.Product;
 import com.example.demo.User.UserService;
 import jakarta.persistence.criteria.Order;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,14 +30,17 @@ public class OrdersController {
         this.userService = userService;
         this.basketService = basketService;
     }
-    @GetMapping("viewOrders")
-    @ResponseBody
+
+    @PreAuthorize("hasAuthority('USER')")
+    @GetMapping("/order")
     public String viewOrder(Model model){
         List<Orders> order = ordersService.getOrderByUserID(userService.getIDOfCurrentUser());
+        System.out.println(order);
         model.addAttribute("orders", order);
-        return "order";
+        return "Order/order";
     }
-    @GetMapping("/checkout")
+    @PreAuthorize("hasAuthority('USER')")
+    @PostMapping("/checkout")
     public String checkout(){
         int userID = userService.getIDOfCurrentUser();
         List<basketItem> basket = basketService.getBasket(userID);
@@ -53,6 +57,6 @@ public class OrdersController {
             ordersService.saveOrder(order);
             basketService.delete(item.getBasketID());
         }
-        return ("redirect:/");
+        return ("redirect:/basket");
     }
 }

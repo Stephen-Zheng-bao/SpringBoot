@@ -38,20 +38,26 @@
 
 
                 <div th:each="prod : ${product}" class = "jewellery">
-                    <div class = "image">
-                        <img th:src="@{images/}+${prod.Image}">
-                    </div>
-                    <div class = "namePrice">
-                        <h3 th:text ="${prod.ProductName}"></h3>
-                        <span th:text ="'£'+${prod.Price}"> </span>
-                    </div>
+                    <form method="post" th:action="@{/addToBasket}" >
+                        <input th:name="productID" type="hidden" th:value="*{prod.productID}">
+                        <input th:name="quantity"  type="hidden" th:value="1">
+                        <input th:name="price"  type="hidden" th:value="*{prod.price}">
 
-                    <p th:text ="${prod.Description}"></p>
-                    <br>
-                    <div class = "buy">
+                            <div class = "image">
+                                <img th:src="@{images/}+${prod.image}">
+                            </div>
+                            <div class = "namePrice">
+                                <h3 th:text ="${prod.productName}"></h3>
+                                <span th:text ="'£'+${prod.price}"> </span>
+                            </div>
 
-                        <button> Buy now </button>
-                    </div>
+                            <p th:text ="${prod.description}"></p>
+                            <br>
+                            <div class = "buy">
+
+                                <button type = "submit"> Buy now </button>
+                            </div>
+                    </form>
                 </div>
 
 

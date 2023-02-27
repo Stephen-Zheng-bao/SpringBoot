@@ -79,7 +79,7 @@
     <div class="ProductTable">
 
 
-        <form method="post" th:action="@{/admin/productAdd}" th:object="${prodcut}">
+        <form method="post" th:action="@{/admin/productAdd}" th:object="${product}">
             <input id="productName" placeholder="name" type="text" th:field="*{productName}">
             <input id="productType" placeholder="productType" type="text" th:field="*{productType}">
             <input id="price" placeholder="Price" type="text" th:field="*{price}">

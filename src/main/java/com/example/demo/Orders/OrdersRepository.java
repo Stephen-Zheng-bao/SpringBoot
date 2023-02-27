@@ -12,5 +12,7 @@ public interface OrdersRepository extends JpaRepository<Orders,Integer> {
     @Query(value = "SELECT order_number FROM past_order WHERE (select max(orderID) FROM past_order)", nativeQuery = true)
     int getPreviousID();
 
-    List<Orders> findByUserID(Integer idOfCurrentUser);
+    List<Orders> findAllByUserID(Integer id);
+
+
 }

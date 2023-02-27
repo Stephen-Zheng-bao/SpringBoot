@@ -4,12 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85e89682-10e1-4d71-a799-27c8e74687d5" name="Changes" comment="Completed admin section and login/register">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/Basket/basket.html" afterDir="false" />
+    <list default="true" id="85e89682-10e1-4d71-a799-27c8e74687d5" name="Changes" comment="Filter Kinda work">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/basket.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/contact.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/ContactUs/contactUs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/Order/order.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Admin/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Products/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Products/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Login/Signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Login/Signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Basket/BasketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Basket/BasketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Misc/MiscController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Misc/MiscController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Orders/OrdersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Orders/OrdersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Orders/OrdersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Orders/OrdersRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Orders/OrdersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Orders/OrdersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/sign.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/sign.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Admin/Admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Admin/Admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Basket/basket.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Basket/basket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Fragment/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Fragment/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/LeftOver/Stuff/Basket.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/LeftOver/Stuff/Basket.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Product/jewellery.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Product/jewellery.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,10 +30,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="Class" />
         <option value="Interface" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -60,7 +70,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/Order" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -70,6 +80,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\demo\src\main\resources\templates\Order" />
       <recent name="C:\xampp\htdocs\demo\src\main\resources\static\css" />
       <recent name="C:\xampp\htdocs\demo\src\main\resources\templates\Admin" />
       <recent name="C:\xampp\htdocs\demo\src\main\resources\templates\Homepage" />
@@ -146,7 +157,7 @@
       <workItem from="1677155518912" duration="597000" />
       <workItem from="1677158182768" duration="11147000" />
       <workItem from="1677194162656" duration="286000" />
-      <workItem from="1677319823731" duration="24633000" />
+      <workItem from="1677319823731" duration="35697000" />
     </task>
     <task id="LOCAL-00001" summary="Now able to Add data and delete data from the HTML page while also seeing the document">
       <created>1676222879271</created>
@@ -183,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677409194640</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Filter Kinda work">
+      <created>1677430148934</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1677430148934</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +209,17 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="application.properties" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -211,6 +240,7 @@
     <MESSAGE value="MVC for Basket and Orders. Problem with database merging" />
     <MESSAGE value="Reorgination for entire project, website 45% done" />
     <MESSAGE value="Completed admin section and login/register" />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed admin section and login/register" />
+    <MESSAGE value="Filter Kinda work" />
+    <option name="LAST_COMMIT_MESSAGE" value="Filter Kinda work" />
   </component>
 </project>

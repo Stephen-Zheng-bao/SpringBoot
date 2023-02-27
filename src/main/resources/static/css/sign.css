@@ -21,7 +21,6 @@ body {
 .container {
     position: center;
     display: flex;
-    width: 50%;
     height: auto;
     background: #ffffff;
     box-shadow: 0 0 5px #999999;

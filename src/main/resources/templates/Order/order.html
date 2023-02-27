@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<html lan = "en">
+<head>
+    <meta charset = "utf-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Jewellery Page </title>
+    <link rel = "stylesheet" th:href = "@{/css/basket.css}">
+    <link rel = "stylesheet" th:href = "@{/css/nav.css}">
+</head>
+<body>
+<header th:insert="~{Fragment/navbar :: copy}"></header>
+
+<div class="container">
+    <h1>Order</h1>
+    <table>
+        <tr>
+            <th>Order ID</th>
+            <th>Product ID</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Name</th>
+            <th>Status</th>
+
+        </tr>
+        <tr th:each="order : ${orders}">
+            <td th:text="${order.OrdersID}"></td>
+            <td th:text="${order.ProductID}"></td>
+            <td th:text="${order.Quantity}"></td>
+            <td th:text="${order.Price}"></td>
+            <td th:text="${order.Status}"></td>
+
+        </tr>
+    </table>
+
+
+
+</html>
