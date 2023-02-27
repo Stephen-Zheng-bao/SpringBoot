@@ -36,7 +36,7 @@ public class AdminController {
 		List<Product> products = productService.getProduct();
 		model.addAttribute("products", products);
 		model.addAttribute("product", new Product());
-		return "/admin/Admin";
+		return "admin/Admin";
 	}
 
 	@PostMapping(value = "/admin/productAdd")
@@ -52,27 +52,27 @@ public class AdminController {
         List<Orders> orders = orderService.getOrders();
         model.addAttribute("orders", orders);
         model.addAttribute("order", new Orders());
-		return "/Admin/Orders";
+		return "Admin/Orders";
 	}
 	@PostMapping("/admin/updateOrder")
 	public String updateOrder(@RequestParam String status ,@RequestParam String orderID){
 		orderService.updateOrder(Integer.parseInt(orderID),status);
-		return "/Admin/Orders";
+		return "Admin/Orders";
 	}
 	@GetMapping("/admin/customers")
 	public String Customers(Model model) {
         List<User> users = userService.getUsers();
         model.addAttribute("users", users);
         model.addAttribute("user", new User());
-		return "/Admin/Customers";}
+		return "Admin/Customers";}
 
 	@GetMapping("/admin/accounts")
 	public String Account(Model model) {
-		return "/Admin/Account";}
+		return "Admin/Account";}
 
 	@GetMapping("/admin/vendors")
 	public String Vender(Model model) {
-		return "/Admin/Vendors";}
+		return "Admin/Vendors";}
 
 
 	@PostMapping("/admin/updateProduct")
@@ -84,7 +84,7 @@ public class AdminController {
 		productCast.setPrice(price);
 		productCast.setDescription(description);
 		productService.updateProduct(productCast);
-		return "/Admin/admin";
+		return "Admin/admin";
 
 
 	}
