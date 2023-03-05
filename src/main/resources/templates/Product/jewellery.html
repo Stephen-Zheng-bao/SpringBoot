@@ -34,13 +34,16 @@
             <br>
             <br>
             <br>
+            <h1 th:if="${error}">
+                <p th:text="${error}"></p>
+            </h1>
             <div class = "jewelleries">
 
 
                 <div th:each="prod : ${product}" class = "jewellery">
                     <form method="post" th:action="@{/addToBasket}" >
                         <input th:name="productID" type="hidden" th:value="*{prod.productID}">
-                        <input th:name="quantity"  type="hidden" th:value="1">
+                        <input th:name="quantity"  type="hidden" th:value="3">
                         <input th:name="price"  type="hidden" th:value="*{prod.price}">
 
                             <div class = "image">

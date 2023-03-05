@@ -33,5 +33,9 @@ public class ProductService {
 
     public void deleteProduct(int parseInt) {productRepository.deleteById(parseInt);
     }
+
+    public int getStock(int id) {
+        return Integer.valueOf(productRepository.findById(id).get().getStock());
+    }
 }
 

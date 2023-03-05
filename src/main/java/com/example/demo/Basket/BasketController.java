@@ -1,6 +1,7 @@
 package com.example.demo.Basket;
 
 
+import com.example.demo.Products.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
@@ -10,9 +11,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.User.UserService;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.servlet.view.RedirectView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -20,11 +21,13 @@ public class BasketController {
 
 private final  BasketService basketService;
 private final UserService userService;
+    private ProductService productService;
 
     @Autowired
-    public BasketController(BasketService basketService, UserService userService){
+    public BasketController(BasketService basketService, UserService userService, ProductService productService){
         this.basketService = basketService;
 		this.userService = userService;
+        this.productService = productService;
     }
     /*
     * Returns an ArrayList of basketItems
@@ -43,7 +46,12 @@ private final UserService userService;
     * */
     @PreAuthorize("hasAuthority('USER')")
     @PostMapping("/addToBasket")
-        public String addToBasket(@RequestParam String productID, @RequestParam String quantity, @RequestParam String price ){
+        public RedirectView addToBasket(@RequestParam String productID, @RequestParam String quantity, @RequestParam String price, RedirectAttributes redirectAttributes){
+        System.out.println(quantity);
+        if ((productService.getStock(Integer.valueOf(productID))- Integer.valueOf(quantity))  < 0){
+            redirectAttributes.addFlashAttribute("error","Out of Stock");
+            return new RedirectView("/product",true);
+        }
         Basket itemAdd = new Basket();
         itemAdd.setProductID(Integer.valueOf(productID));
         /*itemAdd.setQuantity(Integer.valueOf(quantity));*/
@@ -51,7 +59,7 @@ private final UserService userService;
         itemAdd.setUserID(userService.getIDOfCurrentUser());
         itemAdd.setPrice(price);
         basketService.createBasket(itemAdd);
-        return ("redirect:/");
+        return new RedirectView("/product",true);
     }
 
 }
