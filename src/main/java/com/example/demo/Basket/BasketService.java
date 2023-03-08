@@ -5,10 +5,8 @@ import com.example.demo.Products.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.example.demo.Products.ProductRepository;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+
+import java.util.*;
 
 
 @Service
@@ -40,5 +38,9 @@ public class BasketService {
 
     public void delete(int basketID) {
         basketRepository.deleteById(basketID);
+    }
+
+    public Optional<Basket> getBasketByProductID(Integer productID,Integer idOfCurrentUser) {
+        return basketRepository.findByProductIDAndUserID(productID,idOfCurrentUser);
     }
 }

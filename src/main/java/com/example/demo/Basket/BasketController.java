@@ -16,6 +16,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class BasketController {
@@ -53,10 +54,17 @@ private final UserService userService;
             redirectAttributes.addFlashAttribute("error","Out of Stock");
             return new RedirectView(request.getHeader("Referer"),true);
         }
-        Basket itemAdd = new Basket();
+        Basket itemAdd;
+        Optional<Basket> basket = basketService.getBasketByProductID(Integer.valueOf(productID),userService.getIDOfCurrentUser());
+        if (basket.isPresent()){
+            itemAdd = basket.get();
+        }
+        else {
+            itemAdd = new Basket();
+        }
         itemAdd.setProductID(Integer.valueOf(productID));
-        /*itemAdd.setQuantity(Integer.valueOf(quantity));*/
-        itemAdd.setQuantity(1);
+        itemAdd.setQuantity(Integer.valueOf(quantity));
+        //itemAdd.setQuantity(1);
         itemAdd.setUserID(userService.getIDOfCurrentUser());
         itemAdd.setPrice(price);
         basketService.createBasket(itemAdd);
