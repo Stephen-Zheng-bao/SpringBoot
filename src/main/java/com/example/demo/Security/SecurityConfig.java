@@ -30,7 +30,6 @@ public class SecurityConfig {
 	
 	@Bean
 	public SecurityFilterChain SecurityFilterChain(HttpSecurity http) throws Exception{
-		System.out.println("This is a test");
 		return http.csrf().disable()
 			.authorizeHttpRequests().requestMatchers("/admin/").authenticated()
 			.and()

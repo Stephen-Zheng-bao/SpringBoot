@@ -36,7 +36,7 @@ public class AdminController {
 		List<Product> products = productService.getProduct();
 		model.addAttribute("products", products);
 		model.addAttribute("product", new Product());
-		return "admin/Admin";
+		return "admin/admin";
 	}
 
 	@PostMapping(value = "/admin/productAdd")

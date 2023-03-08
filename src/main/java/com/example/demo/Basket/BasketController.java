@@ -2,6 +2,7 @@ package com.example.demo.Basket;
 
 
 import com.example.demo.Products.ProductService;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
@@ -46,11 +47,11 @@ private final UserService userService;
     * */
     @PreAuthorize("hasAuthority('USER')")
     @PostMapping("/addToBasket")
-        public RedirectView addToBasket(@RequestParam String productID, @RequestParam String quantity, @RequestParam String price, RedirectAttributes redirectAttributes){
+        public RedirectView addToBasket(@RequestParam String productID, @RequestParam String quantity, @RequestParam String price, RedirectAttributes redirectAttributes, HttpServletRequest request ){
         System.out.println(quantity);
         if ((productService.getStock(Integer.valueOf(productID))- Integer.valueOf(quantity))  < 0){
             redirectAttributes.addFlashAttribute("error","Out of Stock");
-            return new RedirectView("/product",true);
+            return new RedirectView(request.getHeader("Referer"),true);
         }
         Basket itemAdd = new Basket();
         itemAdd.setProductID(Integer.valueOf(productID));
@@ -59,7 +60,7 @@ private final UserService userService;
         itemAdd.setUserID(userService.getIDOfCurrentUser());
         itemAdd.setPrice(price);
         basketService.createBasket(itemAdd);
-        return new RedirectView("/product",true);
+        return new RedirectView(request.getHeader("Referer"),true);
     }
 
 }
