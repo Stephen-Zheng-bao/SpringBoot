@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Open sanss", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   box-sizing: border-box;
   
 }
@@ -17,7 +17,7 @@
 }
 
 body {
-  background: linear-gradient(135deg,  #574432d7, #e8cba6);
+  background: linear-gradient(45deg,  #ffffffd7, #ffffffd7);
 }
 
 a {
@@ -45,7 +45,7 @@ a {
   }
   
  .container {
-    filter: grayscale(100%);
+    
    
     animation: slide 15s infinite;
     animation-direction: alternate;
@@ -60,8 +60,10 @@ a {
 
   @keyframes slide {
     
-    from{transform: translate(0,0);}
-    to{transform: translate(-1800px,0);}
+    from{transform: translate(0,0);
+    filter: grayscale(1);}
+    to{transform: translate(-1800px,0);
+    filter: grayscale(0);}
   }
 
   @-webkit-keyframes slide {
@@ -119,7 +121,7 @@ a {
     transition: opacity;
     opacity: 0;
     animation: squeeze 9s infinite alternate;
-    
+    line-height: 0; 
     margin-top: 1px;
   }
 
@@ -201,74 +203,27 @@ a {
 }
 
 
-.para-1-container {
+.video {
+  height: 400px;
   width: 100%;
-  background-color: rgb(247, 199, 144);
-  min-height: 200px;
-  display: flex;
-  text-align: center;
-}
-
-.para-1{
-  padding: 7px;
-  
-}
-
-
-.slider-container {
-  position: relative;
   overflow: hidden;
-  width: 100%;
-  padding: 20px;
-}
-
-.slider-wrapper {
-  display: flex;
-  flex-wrap: nowrap;
-  transition: transform 0.4s ease-in-out;
-  width: 100%;
-  
-}
-
-.slider-item {
-  
-  margin-right: 20px;
-  padding: 20px;
+  filter: grayscale(0);
+  display: block;
   text-align: center;
 }
 
-.slider-item img {
-  width: auto;
-  height: auto;
-}
 
-.slider-button {
+video {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  padding: 10px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  cursor: pointer;
+  width: 100%;
+  display: block;
+ 
+ 
 }
 
-.slider-button-left {
-  left: 0;
-}
 
-.slider-button-right {
-  right: 0;
-}
 
-.slider-item img {
-  height: 200px;
-  width: 300px;
-  border-radius: 30px;
-}
-
-.slider-item {
-  background: beige;
-  border-radius: 30px;
-}
 
 
