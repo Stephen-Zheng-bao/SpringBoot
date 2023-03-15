@@ -1,11 +1,14 @@
 package com.example.demo.User;
 
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.List;
 
@@ -35,6 +38,7 @@ public class UserController {
 
     @PostMapping(value = "/add")
     public String createUser(@ModelAttribute User users, Model model, BindingResult bindingResult) {
+
     	System.out.println(users);
     	users.setRoles("USER");
         User user = userService.createUser(users);
@@ -76,11 +80,19 @@ public class UserController {
     }
 
     @PostMapping("/addingUser")
-    public String addingUser(@ModelAttribute User users, Model model, BindingResult bindingResult) {
-        System.out.println(users);
-        users.setRoles("USER");
-        User user = userService.createUser(users);
-        return "redirect:/login";
+    public RedirectView addingUser(@ModelAttribute User users, Model model, BindingResult bindingResult, RedirectAttributes redirectAttributes, HttpServletRequest request) {
+        if (userService.checkEmailUnique(users.getEmail())){
+            System.out.println(users);
+            users.setRoles("USER");
+            User user = userService.createUser(users);
+            redirectAttributes.addFlashAttribute("error","User Created Succesful");
+            return new RedirectView("/login",true);
+        }
+        else {
+            redirectAttributes.addFlashAttribute("error","Email already exists in the database");
+            return new RedirectView(request.getHeader("Referer"),true);
+        }
+
     }
 
 

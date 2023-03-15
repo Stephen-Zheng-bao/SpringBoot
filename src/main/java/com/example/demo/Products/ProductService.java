@@ -1,6 +1,7 @@
 package com.example.demo.Products;
 
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 
@@ -37,5 +38,19 @@ public class ProductService {
     public int getStock(int id) {
         return Integer.valueOf(productRepository.findById(id).get().getStock());
     }
+
+    public void updateStock(Product product,int i) {
+        product.setStock(Integer.toString(i));
+        productRepository.save(product);
+    }
+    public HashMap<String,String> generateReport(){
+        HashMap<String,String> list = new HashMap<>();
+        List<Product> products = productRepository.findAll();
+        for (Product item : products){
+            list.put(item.getProductName(),item.getStock());
+        }
+        return list;
+    }
+
 }
 

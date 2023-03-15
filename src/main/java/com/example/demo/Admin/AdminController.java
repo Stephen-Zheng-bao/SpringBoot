@@ -1,6 +1,8 @@
 package com.example.demo.Admin;
 
 import com.example.demo.Orders.*;
+
+import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 
@@ -74,6 +76,16 @@ public class AdminController {
 	public String Vender(Model model) {
 		return "Admin/Vendors";}
 
+	@GetMapping("/admin/generateReport")
+	@ResponseBody
+	public HashMap<String,Object> generateReport(){
+		HashMap<String,Object> infomationToSend = new HashMap<String,Object>();
+		infomationToSend.put("totalOrders", orderService.orderTotals());
+		infomationToSend.put("totalProcessing",orderService.orderProcessingTotal());
+		infomationToSend.put("totalDispatched",orderService.orderDispatchedTotal());
+		infomationToSend.put("stock",productService.generateReport());
+		return infomationToSend;
+	}
 
 	@PostMapping("/admin/updateProduct")
 	public String updateProduct(@RequestParam String ProductId ,@RequestParam String productName,@RequestParam String description, @RequestParam String price) {

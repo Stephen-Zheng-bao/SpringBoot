@@ -7,6 +7,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserService {
@@ -55,7 +56,15 @@ public class UserService {
 		return user.getUserID();
 	}
 
-
+	public boolean checkEmailUnique(String userEmail){
+		Optional<User> user = userRepository.findByEmail(userEmail);
+		if (user.isPresent()){
+			return false;
+		}
+		else{
+			return true;
+		}
+	}
 
 	public List<User> fetchByName(String name) {
 		return userRepository.findByName(name);

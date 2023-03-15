@@ -26,6 +26,9 @@
                         <div th:if="${param.error}">
                             <p class="text-danger">[[${session.SPRING_SECURITY_LAST_EXCEPTION.message}]]</p>
                         </div>
+                        <h1 th:if="${error}">
+                            <p th:text="${error}"></p>
+                        </h1>
                         <div class="user-details">
                           
                             <div class="input-box">

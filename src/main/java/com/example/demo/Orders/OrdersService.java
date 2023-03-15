@@ -6,6 +6,7 @@ import com.example.demo.User.UserRepository;
 
 import java.util.List;
 
+import jakarta.persistence.criteria.CriteriaBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -43,4 +44,18 @@ public class OrdersService {
     public List<Orders> getOrderByUserID(Integer idOfCurrentUser) {
         return ordersRepository.findAllByUserID(idOfCurrentUser);
     }
+
+    public String orderTotals() {
+        List<Orders> orders = ordersRepository.findAll();
+        return Integer.toString(orders.size());
+    }
+    public String orderProcessingTotal(){
+        List<Orders> orders = ordersRepository.findByStatus("processing");
+        return Integer.toString(orders.size());
+    }
+    public String orderDispatchedTotal(){
+        List<Orders> orders = ordersRepository.findByStatus("Dispatched");
+        return Integer.toString(orders.size());
+    }
+
 }
