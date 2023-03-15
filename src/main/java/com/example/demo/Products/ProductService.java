@@ -25,7 +25,7 @@ public class ProductService {
     	return productRepository.findById(id);
     }
     public List<Product> fetchByType(String type){
-    	return productRepository.findByProductType(type);
+    	return productRepository.findByProductTypeContains(type);
     }
     public List<Product> fetchByName(String name){
     	return productRepository.findByProductNameContains(name);

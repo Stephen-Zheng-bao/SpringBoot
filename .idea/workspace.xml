@@ -4,10 +4,57 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85e89682-10e1-4d71-a799-27c8e74687d5" name="Changes" comment="admin working">
+    <list default="true" id="85e89682-10e1-4d71-a799-27c8e74687d5" name="Changes" comment="about us working on deploy">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ImagesHomePage/ear1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ImagesHomePage/ear2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ImagesHomePage/ear3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ImagesHomePage/ear4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ImagesHomePage/ear5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ImagesHomePage/ear6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ImagesHomePage/ear7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ImagesHomePage/ear8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ImagesHomePage/ear9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ear1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ear2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ear3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ear4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ear5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ear6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ear7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ear8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ear9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/neck1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/neck2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/neck3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/neck4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/neck5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/neck6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/neck8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/neck9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ring1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ring2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ring3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ring4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ring5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ring6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ring7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ring8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ring9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/LeftOver/Products Page-Ruth/Necklace/images/neck7.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Aboutus/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/AboutUs/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/LeftOver/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/LeftOver/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Admin/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Products/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Products/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Products/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Products/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Products/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Products/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Create_Value.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Create_Value.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/nav.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/AboutUs/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/AboutUs/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ContactUs/contactUs.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ContactUs/contactUs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Fragment/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Fragment/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Homepage/Homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Homepage/Homepage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/LeftOver/Products Page-Ruth/Necklace/Necklace.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/LeftOver/Products Page-Ruth/Necklace/Necklace.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/LeftOver/Products Page-Ruth/Necklace/images/necks7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/neck7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Product/jewellery.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Product/jewellery.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +104,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/Order" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -67,11 +114,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\demo\src\main\resources\static\images" />
+      <recent name="C:\xampp\htdocs\demo\src\main\resources\static\images\ImagesHomePage" />
       <recent name="C:\xampp\htdocs\demo\src\main\resources\templates\Order" />
       <recent name="C:\xampp\htdocs\demo\src\main\resources\static\css" />
       <recent name="C:\xampp\htdocs\demo\src\main\resources\templates\Admin" />
-      <recent name="C:\xampp\htdocs\demo\src\main\resources\templates\Homepage" />
-      <recent name="C:\xampp\htdocs\demo\src\main\resources\static\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\demo\src\main\resources\templates\LeftOver" />
@@ -145,7 +192,20 @@
       <workItem from="1677158182768" duration="11147000" />
       <workItem from="1677194162656" duration="286000" />
       <workItem from="1677319823731" duration="36458000" />
-      <workItem from="1677495186454" duration="1254000" />
+      <workItem from="1677495186454" duration="1334000" />
+      <workItem from="1677502487519" duration="5879000" />
+      <workItem from="1677620185991" duration="2065000" />
+      <workItem from="1677661668368" duration="1769000" />
+      <workItem from="1677700631512" duration="1258000" />
+      <workItem from="1678018343149" duration="3536000" />
+      <workItem from="1678104510168" duration="2250000" />
+      <workItem from="1678113688442" duration="395000" />
+      <workItem from="1678262354573" duration="274000" />
+      <workItem from="1678266414470" duration="474000" />
+      <workItem from="1678267207453" duration="4271000" />
+      <workItem from="1678706659279" duration="2598000" />
+      <workItem from="1678712618796" duration="5745000" />
+      <workItem from="1678870853762" duration="6104000" />
     </task>
     <task id="LOCAL-00001" summary="Now able to Add data and delete data from the HTML page while also seeing the document">
       <created>1676222879271</created>
@@ -203,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677460079476</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="about us working on deploy">
+      <created>1677496593320</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1677496593320</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,6 +312,7 @@
     <MESSAGE value="Filter Kinda work" />
     <MESSAGE value="Basket and Contact and Order pages complete (website functional state)" />
     <MESSAGE value="admin working" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin working" />
+    <MESSAGE value="about us working on deploy" />
+    <option name="LAST_COMMIT_MESSAGE" value="about us working on deploy" />
   </component>
 </project>

@@ -9,10 +9,10 @@
     <link rel = "stylesheet" th:href = "@{/css/nav.css}">
   </head>
 
-  
+
 <header th:fragment="copy">
   <nav id="nav-bar">
-  <img id="logo" src="https://media.discordapp.net/attachments/1071505588044968038/1075014674346672138/statusLOGO.png" width="40px" height="40px"/> 
+  <img id="logo" src="https://media.discordapp.net/attachments/1071505588044968038/1075014674346672138/statusLOGO.png" width="40px" height="40px"/>
     <ul id="nav-ul">
       <li ><a th:href="@{/}">Home</a></li>
       <li ><a th:href="@{/product}">Products</a></li>
@@ -27,3 +27,41 @@
     </ul>
   </nav>
 </header>
+
+<footer th:fragment="footer">
+  <div class="footer">
+    <div class="footer-container">
+      <ul class="footer-item">
+        <h4>We</h4>
+        <li>Hallmark guide</li>
+        <li>Stainless Steel</li>
+        <li>Lab grown</li>
+        <li>Moissanite</li>
+        <li>Gem</li>
+      </ul>
+      <ul class="footer-item">
+        <h4>Are</h4>
+        <li>Innovation</li>
+        <li>Creativity</li>
+        <li>Unique</li>
+        <li>Timeless</li>
+        <li>Sentimental</li>
+      </ul>
+      <ul class="footer-item">
+        <h4>Timeless.</h4>
+        <li>About Us</li>
+        <li>Watches</li>
+        <li>Earrings</li>
+        <li>Necklaces</li>
+        <li>Pendants</li>
+      </ul>
+    </div>
+    <div class="copyright">
+      <h3>CopyRight</h3>
+      <p>Established in 2023, 'Status' was established by gem specialist
+        located in the United Kingdom offering services to international
+        customers at unbeatable prices.</p>
+    </div>
+  </div>
+
+</footer>

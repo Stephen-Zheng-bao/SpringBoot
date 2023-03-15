@@ -10,10 +10,14 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ProductRepository extends JpaRepository<Product,Integer> {
 
-	@Query(value = "SELECT * FROM Product WHERE ProductType = ?1",nativeQuery = true)
-	List<Product> findByProductType(String ProductType);
+
+	List<Product> findByProductTypeContains(String ProductType);
 	
 	List<Product> findByProductNameContains(String ProductName);
+	/*#TODO: Make a way to sort by price*/
+	List<Product> findByProductIDOrderByPriceAsc(String ProductName);
+	/*#TODO: Make a way to price range*/
+	List<Product> findByPriceBetween(String price1,String price2);
 
 	Product findByProductID(String productID);
 }

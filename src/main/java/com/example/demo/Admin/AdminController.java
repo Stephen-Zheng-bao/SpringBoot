@@ -32,7 +32,6 @@ public class AdminController {
 		
 	}
 	@PreAuthorize("hasAuthority('ADMIN')")
-
 	@GetMapping("/admin")
 	public String Admin(Model model) {
 		List<Product> products = productService.getProduct();
