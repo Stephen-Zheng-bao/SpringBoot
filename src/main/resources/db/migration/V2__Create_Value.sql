@@ -33,15 +33,15 @@ VALUES
 (29, 'Simple Necklace', 'Necklace', 'neck8.jpg', 'Everything Pearls', 50, 19.99, 'Unisex'),
 (30, 'Pearl Necklace', 'Necklace', 'neck9.jpg', 'Everything Pearls', 50, 119.99, 'Unisex'),
 
-(23, 'Silver Petal Ring', 'Ring', 'ring1.png', 'Diamond engagement ring', 50, 4999.99, 'Unisex'),
-(24, 'Gold Infinity Ring', 'Ring', 'ring2.png', '24K Gold ring', 50, 3899.99, 'Unisex'),
-(25, 'Diamond Incrested Ring', 'Ring', 'ring3.png', 'Lab side stone engagement ring', 50, 369.99, 'Unisex'),
-(26, 'Traditional Silver', 'Ring', 'ring4.png', 'Traditional engagement ring', 50, 14999.99, 'Unisex'),
-(27, 'Gold Husky Ring', 'Ring', 'ring5.png', '15K Gold ring', 50, 3009.99, 'Unisex'),
-(28, '24K Gold', 'Ring', 'ring6.png', 'Simple Gold ring', 50, 999.99, 'Unisex'),
-(29, 'Diamond Silver Ring', 'Ring', 'ring7.png', 'Basic engagment ring', 50, 2499.99, 'Unisex'),
-(30, '2 Set Gold Wedding Rings', 'Ring', 'ring8.png', 'Minimalistic rings for Her & Him', 50, 999.99, 'Unisex'),
-(31, 'His & Hers Matching Rings', 'Ring', 'ring9.png', 'Perfect for matching wedding rings', 50, 45999.99, 'Unisex');
+(31, 'Silver Petal Ring', 'Ring', 'ring1.png', 'Diamond engagement ring', 50, 4999.99, 'Unisex'),
+(32, 'Gold Infinity Ring', 'Ring', 'ring2.png', '24K Gold ring', 50, 3899.99, 'Unisex'),
+(33, 'Diamond Incrested Ring', 'Ring', 'ring3.png', 'Lab side stone engagement ring', 50, 369.99, 'Unisex'),
+(34, 'Traditional Silver', 'Ring', 'ring4.png', 'Traditional engagement ring', 50, 14999.99, 'Unisex'),
+(35, 'Gold Husky Ring', 'Ring', 'ring5.png', '15K Gold ring', 50, 3009.99, 'Unisex'),
+(36, '24K Gold', 'Ring', 'ring6.png', 'Simple Gold ring', 50, 999.99, 'Unisex'),
+(37, 'Diamond Silver Ring', 'Ring', 'ring7.png', 'Basic engagment ring', 50, 2499.99, 'Unisex'),
+(38, '2 Set Gold Wedding Rings', 'Ring', 'ring8.png', 'Minimalistic rings for Her & Him', 50, 999.99, 'Unisex'),
+(39, 'His & Hers Matching Rings', 'Ring', 'ring9.png', 'Perfect for matching wedding rings', 50, 45999.99, 'Unisex');
 
 
 INSERT INTO `user` (`userID`, `name`, `email`, `password`, `roles`)
