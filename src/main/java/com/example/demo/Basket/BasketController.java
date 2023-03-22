@@ -56,10 +56,6 @@ private final UserService userService;
     @PostMapping("/addToBasket")
         public RedirectView addToBasket(@RequestParam String productID, @RequestParam String quantity, @RequestParam String price, RedirectAttributes redirectAttributes, HttpServletRequest request ){
         System.out.println(quantity);
-        if ((productService.getStock(Integer.valueOf(productID))- Integer.valueOf(quantity))  < 0){
-            redirectAttributes.addFlashAttribute("error","Out of Stock");
-            return new RedirectView(request.getHeader("Referer"),true);
-        }
         Basket itemAdd;
         Optional<Basket> basket = basketService.getBasketByProductID(Integer.valueOf(productID),userService.getIDOfCurrentUser());
         if (basket.isPresent()){
@@ -69,6 +65,10 @@ private final UserService userService;
         else {
             itemAdd = new Basket();
             itemAdd.setQuantity(Integer.valueOf(quantity));
+        }
+        if ((productService.getStock(Integer.valueOf(productID))- itemAdd.getQuantity() < 0)){
+            redirectAttributes.addFlashAttribute("error","Out of Stock");
+            return new RedirectView(request.getHeader("Referer"),true);
         }
         itemAdd.setProductID(Integer.valueOf(productID));
         //itemAdd.setQuantity(Integer.valueOf(quantity));
