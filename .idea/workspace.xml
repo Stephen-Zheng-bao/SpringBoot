@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85e89682-10e1-4d71-a799-27c8e74687d5" name="Changes" comment="admin working">
+    <list default="true" id="85e89682-10e1-4d71-a799-27c8e74687d5" name="Changes" comment="Opps SQL i cant count">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Aboutus/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/AboutUs/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/LeftOver/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/LeftOver/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Basket/BasketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Basket/BasketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Basket/basketItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Basket/basketItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/basket.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/basket.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Basket/basket.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Basket/basket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Product/jewellery.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Product/jewellery.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +60,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/Order" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/AstonStop-main/AstonStop-main/src/main/java/com/example/demo/Controllers/CheckOutController.java" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -67,11 +70,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\demo\src\main\resources\static\images" />
+      <recent name="C:\xampp\htdocs\demo\src\main\resources\static\images\ImagesHomePage" />
       <recent name="C:\xampp\htdocs\demo\src\main\resources\templates\Order" />
       <recent name="C:\xampp\htdocs\demo\src\main\resources\static\css" />
       <recent name="C:\xampp\htdocs\demo\src\main\resources\templates\Admin" />
-      <recent name="C:\xampp\htdocs\demo\src\main\resources\templates\Homepage" />
-      <recent name="C:\xampp\htdocs\demo\src\main\resources\static\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\demo\src\main\resources\templates\LeftOver" />
@@ -145,7 +148,26 @@
       <workItem from="1677158182768" duration="11147000" />
       <workItem from="1677194162656" duration="286000" />
       <workItem from="1677319823731" duration="36458000" />
-      <workItem from="1677495186454" duration="1254000" />
+      <workItem from="1677495186454" duration="1334000" />
+      <workItem from="1677502487519" duration="5879000" />
+      <workItem from="1677620185991" duration="2065000" />
+      <workItem from="1677661668368" duration="1769000" />
+      <workItem from="1677700631512" duration="1258000" />
+      <workItem from="1678018343149" duration="3536000" />
+      <workItem from="1678104510168" duration="2250000" />
+      <workItem from="1678113688442" duration="395000" />
+      <workItem from="1678262354573" duration="274000" />
+      <workItem from="1678266414470" duration="474000" />
+      <workItem from="1678267207453" duration="4271000" />
+      <workItem from="1678706659279" duration="2598000" />
+      <workItem from="1678712618796" duration="5745000" />
+      <workItem from="1678870853762" duration="6104000" />
+      <workItem from="1679226637280" duration="96000" />
+      <workItem from="1679308622722" duration="1110000" />
+      <workItem from="1679316264831" duration="1686000" />
+      <workItem from="1679331489704" duration="931000" />
+      <workItem from="1679430381505" duration="4039000" />
+      <workItem from="1679475809828" duration="1307000" />
     </task>
     <task id="LOCAL-00001" summary="Now able to Add data and delete data from the HTML page while also seeing the document">
       <created>1676222879271</created>
@@ -203,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677460079476</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="about us working on deploy">
+      <created>1677496593320</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1677496593320</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,6 +274,7 @@
     <MESSAGE value="Filter Kinda work" />
     <MESSAGE value="Basket and Contact and Order pages complete (website functional state)" />
     <MESSAGE value="admin working" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin working" />
+    <MESSAGE value="about us working on deploy" />
+    <option name="LAST_COMMIT_MESSAGE" value="about us working on deploy" />
   </component>
 </project>

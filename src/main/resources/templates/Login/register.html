@@ -8,13 +8,14 @@
 </head>
 <body>
 <header th:insert="~{Fragment/navbar :: copy}"></header>
-
 <form method="post" th:action="@{/register}" th:object="${user}">
     <input id="name" placeholder="Enter your name" type="text" th:field="*{name}" required>
     <input id="email" placeholder="Enter your email" type="text" th:field="*{email}" required>
     <input id="password" placeholder="Enter your password" type="password" th:field="*{password}" required>
     <input type="submit">
 </form>
-</form>
+<h1 th:if="${error}">
+    <p th:text="${error}"></p>
+</h1>
 </body>
 </html>

@@ -24,11 +24,28 @@
                     <button type="submit">Search</button>
                 </form>
                 <br>
-                <button> Necklaces </button>
-                <button> Rings </button>
-                <button> Ear Rings </button>
-                <button> Bracelets </button>
-                <button> Watches </button>
+
+                <form th:action="@{filter}" method="post">
+                    <input type="hidden" th:name="name" th:value="Necklace" />
+                    <button type="submit">Necklaces</button>
+                </form>
+                <form th:action="@{filter}" method="post">
+                    <input type="hidden" th:name="name" th:value="Ring" />
+                    <button type="submit">Rings</button>
+                </form>
+                <form th:action="@{filter}" method="post">
+                    <input type="hidden" th:name="name" th:value="EarRing" />
+                    <button type="submit">Ear Rings</button>
+                </form>
+                <form th:action="@{filter}" method="post">
+                    <input type="hidden" th:name="name" th:value="Bracelet" />
+                    <button type="submit">Bracelets</button>
+                </form>
+                <form th:action="@{filter}" method="post">
+                    <input type="hidden" th:name="name" th:value="Watch" />
+                    <button type="submit">Watches</button>
+                </form>
+
             </div>
             <br>
             <br>
@@ -43,7 +60,7 @@
                 <div th:each="prod : ${product}" class = "jewellery">
                     <form method="post" th:action="@{/addToBasket}" >
                         <input th:name="productID" type="hidden" th:value="*{prod.productID}">
-                        <input th:name="quantity"  type="hidden" th:value="3">
+                        <input th:name="quantity"  type="hidden" th:value="1">
                         <input th:name="price"  type="hidden" th:value="*{prod.price}">
 
                             <div class = "image">
@@ -270,5 +287,7 @@
 
             </div>
         </div>
+
     </body>
+    <footer th:insert="~{Fragment/navbar :: footer}"></footer>
 </html> 

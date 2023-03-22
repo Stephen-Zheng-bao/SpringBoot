@@ -15,7 +15,9 @@
 
 <body>
 <header th:insert="~{Fragment/navbar :: copy}"></header>
-
+    <h1 th:if="${error}">
+        <p th:text="${error}"></p>
+    </h1>
     <!--This is where the nav bar is going to go once its fully completed-->
     <div class="wrapper signup">
         <div class="container">

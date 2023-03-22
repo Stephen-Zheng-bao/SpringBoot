@@ -41,6 +41,12 @@ private final UserService userService;
 		int userID = userService.getIDOfCurrentUser();
 		List<basketItem> basket = basketService.getBasket(userID);
         model.addAttribute("baskets",basket);
+        double total = 0.0;
+        for (basketItem stuff:basket){
+            total += stuff.total();
+        }
+        System.out.println(String.format("%.2f",total));
+        model.addAttribute("Total",String.format("%.2f",total));
         return "Basket/basket";
     }
     /*
@@ -58,12 +64,14 @@ private final UserService userService;
         Optional<Basket> basket = basketService.getBasketByProductID(Integer.valueOf(productID),userService.getIDOfCurrentUser());
         if (basket.isPresent()){
             itemAdd = basket.get();
+            itemAdd.setQuantity(itemAdd.getQuantity()+Integer.parseInt(quantity));
         }
         else {
             itemAdd = new Basket();
+            itemAdd.setQuantity(Integer.valueOf(quantity));
         }
         itemAdd.setProductID(Integer.valueOf(productID));
-        itemAdd.setQuantity(Integer.valueOf(quantity));
+        //itemAdd.setQuantity(Integer.valueOf(quantity));
         //itemAdd.setQuantity(1);
         itemAdd.setUserID(userService.getIDOfCurrentUser());
         itemAdd.setPrice(price);
