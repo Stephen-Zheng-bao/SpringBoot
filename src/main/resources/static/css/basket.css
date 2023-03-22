@@ -63,3 +63,13 @@ td span.quantity {
 .empty-message {
     display: none;
 }
+
+.resize {
+    width: 200px;
+    height: auto;
+}
+
+.resize {
+    width: 100px;
+    height: auto;
+}

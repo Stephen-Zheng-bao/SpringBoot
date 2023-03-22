@@ -28,4 +28,10 @@ public class basketItem {
     public void setBasketID(int basketID) {
         this.basketID = basketID;
     }
+
+    public Double total(){
+
+        Double Total = Double.parseDouble(product.getPrice()) * quantity;
+        return Total;
+    }
 }
