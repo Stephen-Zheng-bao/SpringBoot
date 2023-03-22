@@ -276,6 +276,28 @@
   .Cards .card:hover .CardIcon {
     color: beige;
   }
+
+  .addrod{
+  
+  }
+ 
+  #productName, #productType, #price, #image, #description, #stock, #submit{
+    width: 75%;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin-right: 350px;
+    
+
+  }
+
+  #submit{
+    width: 30%;
+    background-color: #064dad;
+    margin-right: 460px;
+    
+  }
+
+
   
  .ProductTable {
     
@@ -284,7 +306,7 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-gap: 25px;
-    background-color:#f6f6f6 ;
+    background-color: rgb(231, 231, 216);
     border-collapse: collapse;
     margin-top: 15px;
     text-align: center;
