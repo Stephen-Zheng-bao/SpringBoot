@@ -4,56 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85e89682-10e1-4d71-a799-27c8e74687d5" name="Changes" comment="about us working on deploy">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ImagesHomePage/ear1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ImagesHomePage/ear2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ImagesHomePage/ear3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ImagesHomePage/ear4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ImagesHomePage/ear5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ImagesHomePage/ear6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ImagesHomePage/ear7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ImagesHomePage/ear8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ImagesHomePage/ear9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ear1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ear2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ear3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ear4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ear5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ear6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ear7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ear8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ear9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/neck1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/neck2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/neck3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/neck4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/neck5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/neck6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/neck8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/neck9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ring1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ring2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ring3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ring4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ring5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ring6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ring7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ring8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ring9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/LeftOver/Products Page-Ruth/Necklace/images/neck7.jpg" afterDir="false" />
+    <list default="true" id="85e89682-10e1-4d71-a799-27c8e74687d5" name="Changes" comment="Opps SQL i cant count">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Admin/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Products/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Products/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Products/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Products/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Products/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Products/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Create_Value.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Create_Value.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/nav.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/AboutUs/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/AboutUs/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ContactUs/contactUs.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ContactUs/contactUs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Fragment/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Fragment/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Homepage/Homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Homepage/Homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/LeftOver/Products Page-Ruth/Necklace/Necklace.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/LeftOver/Products Page-Ruth/Necklace/Necklace.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/LeftOver/Products Page-Ruth/Necklace/images/necks7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/neck7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Basket/BasketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Basket/BasketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Basket/basketItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Basket/basketItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/basket.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/basket.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Basket/basket.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Basket/basket.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Product/jewellery.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Product/jewellery.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +60,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/images" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/AstonStop-main/AstonStop-main/src/main/java/com/example/demo/Controllers/CheckOutController.java" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -206,6 +162,12 @@
       <workItem from="1678706659279" duration="2598000" />
       <workItem from="1678712618796" duration="5745000" />
       <workItem from="1678870853762" duration="6104000" />
+      <workItem from="1679226637280" duration="96000" />
+      <workItem from="1679308622722" duration="1110000" />
+      <workItem from="1679316264831" duration="1686000" />
+      <workItem from="1679331489704" duration="931000" />
+      <workItem from="1679430381505" duration="4039000" />
+      <workItem from="1679475809828" duration="1307000" />
     </task>
     <task id="LOCAL-00001" summary="Now able to Add data and delete data from the HTML page while also seeing the document">
       <created>1676222879271</created>
