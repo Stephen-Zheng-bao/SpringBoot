@@ -2,14 +2,21 @@ package com.example.demo.Admin;
 
 import com.example.demo.Orders.*;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 
+import org.apache.tomcat.websocket.WsIOException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,6 +25,8 @@ import com.example.demo.Products.Product;
 import com.example.demo.Products.ProductService;
 import com.example.demo.User.User;
 import com.example.demo.User.UserService;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.view.RedirectView;
 
 @Controller
 public class AdminController {
@@ -41,13 +50,24 @@ public class AdminController {
 	}
 
 	@PostMapping(value = "/admin/productAdd")
-	public String createUser(@ModelAttribute Product product, Model model, BindingResult bindingResult) {
+	public String createUser(@ModelAttribute Product product, Model model, BindingResult bindingResult,@RequestParam("image") MultipartFile file) throws IOException {
 		System.out.println(product);
+		String filename = StringUtils.cleanPath(file.getOriginalFilename());
+		file.transferTo(new File(  System.getProperty("user.dir")+ "/src/main/resources/static/images/" + filename));
+		product.setImage(filename);
 		Product products = productService.createProduct(product);
 		return "redirect:/admin";}
 
-
-
+	@GetMapping("/admin/testSave")
+	public String testSave(){
+		return ("imageTest.html");
+	}
+	@PostMapping("/save")
+	public RedirectView saveImage(@RequestParam("image") MultipartFile file) throws IOException {
+		String filename = StringUtils.cleanPath(file.getOriginalFilename());
+		file.transferTo(new File(  System.getProperty("user.dir")+ "/src/main/resources/static/images/" + filename));
+		return new RedirectView("/");
+	}
 	@GetMapping("/admin/orders")
 	public String Orders(Model model) {
         List<Orders> orders = orderService.getOrders();
@@ -55,6 +75,7 @@ public class AdminController {
         model.addAttribute("order", new Orders());
 		return "Admin/Orders";
 	}
+
 	@PostMapping("/admin/updateOrder")
 	public String updateOrder(@RequestParam String status ,@RequestParam String orderID){
 		orderService.updateOrder(Integer.parseInt(orderID),status);
