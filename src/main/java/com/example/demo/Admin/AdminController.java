@@ -10,6 +10,7 @@ import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
+import  java.util.ArrayList;
 
 import org.apache.tomcat.websocket.WsIOException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -75,7 +76,12 @@ public class AdminController {
         model.addAttribute("order", new Orders());
 		return "Admin/Orders";
 	}
+/*	public HashMap<Integer, ArrayList<Orders>> getOrders(){
+		int currentMax = orderService.getNewID();
+		for (int i=0; i<currentMax;i++){
 
+		}
+	} */
 	@PostMapping("/admin/updateOrder")
 	public String updateOrder(@RequestParam String status ,@RequestParam String orderID){
 		orderService.updateOrder(Integer.parseInt(orderID),status);
