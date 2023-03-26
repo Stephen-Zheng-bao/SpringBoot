@@ -1,11 +1,4 @@
-/* Page styles */
-body {
-	background-color: #fff;
-	font-family: Arial, sans-serif;
-	font-size: 16px;
-	margin: 0;
-	padding: 0;
-}
+
 
 .container {
 	margin: 0 auto;
@@ -75,4 +68,14 @@ td span.quantity {
 
 .empty-message {
 	display: none;
+}
+
+.resize {
+	width: 200px;
+	height: auto;
+}
+
+.resize {
+	width: 100px;
+	height: auto;
 }

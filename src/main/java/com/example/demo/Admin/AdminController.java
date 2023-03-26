@@ -37,7 +37,9 @@ public class AdminController {
 		List<Product> products = productService.getProduct();
 		model.addAttribute("products", products);
 		model.addAttribute("product", new Product());
-		return "admin/admin";
+		model.addAttribute("Revenue",orderService.orderRevenue());
+		model.addAttribute("Sale",orderService.orderTotals());
+		return "Admin/Admin";
 	}
 
 	@PostMapping(value = "/admin/productAdd")
@@ -95,7 +97,7 @@ public class AdminController {
 		productCast.setPrice(price);
 		productCast.setDescription(description);
 		productService.updateProduct(productCast);
-		return "Admin/admin";
+		return "Admin/Admin";
 
 
 	}
