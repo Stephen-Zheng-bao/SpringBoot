@@ -12,7 +12,7 @@
 
 <header th:fragment="copy">
   <nav id="nav-bar">
-  <img id="logo" src="https://media.discordapp.net/attachments/1071505588044968038/1075014674346672138/statusLOGO.png" width="40px" height="40px"/>
+  <img id="logo" th:src="@{images/statusLOGO.png}" width="120px" height="60px"/>
     <ul id="nav-ul">
       <li ><a th:href="@{/}">Home</a></li>
       <li ><a th:href="@{/product}">Products</a></li>

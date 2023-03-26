@@ -50,6 +50,15 @@ public class OrdersService {
         List<Orders> orders = ordersRepository.findAll();
         return Integer.toString(orders.size());
     }
+
+    public Double orderRevenue(){
+        List<Orders> orders = ordersRepository.findAll();
+        double price = 0;
+        for (Orders order:orders){
+            price += Double.parseDouble(order.getPrice());
+        }
+        return price;
+    }
     public String orderProcessingTotal(){
         List<Orders> orders = ordersRepository.findByStatus("processing");
         return Integer.toString(orders.size());

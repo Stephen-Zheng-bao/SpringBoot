@@ -15,6 +15,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Controller
@@ -27,13 +28,13 @@ import java.util.List;
         public ProductController(ProductService productService) {
             this.productService = productService;
         }
-        @PostMapping("/filter")
-        public String filter(@RequestParam String name,Model model) {
+        @GetMapping("filter/{name}")
+        public String filter(@PathVariable String name,Model model) {
             List<Product> product = productService.fetchByType(name);
             model.addAttribute("product", product);
             return "Product/jewellery";
         }
-        @PostMapping("/search")
+        @PostMapping("search")
         public String search(@RequestParam String name,Model model) {
             List<Product> product = productService.fetchByName(name);
             model.addAttribute("product", product);
@@ -51,7 +52,13 @@ import java.util.List;
             model.addAttribute("product", product);
             return "Product/jewellery";
     }
+        @GetMapping(value = "/product/{id}")
+        public String singleProduct(@PathVariable Integer id,Model model) {
 
+            Optional<Product> product = productService.fetchByID(id);
+        model.addAttribute("product", product.get());
+        return "Product/product";
+    }
 
 
 

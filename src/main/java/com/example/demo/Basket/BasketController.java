@@ -78,5 +78,11 @@ private final UserService userService;
         basketService.createBasket(itemAdd);
         return new RedirectView(request.getHeader("Referer"),true);
     }
-
+    @PreAuthorize("hasAuthority('USER')")
+    @GetMapping("/deleteBasket")
+    public String delete(@RequestParam String basketid) {
+        int userID = userService.getIDOfCurrentUser();
+        basketService.delete(Integer.parseInt(basketid));
+        return "Basket/basket";
+    }
 }

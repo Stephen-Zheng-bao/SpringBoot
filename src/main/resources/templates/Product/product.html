@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lan = "en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset = "utf-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Black Lion Bracelet </title>
+    <link rel = "stylesheet" th:href = "@{/css/prod.css}">
+    <link rel = "stylesheet" th:href = "@{/css/nav.css}">
+</head>
+<header th:insert="~{Fragment/navbar :: copy}"></header>
+    <body>
+        <div class = "container-item">
+            <div class = "product">
+                <div class = "gallery">
+                    <img th:src="@{images/}+${product.image}">
+                </div>
+                <div class = "details">
+                    <h1 th:text ="${product.productName}"> </h1>
+
+                    <h2 th:text ="'£'+${product.price}">  </h2>
+
+                    <h3 th:text ="'Total Stock Left: '+${product.stock}"> Total Stock Left: </h3>
+
+                    <p th:text ="${product.description}"> Several spherical black beads surrounding a single black lion bead. </p>
+                    <form method="post" th:action="@{/addToBasket}" >
+                        <div class = "quantity-select">
+                            <p> Quantity </p>
+                                <input th:name="quantity"   type="number" th:value="1">
+                        </div>
+
+                            <input th:name="productID" type="hidden" th:value="*{product.productID}">
+
+                            <input th:name="price"  type="hidden" th:value="*{product.price}">
+                            <div class = "buy1">
+                                <button type = "submit"> Buy now </button>
+                            </div>
+                        <br>
+                    </form>
+                        <form th:action ="@{/product}">
+                            <button type = "button"> Back </button>
+                        </form>
+
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

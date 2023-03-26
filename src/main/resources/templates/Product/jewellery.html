@@ -6,26 +6,60 @@
         <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Jewellery Page </title>
-        <link rel = "stylesheet" th:href = "@{/css/product.css}">
+        <link rel = "stylesheet" th:href = "@{/css/prod.css}">
         <link rel = "stylesheet" th:href = "@{/css/nav.css}">
         </head>
     <body>
     <header th:insert="~{Fragment/navbar :: copy}"></header>
-
+    <br><br>
+        <div class = "header">
+            <h1> Jewellery </h1>
+        </div>
         <div class = "container">
-            <div class = "header">
-                <h1> Jewellery </h1>
-            </div>
+
             <br>
-            <div class = "sidebar">
+            <div class = "filter">
                 <form th:action="@{search}" method="post">
                     <i class = "fas fa-search"></i>
                     <input type="text" th:name="name" placeholder = "Search jewellery" />
                     <button type="submit">Search</button>
                 </form>
-                <br>
+                <div class = "jewelleries">
+                    <table>
+                    <tr>
+                        <th>
+                    <a th:href="@{/filter/Bracelet}">
+                        <img src="https://media.discordapp.net/attachments/1082979832717119509/1085495112836059166/Bracelet.jpg?width=180&height=60" alt="Bracelet"></a>
+                        </th>
+                        <th>
+                    <a th:href="@{/filter/Watch}">
+                        <img src="https://media.discordapp.net/attachments/1082979832717119509/1082983948197560330/Watch1.jpg?width=180&height=60" alt="Watch"></a>
+                        </th>
+                        <th>
+                    <a th:href="@{/filter/Ring}">
+                        <img src="https://media.discordapp.net/attachments/1082979832717119509/1085492702721884221/Ring.jpg?width=180&height=60" alt="Ring"></a>
+                        </th>
+                        <th>
+                    <a th:href="@{/filter/Necklace}">
+                        <img src="https://media.discordapp.net/attachments/1082979832717119509/1085495011967242290/Necklace.jpg?width=180&height=60" alt="Necklaces"></a>
+                        </th>
+                        <th>
+                    <a th:href="@{/filter/EarRing}">
+                        <img src="https://media.discordapp.net/attachments/1082979832717119509/1085492906502148197/Earring.jpg?width=180&height=60" alt="Earrings"></a>
+                        </th>
+                    </tr>
+                        <tr>
+                            <th style="color: white">Bracelet</th>
+                            <th style="color: white">Watch</th>
+                            <th style="color: white">Ring</th>
+                            <th style="color: white">Necklace</th>
+                            <th style="color: white">Earring</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
 
-                <form th:action="@{filter}" method="post">
+<!--                <form th:action="@{filter}" method="post">
                     <input type="hidden" th:name="name" th:value="Necklace" />
                     <button type="submit">Necklaces</button>
                 </form>
@@ -44,12 +78,11 @@
                 <form th:action="@{filter}" method="post">
                     <input type="hidden" th:name="name" th:value="Watch" />
                     <button type="submit">Watches</button>
-                </form>
+                </form>-->
 
-            </div>
+
             <br>
-            <br>
-            <br>
+
             <br>
             <h1 th:if="${error}">
                 <p th:text="${error}"></p>
@@ -58,12 +91,7 @@
 
 
                 <div th:each="prod : ${product}" class = "jewellery">
-                    <form method="post" th:action="@{/addToBasket}" >
-                        <input th:name="productID" type="hidden" th:value="*{prod.productID}">
-                        <input th:name="quantity"  type="hidden" th:value="1">
-                        <input th:name="price"  type="hidden" th:value="*{prod.price}">
-
-                            <div class = "image">
+                     <div th:href="@{product/{id}(id = ${prod.productID})}" class = "image">
                                 <img th:src="@{images/}+${prod.image}">
                             </div>
                             <div class = "namePrice">
@@ -73,221 +101,25 @@
 
                             <p th:text ="${prod.description}"></p>
                             <br>
+                        <form method="post" th:action="@{/addToBasket}" >
+                            <input th:name="productID" type="hidden" th:value="*{prod.productID}">
+                            <input th:name="quantity"  type="hidden" th:value="1">
+                            <input th:name="price"  type="hidden" th:value="*{prod.price}">
                             <div class = "buy">
-
                                 <button type = "submit"> Buy now </button>
                             </div>
                     </form>
-                </div>
-
-
-<!--                <div class = "jewellery">
-                    <div class = "image">
-                        <img src = "images/Bracelet1.jpg" alt = "">
-                    </div>
-                    <div class = "namePrice">
-                        <h3> Black Lion Bracelet </h3>
-                        <span> £19.99 </span>
-                    </div>
-
-                    <p> Several spherical black beads surrounding a single black lion bead. </p>
-                    <br>
-                    <div class = "buy">
-
-                        <button> Buy now </button>
+                    <div class = "buy1">
+                        <form th:action="@{product/{id}(id = ${prod.productID})}">
+                        <button style="left: 200px">Detail</button>
+                        </form>
                     </div>
                 </div>
-
-                <div class = "jewellery">
-                    <div class = "image">
-                        <img src = "images/Bracelet2.jpg" alt = "">
-                    </div>
-                    <div class = "namePrice">
-                        <h3> Diamond Bracelet </h3>
-                        <span> £499.99 </span>
-                    </div>
-
-                    <p> Silver bracelet with microscopic diamonds placed carefully on one side of the two silver ends. </p>
-                    <br>
-                    <div class = "buy">
-
-                        <button> Buy now </button>
-                    </div>
                 </div>
-
-                <div class = "jewellery">
-                    <div class = "image">
-                        <img src = "images/Bracelet3.jpg" alt = "">
-                    </div>
-                    <div class = "namePrice">
-                        <h3> Gold Bracelet </h3>
-                        <span> £299.99 </span>
-                    </div>
-
-                    <p> Elegant 24-carat gold pattern bracelets hanging on a luxurious white/gold cup. </p>
-                    <br>
-                    <div class = "buy">
-
-                        <button> Buy now </button>
-                    </div>
-                </div>
-
-                <div class = "jewellery">
-                    <div class = "image">
-                        <img src = "images/Bracelet4.jpg" alt = "">
-                    </div>
-                    <div class = "namePrice">
-                        <h3> Silver Bracelet </h3>
-                        <span> £99.99 </span>
-                    </div>
-
-                    <p> Silver pattern bracelet place around a blue round box. </p>
-                    <br>
-                    <div class = "buy">
-
-                        <button> Buy now </button>
-                    </div>
-                </div>
-
-                <div class = "jewellery">
-                    <div class = "image">
-                        <img src = "images/Bracelet5.jpg" alt = "">
-                    </div>
-                    <div class = "namePrice">
-                        <h3> White Pearl Bracelet </h3>
-                        <span> £349.99 </span>
-                    </div>
-
-                    <p> Several oval-shaped pearls surrounding one elegant, spherical, white pearl. </p>
-                    <br>
-                    <div class = "buy">
-
-                        <button> Buy now </button>
-                    </div>
-                </div>
-
-                <div class = "jewellery">
-                    <div class = "image">
-                        <img src = "images/Bracelet6.jpg" alt = "">
-                    </div>
-                    <div class = "namePrice">
-                        <h3> Bronze Bracelet </h3>
-                        <span> £44.99 </span>
-                    </div>
-
-                    <p> Bronze pattern bracelet place on top of a dark-brown vase. </p>
-                    <br>
-                    <div class = "buy">
-
-                        <button> Buy now </button>
-                    </div>
-                </div>
-
-                <div class = "jewellery">
-                    <div class = "image">
-                        <img src = "images/Watch1.jpg" alt = "">
-                    </div>
-                    <div class = "namePrice">
-                        <h3> Silver&Black Chronograph Watch </h3>
-                        <span> £79.99 </span>
-                    </div>
-
-                    <p> Silver linked bracelet with a round black chronograph for this particular watch. </p>
-                    <br>
-                    <div class = "buy">
-
-                        <button> Buy now </button>
-                    </div>
-                </div>
-
-                <div class = "jewellery">
-                    <div class = "image">
-                        <img src = "images/Watch2.jpg" alt = "">
-                    </div>
-                    <div class = "namePrice">
-                        <h3> Black Leather Strap Silver Chronograph Watch </h3>
-                        <span> £59.99 </span>
-                    </div>
-
-                    <p> Black leather strap with a round silver chronograph for this particular watch. </p>
-                    <br>
-                    <div class = "buy">
-
-                        <button> Buy now </button>
-                    </div>
-                </div>
-
-                <div class = "jewellery">
-                    <div class = "image">
-                        <img src = "images/Watch3.jpg" alt = "">
-                    </div>
-                    <div class = "namePrice">
-                        <h3> Black&Bronze Chronograph Watch </h3>
-                        <span> £44.99 </span>
-                    </div>
-
-                    <p> Bronze and black linked bracelet with a round grey chronograph for this particular watch. </p>
-                    <br>
-                    <div class = "buy">
-
-                        <button> Buy now </button>
-                    </div>
-                </div>
-
-                <div class = "jewellery">
-                    <div class = "image">
-                        <img src = "images/Watch4.jpg" alt = "">
-                    </div>
-                    <div class = "namePrice">
-                        <h3> Brown Leather Strap White Analog Watch </h3>
-                        <span> £24.99 </span>
-                    </div>
-
-                    <p> Brown leather strap with a round white analog for this particular watch. </p>
-                    <br>
-                    <div class = "buy">
-
-                        <button> Buy now </button>
-                    </div>
-                </div>
-
-                <div class = "jewellery">
-                    <div class = "image">
-                        <img src = "images/Watch5.jpg" alt = "">
-                    </div>
-                    <div class = "namePrice">
-                        <h3> Black Strap Silver Analog Watch </h3>
-                        <span> £49.99 </span>
-                    </div>
-
-                    <p> Black leather strap with a round silver analog for this particular watch. </p>
-                    <br>
-                    <div class = "buy">
-
-                        <button> Buy now </button>
-                    </div>
-                </div>
-
-                <div class = "jewellery">
-                    <div class = "image">
-                        <img src = "images/Watch6.jpg" alt = "">
-                    </div>
-                    <div class = "namePrice">
-                        <h3> Silver Chronograph Watch </h3>
-                        <span> £119.99 </span>
-                    </div>
-
-                    <p> Silver linked bracelet with a round silver chronograph for this particular watch. </p>
-                    <br>
-                    <div class = "buy">
-
-                        <button> Buy now </button>
-                    </div>
-                </div>-->
 
             </div>
-        </div>
+
 
     </body>
-    <footer th:insert="~{Fragment/navbar :: footer}"></footer>
+
 </html> 
