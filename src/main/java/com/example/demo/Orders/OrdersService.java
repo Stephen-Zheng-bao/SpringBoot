@@ -7,6 +7,7 @@ import com.example.demo.User.UserRepository;
 import java.util.List;
 
 import jakarta.persistence.criteria.CriteriaBuilder;
+import org.aspectj.weaver.ast.Or;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -58,4 +59,9 @@ public class OrdersService {
         return Integer.toString(orders.size());
     }
 
+    public List<Orders> getOrderByOrderNumber(int i) {
+        return  ordersRepository.findByOrderNumber(i);
+
+
+    }
 }

@@ -76,15 +76,23 @@ public class AdminController {
         model.addAttribute("order", new Orders());
 		return "Admin/Orders";
 	}
-/*	public HashMap<Integer, ArrayList<Orders>> getOrders(){
+	/* Stephen here is the code just add the mapping you want for it */
+	public HashMap<Integer, ArrayList<Orders>> getOrders(){
 		int currentMax = orderService.getNewID();
+		HashMap<Integer,ArrayList<Orders>> orders = new HashMap<Integer,ArrayList<Orders>>();
 		for (int i=0; i<currentMax;i++){
-
+			List<Orders> listOfOrders = orderService.getOrderByOrderNumber(i);
+			orders.put(listOfOrders.get(0).getOrderNumber(), (ArrayList<Orders>) listOfOrders);
 		}
-	} */
+		return  orders;
+	}
 	@PostMapping("/admin/updateOrder")
-	public String updateOrder(@RequestParam String status ,@RequestParam String orderID){
-		orderService.updateOrder(Integer.parseInt(orderID),status);
+	public String updateOrder(@RequestParam String status ,@RequestParam String orderNumber){
+		List<Orders> orders = orderService.getOrderByOrderNumber(Integer.valueOf(orderNumber));
+		for (Orders i : orders){
+			i.setStatus(status);
+			orderService.saveOrder(i);
+		}
 		return "Admin/Orders";
 	}
 	@GetMapping("/admin/customers")
