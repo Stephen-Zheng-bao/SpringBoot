@@ -7,7 +7,7 @@ VALUES
 (5, 'White Pearl Bracelet', 'Bracelet', 'Bracelet5.jpg', 'Several oval-shaped pearls surrounding one elegant, spherical, white pearl.', 50, 349.99, 'Unisex'),
 (6, 'Bronze Bracelet', 'Bracelet', 'Bracelet6.jpg', 'Bronze pattern bracelet place on top of a dark-brown vase.', 50, 44.99, 'Unisex'),
 (7, 'Silver & Black Chronograph Watch', 'Watch', 'Watch1.jpg', 'Silver linked bracelet with a round black chronograph for this particular watch.', 50, 79.99, 'Unisex'),
-(8, 'Black Leather Strap Silver Chronograph Watch', 'Watch2.jpg', 'Bracelet3.jpg', 'Black leather strap with a round silver chronograph for this particular watch.', 50, 59.99, 'Unisex'),
+(8, 'Black Leather Strap Silver Chronograph Watch', 'Watch', 'Bracelet3.jpg', 'Black leather strap with a round silver chronograph for this particular watch.', 50, 59.99, 'Unisex'),
 (9, 'Black & Bronze Chronograph Watch', 'Watch', 'Watch3.jpg', 'Bronze and black linked bracelet with a round grey chronograph for this particular watch.', 50, 44.99, 'Unisex'),
 (10, 'Brown Leather Strap White Analog Watch', 'Watch', 'Watch4.jpg', 'Brown leather strap with a round white analog for this particular watch.', 50, 24.99, 'Unisex'),
 (11, 'Black Strap Silver Analog Watch', 'Watch', 'Watch5.jpg', 'Black leather strap with a round silver analog for this particular watch.', 50, 49.99, 'Unisex'),
@@ -45,11 +45,11 @@ VALUES
 
 
 INSERT INTO `user` (`userID`, `name`, `email`, `password`, `roles`)
-VALUES (1, 'test', 'test', '$2a$10$wszwmsVUhEJYvpm07jcX8uzrdbUrm5ipJZy5TBJW5yGLuBuxc4A76', 'USER');
+VALUES (1, 'test', 'test', '$2a$10$wszwmsVUhEJYvpm07jcX8uzrdbUrm5ipJZy5TBJW5yGLuBuxc4A76', 'USER,ADMIN');
 
 
 INSERT INTO `past_order` (`orderID`, `order_number`, `userID`, `productID`, `quantity`, `price`, `status`)
-VALUES (1, '0', '1', '1', '0', '0', 'processing');
+VALUES (1, '0', '1', '1', '100', '19.99', 'PROCESSING');
 INSERT INTO `prod_seq` (`next_val`)
 VALUES (32);
 INSERT INTO `user_seq` (`next_val`)

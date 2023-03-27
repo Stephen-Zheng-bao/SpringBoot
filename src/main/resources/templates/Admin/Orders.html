@@ -25,7 +25,18 @@ Manage order (change status) -->
 <div class="mainSection">
     
     <div class="bar">
-
+        <label for="status">
+            <form>
+                <select id="status" name="status">
+                    <option value="">All</option>
+                    <option th:each="status : ${orderStatus}"
+                    th:value="${status}"
+                            th:text="${status}"
+                    ></option>
+                </select>
+                <button type="submit"></button>
+                </form>
+        </label>
 
         <img th:src="@{images/statusLOGO.png}" style="width:auto; height:380px; margin-left: 350px;">
        
@@ -43,10 +54,6 @@ Manage order (change status) -->
    
    
 
-    <button type="button">View incoming orders</button> 
-    <button type="button">View outgoing orders</button> 
-    <p>note:incoming order has status = processing. outgoing order=out for delivery</p>
-    <br><br>
 <div class="TableDesign">
     <div class="Header">
         <h2>Orders</h2>
@@ -55,36 +62,84 @@ Manage order (change status) -->
     <table>
         <thead id="column">
             <tr>
-                <td>Product</td>
-                <td>Price</td>
+                <td>Order ID</td>
+                <td>Detail</td>
                 <td>Status</td>
+                <td>Update</td>
                
             </tr>
         </thead>
 
-        <tbody>
-            <tr>
-                <td>Name 1</td>
-                <td>£100</td>
-                <td><span class="delivered">Delivered</span></td>
-                <td><button type="button">Change Order Status</button></td>
-            </tr>
+        <tbody >
+            <tr th:each="order : ${orders}">
+                <td th:text="${order.key}"></td>
 
-            <tr>
-                <td>Product 2</td>
-                <td>£499</td>
-                <td><span class="processing">Processing</span></td>
-                <td><button type="button">Change Order Status</button></td>
-               
-            </tr>
+                <td>
+                <table>
+                    <tr>
+                        <td >&nbsp;</td>
+                        <td>User ID</td>
+                        <td>Product ID</td>
+                        <td>Quantity</td>
+                        <td>Price</td>
+                        <td>Status</td>
 
-            <tr>
-                <td>Product 3</td>
-                <td>£200</td>
-                <td><span class=" out-for-delivery">Out for delivery</span></td>
-                <td><button type="button">Change Order Status</button></td>
+
+                    </tr>
+                    <tr th:each="ord:${order.value}">
+                        <td></td>
+                        <td th:text="${ord.getUserID}"></td>
+                        <td th:text="${ord.getProductID}"></td>
+                        <td th:text="${ord.getQuantity}"></td>
+                        <td th:text="${ord.getPrice}*${ord.getQuantity}"></td>
+                        <td th:class="${ord.getStatus}" th:text="${ord.getStatus}"></td>
+                        <td>
+                        </td>
+                    </tr>
+                </table>
+                </td>
+
+                <form method="post" th:action="@{/admin/updateOrder}" >
+                    <input th:name ="orderNumber" type="hidden" th:value="${order.key}">
+                <td>
+
+                        <select id="status" name="status">
+                            <option>PROCESSING</option>
+                            <option>DISPACTCHED</option>
+                            <option>DELIVERED</option>
+                            <option>CANCELLED</option>
+                        </select>
+            </td>
+                    <td>
+                    <button type="submit">Update</button></td>
+                    </td>
+
+                </form>
+
             </tr>
         </tbody>
+        <!--            <tr>
+                        <td>Name 1</td>
+                        <td>£100</td>
+                        <td><span class="delivered">Delivered</span></td>
+                        <td><button type="button">Change Order Status</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>Product 2</td>
+                        <td>£499</td>
+                        <td><span class="processing">Processing</span></td>
+                        <td><button type="button">Change Order Status</button></td>
+
+                    </tr>
+
+                    <tr>
+                        <td>Product 3</td>
+                        <td>£200</td>
+                        <td><span class=" out-for-delivery">Out for delivery</span></td>
+                        <td><button type="button">Change Order Status</button></td>
+                    </tr>-->
+
     </table>
 </div>
 

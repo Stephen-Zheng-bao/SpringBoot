@@ -76,13 +76,40 @@ private final UserService userService;
         itemAdd.setUserID(userService.getIDOfCurrentUser());
         itemAdd.setPrice(price);
         basketService.createBasket(itemAdd);
+        redirectAttributes.addFlashAttribute("error","Out of Stock");
         return new RedirectView(request.getHeader("Referer"),true);
     }
     @PreAuthorize("hasAuthority('USER')")
-    @GetMapping("/deleteBasket")
+    @PostMapping("/deleteBasket")
     public String delete(@RequestParam String basketid) {
         int userID = userService.getIDOfCurrentUser();
         basketService.delete(Integer.parseInt(basketid));
-        return "Basket/basket";
+        return "redirect:/basket";
+    }
+
+    @PreAuthorize("hasAuthority('USER')")
+    @PostMapping("/increaseQ")
+    public String increaseQ(@RequestParam String basketid) {
+        int userID = userService.getIDOfCurrentUser();
+        basketService.increase(Integer.parseInt(basketid));
+        return "redirect:/basket";
+    }
+    @PreAuthorize("hasAuthority('USER')")
+    @PostMapping("/decreaseQ")
+    public String decreaseQ(@RequestParam String basketid){
+        int userID = userService.getIDOfCurrentUser();
+        basketService.decrease(Integer.parseInt(basketid));
+        return "redirect:/basket";
+    }
+    @PreAuthorize("hasAuthority('USER')")
+    @PostMapping("/clearAll")
+    public String clearAll(){
+        int userID = userService.getIDOfCurrentUser();
+        List<basketItem> basket = basketService.getBasket(userID);
+        for (basketItem item : basket){
+            basketService.delete(item.getBasketID());
+        }
+        return "redirect:/basket";
     }
 }
+

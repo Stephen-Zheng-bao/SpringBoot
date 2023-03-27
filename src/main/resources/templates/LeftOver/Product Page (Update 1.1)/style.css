@@ -1,4 +1,9 @@
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
 
 body{
     background-color: #ffffff;
@@ -199,6 +204,28 @@ section{
     line-height: 25px;
 }
 
+.buy{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.buy button{
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 18px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.buy button:hover{
+    transform: scale(1.1);
+}
+
 .container-item{
     width: 100%;
     min-height: 100vh;
@@ -220,9 +247,14 @@ section{
 }
 
 .gallery img{
-    object-fit: cover;
-    margin-top: 50%;
     width: 100%;
+    height: 100%;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: block;
+    cursor: pointer;
     transition: 0.5 ease;
 }
 
@@ -428,51 +460,5 @@ section{
 }
 
 .details form button:hover{
-    transform: scale(1.1);
-}
-
-
-.buy{
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    float: left
-;
-}
-
-.buy1{
-    float: left;
-    display: flex;
-    overflow: hidden;
-}
-
-.buy button{
-    padding: 10px 20px;
-    border-radius: 7px;
-    border: none;
-    background-color: #000000;
-    color: #ffffff;
-    font-size: 18px;
-    text-transform: capitalize;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.buy button:hover{
-    transform: scale(1.1);
-}
-.buy1 button{
-    padding: 10px 20px;
-    border-radius: 7px;
-    border: none;
-    background-color: #000000;
-    color: #ffffff;
-    font-size: 18px;
-    text-transform: capitalize;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.buy1 button:hover{
     transform: scale(1.1);
 }

@@ -92,7 +92,7 @@
 
                 <div th:each="prod : ${product}" class = "jewellery">
                      <div th:href="@{product/{id}(id = ${prod.productID})}" class = "image">
-                                <img th:src="@{images/}+${prod.image}">
+                                <img th:src="@{/images/}+${prod.image}">
                             </div>
                             <div class = "namePrice">
                                 <h3 th:text ="${prod.productName}"></h3>

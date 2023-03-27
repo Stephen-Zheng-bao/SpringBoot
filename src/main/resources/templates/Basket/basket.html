@@ -23,14 +23,29 @@
 			<th>Total</th>
 			<th>Remove</th>
 		</tr>
+		<tr th:if="${#lists.isEmpty(baskets)}">
+			<td colspan="5">Nothing In Basket. Add some...!</td>
+		</tr>
 		<tr th:each="basket : ${baskets}">
 			<td ><img class="resize" th:src="@{images/}+${basket.product.getImage}"></td>
 			<td th:text="${basket.product.getProductName}"></td>
 			<td th:text="'£'+${basket.product.getPrice}"></td>
 			<td >
-				<button class="quantity-btn minus-btn" type="button">-</button>
-				<span th:text="${basket.quantity}">1</span>
-				<button class="quantity-btn plus-btn" type="button">+</button>
+				<form th:action="@{addToBasket}" method="post">
+					<input th:name="productID" type="hidden" th:value="*{basket.product.productID}">
+					<input th:name="quantity"   type="hidden" th:value="1">
+					<input th:name="price"  type="hidden" th:value="*{basket.product.price}">
+					<button class="quantity-btn" type="submit">+</button>
+				</form>
+
+				<span th:text="${basket.quantity}"></span>
+
+				<form th:action="@{addToBasket}" method="post">
+					<input th:name="productID" type="hidden" th:value="*{basket.product.productID}">
+					<input th:name="quantity"   type="hidden" th:value="-1">
+					<input th:name="price"  type="hidden" th:value="*{basket.product.price}">
+					<button class="quantity-btn" type="submit">-</button>
+				</form>
 			</td>
 			<td class="price" th:text="'£'+${basket.total}"></td>
 			<td>

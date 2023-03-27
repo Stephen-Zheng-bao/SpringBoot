@@ -14,7 +14,7 @@
         <div class = "container-item">
             <div class = "product">
                 <div class = "gallery">
-                    <img th:src="@{images/}+${product.image}">
+                    <img th:src="@{/images/}+${product.image}">
                 </div>
                 <div class = "details">
                     <h1 th:text ="${product.productName}"> </h1>

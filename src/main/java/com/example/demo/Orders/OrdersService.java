@@ -60,14 +60,21 @@ public class OrdersService {
         return price;
     }
     public String orderProcessingTotal(){
-        List<Orders> orders = ordersRepository.findByStatus("processing");
+        List<Orders> orders = ordersRepository.findByStatus("PROCESSING");
         return Integer.toString(orders.size());
     }
     public String orderDispatchedTotal(){
-        List<Orders> orders = ordersRepository.findByStatus("Dispatched");
+        List<Orders> orders = ordersRepository.findByStatus("DISPACTCHED");
         return Integer.toString(orders.size());
     }
-
+    public String orderDeliveredTotal(){
+        List<Orders> orders = ordersRepository.findByStatus("DELIVERED");
+        return Integer.toString(orders.size());
+    }
+    public String orderCancellationTotal(){
+        List<Orders> orders = ordersRepository.findByStatus("CANCELLED");
+        return Integer.toString(orders.size());
+    }
     public List<Orders> getOrderByOrderNumber(int i) {
         return  ordersRepository.findAllByOrderNumber(i);
 

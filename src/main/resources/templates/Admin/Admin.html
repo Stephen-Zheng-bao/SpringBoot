@@ -33,7 +33,7 @@
         
         <div class="card">
             <div>
-                <div class="figure">£1000</div> <!--value automatically updated from database-->
+                <div class="figure" th:text="'£'+${Revenue}"></div> <!--value automatically updated from database-->
                 <div class="cardName">Total Revenue </div>
             </div>
 
@@ -44,7 +44,7 @@
 
         <div class="card">
             <div>
-                <div class="figure">50</div>
+                <div class="figure" th:text="${Sale}"></div>
                 <div class="cardName">Total Sales</div>
             </div>
 
@@ -53,6 +53,54 @@
             </div>
         </div>
     </div>
+        <div class="Cards">
+
+            <div class="card">
+                <div>
+                    <div class="figure" th:text="${Process}"></div> <!--value automatically updated from database-->
+                    <div class="cardName">Processing Orders</div>
+                </div>
+
+                <div class="CardIcon">
+                    <i class="bi bi-cash-stack"></i>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="figure" th:text="${Dispactched}"></div>
+                    <div class="cardName">Dispatched Orders</div>
+                </div>
+
+                <div class="CardIcon">
+                    <i class="bi bi-cart-dash"></i>
+                </div>
+            </div>
+        </div>
+        <div class="Cards">
+
+            <div class="card">
+                <div>
+                    <div class="figure" th:text="${Delivered}"></div> <!--value automatically updated from database-->
+                    <div class="cardName">Delivered</div>
+                </div>
+
+                <div class="CardIcon">
+                    <i class="bi bi-cash-stack"></i>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="figure" th:text="${Cancellations}"></div>
+                    <div class="cardName">Cancellations</div>
+                </div>
+
+                <div class="CardIcon">
+                    <i class="bi bi-cart-dash"></i>
+                </div>
+            </div>
+        </div>
 
     
     
@@ -81,10 +129,9 @@
             <input id="productName" placeholder="name" type="text" th:field="*{productName}">
             <input id="productType" placeholder="productType" type="text" th:field="*{productType}">
             <input id="price" placeholder="Price" type="text" th:field="*{price}">
-            <input id="image" placeholder="Image" type="text" th:field="*{image}">
             <input id="description" placeholder="Description" type="text" th:field="*{description}">
             <input id="stock" placeholder="Stock" type="text" th:field="*{stock}">
-            <input type="file" name="image">
+            <input type="file" name="image" th:field="*{image}">
             <input id="gender" placeholder="Stock" type="text" th:field="*{gender}">
             <input id="submit" type="submit" name="Add to Inventory">
         </form>

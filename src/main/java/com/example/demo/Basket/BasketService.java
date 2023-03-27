@@ -43,4 +43,15 @@ public class BasketService {
     public Optional<Basket> getBasketByProductID(Integer productID,Integer idOfCurrentUser) {
         return basketRepository.findByProductIDAndUserID(productID,idOfCurrentUser);
     }
+
+    public void increase(int basketID){
+        Basket basket = basketRepository.findById(basketID).get();
+        basket.setQuantity(basket.getQuantity() + 1);
+        basketRepository.save(basket);
+    }
+    public void decrease(int basketID){
+        Basket basket = basketRepository.findById(basketID).get();
+        basket.setQuantity(basket.getQuantity() - 1);
+        basketRepository.save(basket);
+    }
 }

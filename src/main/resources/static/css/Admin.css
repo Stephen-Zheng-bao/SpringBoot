@@ -325,7 +325,7 @@
     color: var(--white);
   }
   
-  .delivered {
+  .DELIVERED {
     padding: 2px 4px;
     background: #8de02c;
     color: var(--white);
@@ -334,7 +334,7 @@
     font-weight: 500;
   }
 
-  .processing {
+  .PROCESSING {
     padding: 2px 4px;
     background: #1795ce;
     color: var(--white);
@@ -343,9 +343,17 @@
     font-weight: 500;
   }
 
-  .out-for-delivery {
+  .DISPACTCHED {
     padding: 2px 4px;
     background: #e9b10a;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .CANCELLED {
+    padding: 2px 4px;
+    background: #e90a0a;
     color: var(--white);
     border-radius: 4px;
     font-size: 14px;

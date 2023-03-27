@@ -36,8 +36,9 @@ header {
 }
 
 #logo {
-  width: auto;
-  margin: 10px;
+  width: 100px;
+  height: 30px;
+  margin:5px;
 }
 
 

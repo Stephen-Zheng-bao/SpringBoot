@@ -49,6 +49,10 @@ public class AdminController {
 		model.addAttribute("product", new Product());
 		model.addAttribute("Revenue",orderService.orderRevenue());
 		model.addAttribute("Sale",orderService.orderTotals());
+		model.addAttribute("Process",orderService.orderProcessingTotal());
+		model.addAttribute("Dispactched",orderService.orderDispatchedTotal());
+		model.addAttribute("Delivered",orderService.orderDeliveredTotal());
+		model.addAttribute("Cancellations",orderService.orderCancellationTotal());
 		return "Admin/Admin";
 	}
 
@@ -74,13 +78,14 @@ public class AdminController {
 	@GetMapping("/admin/orders")
 	public String Orders(Model model) {
         List<Orders> orders = orderService.getOrders();
-        model.addAttribute("orders", orders);
+        model.addAttribute("orders", getOrders());
         model.addAttribute("order", new Orders());
 		return "Admin/Orders";
 	}
 	/* Stephen here is the code just add the mapping you want for it */
 	public HashMap<Integer, ArrayList<Orders>> getOrders(){
-		int currentMax = orderService.getNewID();
+		int currentMax = orderService.getNewID() ;
+		System.out.println(currentMax);
 		HashMap<Integer,ArrayList<Orders>> orders = new HashMap<Integer,ArrayList<Orders>>();
 		for (int i=0; i<currentMax;i++){
 			List<Orders> listOfOrders = orderService.getOrderByOrderNumber(i);
@@ -95,7 +100,7 @@ public class AdminController {
 			i.setStatus(status);
 			orderService.saveOrder(i);
 		}
-		return "Admin/Orders";
+		return "redirect:/admin/orders";
 	}
 	@GetMapping("/admin/customers")
 	public String Customers(Model model) {

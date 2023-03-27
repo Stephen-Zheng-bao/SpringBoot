@@ -51,7 +51,7 @@ public class OrdersController {
             order.setUserID(userID);
             order.setProductID(item.getProduct().getProductID());
             order.setPrice(item.getProduct().getPrice());
-            order.setStatus("processing");
+            order.setStatus("PROCESSING");
             order.setQuantity(item.getQuantity());
             productService.updateStock(item.getProduct(),productService.getStock(item.getProduct().getProductID()) - item.getQuantity());
             generateReport(productService.getStock(item.getProduct().getProductID()));
@@ -64,7 +64,7 @@ public class OrdersController {
 
     private void generateReport(int stock) {
         if (stock<=5){
-            
+
         }
     }
 }
