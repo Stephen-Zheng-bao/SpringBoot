@@ -45,7 +45,7 @@ public class OrdersController {
     public HashMap<Integer, ArrayList<Orders>> getUserOrders(){
         int currentMax = ordersService.getNewID() ;
         System.out.println(currentMax);
-        HashMap<Integer,ArrayList<Orders>> orders = new HashMap<Integer,ArrayList<Orders>>();
+        HashMap<Integer,ArrayList<Orders>> orders =  new HashMap<Integer,ArrayList<Orders>>();
         
         for (int i=0; i<currentMax;i++){
             List<Orders> listOfOrders = ordersService.getOrderByOrderNumber(i);

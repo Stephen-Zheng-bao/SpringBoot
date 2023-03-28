@@ -122,13 +122,13 @@
     <div class="ProductTable">
 
 
-        <form method="post" th:action="@{/admin/productAdd}" th:object="${product}">
+        <form method="post" th:action="@{/admin/productAdd}" th:object="${product}" enctype="multipart/form-data">
             <input id="productName" placeholder="name" type="text" th:field="*{productName}">
             <input id="productType" placeholder="productType" type="text" th:field="*{productType}">
             <input id="price" placeholder="Price" type="text" th:field="*{price}">
             <input id="description" placeholder="Description" type="text" th:field="*{description}">
             <input id="stock" placeholder="Stock" type="text" th:field="*{stock}">
-            <input type="file" name="image" th:field="*{image}">
+            <input type="file" name="imageTest" >
             <input id="gender" placeholder="Stock" type="text" th:field="*{gender}">
             <input id="submit" type="submit" name="Add to Inventory">
         </form>

@@ -57,7 +57,7 @@ public class AdminController {
 	}
 
 	@PostMapping(value = "/admin/productAdd")
-	public String createUser(@ModelAttribute Product product, Model model, BindingResult bindingResult,@RequestParam("image") MultipartFile file) throws IOException {
+	public String createUser(@ModelAttribute Product product, Model model, BindingResult bindingResult,@RequestParam("imageTest") MultipartFile file) throws IOException {
 		System.out.println(product);
 		String filename = StringUtils.cleanPath(file.getOriginalFilename());
 		file.transferTo(new File(  System.getProperty("user.dir")+ "/src/main/resources/static/images/" + filename));
