@@ -12,6 +12,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 @Controller
@@ -33,11 +35,22 @@ public class OrdersController {
     @PreAuthorize("hasAuthority('USER')")
     @GetMapping("/order")
     public String viewOrder(Model model){
-        List<Orders> order = ordersService.getOrderByUserID(userService.getIDOfCurrentUser());
-        System.out.println(order);
-        model.addAttribute("orders", order);
+        model.addAttribute("orders", getUserOrders());
         return "Order/order";
     }
+    public HashMap<Integer, ArrayList<Orders>> getUserOrders(){
+        int currentMax = ordersService.getNewID() ;
+        System.out.println(currentMax);
+        HashMap<Integer,ArrayList<Orders>> orders = new HashMap<Integer,ArrayList<Orders>>();
+        for (int i=0; i<currentMax;i++){
+            List<Orders> listOfOrders = ordersService.getOrderByOrderNumber(i);
+            if (listOfOrders.get(1).getUserID().equals(userService.getIDOfCurrentUser())) {
+                orders.put(listOfOrders.get(0).getOrderNumber(), (ArrayList<Orders>) listOfOrders);
+            }
+        }
+        return  orders;
+    }
+
     @PreAuthorize("hasAuthority('USER')")
     @PostMapping("/checkout")
     public String checkout(){
