@@ -38,6 +38,7 @@ public class SecurityConfig {
 			.formLogin()
 				.loginPage("/login")
 				.usernameParameter("email")
+				.defaultSuccessUrl("/",true)
 			.and()
 			.build();
 	}
