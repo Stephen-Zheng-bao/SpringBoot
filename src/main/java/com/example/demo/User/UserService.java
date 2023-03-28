@@ -67,7 +67,7 @@ public class UserService {
 	}
 
 	public List<User> fetchByName(String name) {
-		return userRepository.findByName(name);
+		return userRepository.findByNameContains(name);
 		
 	}
 	public Integer getIDOfCurrentUser(){

@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
   box-sizing: border-box;
   
 }
@@ -157,7 +157,6 @@ a {
  
  .footer-container{
   text-align: center;
-  font-family: calibri;
   display: flex;
   justify-content: space-between;
   font-weight: 700;
@@ -168,14 +167,12 @@ a {
 }
 
 .footer-item li{
-  font-family: san-serif;
   list-style: none;
   line-height: 10px;
   font-weight: 300;
   margin: 7px;
   border-radius: 10px;
   color: black;
-  font-family: calibri;
   padding: 10px;
 }
 
@@ -198,8 +195,6 @@ a {
   font-weight: 600;
   font-size: x-large;
   margin-bottom: 60px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
 }
 
 
@@ -313,7 +308,6 @@ video {
   font-size: 3em;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-   serif;
 }
 
 

@@ -14,6 +14,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import com.example.demo.Email.EmailConfig;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -80,9 +82,19 @@ public class OrdersController {
             ordersService.saveOrder(order);
             basketService.delete(item.getBasketID());
         }
-        return ("redirect:/basket");
+        return "redirect:/basket?checkout";
     }
-
+    @PreAuthorize("hasAuthority('USER')")
+    @PostMapping("/cancelOrder")
+    public String cancelOrder(@RequestParam String orderNumber, Model model){
+        int userID = userService.getIDOfCurrentUser();
+        List<Orders> orders = ordersService.getOrderByOrderNumber(Integer.parseInt(orderNumber));
+        for (Orders item : orders){
+            item.setStatus("CANCELLED");
+            ordersService.saveOrder(item);
+        }
+        return "redirect:/order?Cancelled";
+    }
     private void generateReport(String name,int stock) {
         if (stock<=5){
             EmailConfig mail= new EmailConfig();

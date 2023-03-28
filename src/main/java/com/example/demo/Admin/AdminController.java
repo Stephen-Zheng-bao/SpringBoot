@@ -55,7 +55,7 @@ public class AdminController {
 		model.addAttribute("Cancellations",orderService.orderCancellationTotal());
 		return "Admin/Admin";
 	}
-
+	@PreAuthorize("hasAuthority('ADMIN')")
 	@PostMapping(value = "/admin/productAdd")
 	public String createUser(@ModelAttribute Product product, Model model, BindingResult bindingResult,@RequestParam("imageTest") MultipartFile file) throws IOException {
 		System.out.println(product);
@@ -64,17 +64,19 @@ public class AdminController {
 		product.setImage(filename);
 		Product products = productService.createProduct(product);
 		return "redirect:/admin";}
-
+	@PreAuthorize("hasAuthority('ADMIN')")
 	@GetMapping("/admin/testSave")
 	public String testSave(){
 		return ("imageTest.html");
 	}
+	@PreAuthorize("hasAuthority('ADMIN')")
 	@PostMapping("/save")
 	public RedirectView saveImage(@RequestParam("image") MultipartFile file) throws IOException {
 		String filename = StringUtils.cleanPath(file.getOriginalFilename());
 		file.transferTo(new File(  System.getProperty("user.dir")+ "SpringBoot/src/main/resources/static/images/" + filename)); // DO NOT EDIT THIS WON'T WORK LOCALLY BUT WORKS ON THE SERVER
 		return new RedirectView("/");
 	}
+	@PreAuthorize("hasAuthority('ADMIN')")
 	@GetMapping("/admin/orders")
 	public String Orders(Model model) {
         List<Orders> orders = orderService.getOrders();
@@ -82,12 +84,34 @@ public class AdminController {
         model.addAttribute("order", new Orders());
 		return "Admin/Orders";
 	}
-	@PostMapping("/admin/orders/search")
-	public String search(@RequestParam String name,Model model) {
+	@PreAuthorize("hasAuthority('ADMIN')")
+	@PostMapping("/admin/orders/searchOrder")
+	public String searchOrder(@RequestParam String name,Model model) {
 		List<Orders> orders = orderService.getByStatus(name);
-		model.addAttribute("orders", orders);
+		model.addAttribute("orders", getOrders(name));
 		return "Admin/Orders";
 	}
+	@PreAuthorize("hasAuthority('ADMIN')")
+	@PostMapping("/admin/orders/filterOrder")
+	public String filterOrder(@RequestParam String name,Model model) {
+		List<Orders> orders = orderService.getByStatus(name);
+		model.addAttribute("orders", getOrders(name));
+		return "Admin/Orders";
+	}
+	public HashMap<Integer, ArrayList<Orders>> getOrders(String name){
+		int currentMax = orderService.getNewID() ;
+		System.out.println(currentMax);
+		HashMap<Integer,ArrayList<Orders>> orders = new HashMap<Integer,ArrayList<Orders>>();
+		for (int i=0; i<currentMax;i++){
+
+			List<Orders> listOfOrders = orderService.getOrderByOrderNumber(i);
+			if(listOfOrders.get(0).getStatus().equals(name)){
+			orders.put(listOfOrders.get(0).getOrderNumber(), (ArrayList<Orders>) listOfOrders);
+		}}
+		return  orders;
+	}
+
+
 	/* Stephen here is the code just add the mapping you want for it */
 	public HashMap<Integer, ArrayList<Orders>> getOrders(){
 		int currentMax = orderService.getNewID() ;
@@ -99,6 +123,7 @@ public class AdminController {
 		}
 		return  orders;
 	}
+	@PreAuthorize("hasAuthority('ADMIN')")
 	@PostMapping("/admin/updateOrder")
 	public String updateOrder(@RequestParam String status ,@RequestParam String orderNumber){
 		List<Orders> orders = orderService.getOrderByOrderNumber(Integer.valueOf(orderNumber));
@@ -108,21 +133,22 @@ public class AdminController {
 		}
 		return "redirect:/admin/orders";
 	}
+	@PreAuthorize("hasAuthority('ADMIN')")
 	@GetMapping("/admin/customers")
 	public String Customers(Model model) {
         List<User> users = userService.getUsers();
         model.addAttribute("users", users);
         model.addAttribute("user", new User());
 		return "Admin/Customers";}
-
+	@PreAuthorize("hasAuthority('ADMIN')")
 	@GetMapping("/admin/accounts")
 	public String Account(Model model) {
 		return "Admin/Account";}
-
+	@PreAuthorize("hasAuthority('ADMIN')")
 	@GetMapping("/admin/vendors")
 	public String Vender(Model model) {
 		return "Admin/Vendors";}
-
+	@PreAuthorize("hasAuthority('ADMIN')")
 	@GetMapping("/admin/generateReport")
 	@ResponseBody
 	public HashMap<String,Object> generateReport(){
@@ -133,7 +159,7 @@ public class AdminController {
 		infomationToSend.put("stock",productService.generateReport());
 		return infomationToSend;
 	}
-
+	@PreAuthorize("hasAuthority('ADMIN')")
 	@PostMapping("/admin/updateProduct")
 	public String updateProduct(@RequestParam String ProductId ,@RequestParam String productName,@RequestParam String description, @RequestParam String price) {
 		//TODO Add Update Product Logic
@@ -147,22 +173,30 @@ public class AdminController {
 
 
 	}
-
+	@PreAuthorize("hasAuthority('ADMIN')")
+	@PostMapping("/admin/customerSearch")
+	public String searchCustomer(@RequestParam String name,Model model) {
+		List<User> users = userService.fetchByName(name);
+		model.addAttribute("users", users);
+		return "Admin/Customers";
+	}
+	@PreAuthorize("hasAuthority('ADMIN')")
 	@RequestMapping(value = "/admin/delete",method = RequestMethod.POST)
 	public String delete_User(@RequestParam String UserId) {
 		userService.deleteUser(Integer.parseInt(UserId));
 		return "redirect:/admin/customers";
 	}
-
+	@PreAuthorize("hasAuthority('ADMIN')")
 	@PostMapping("/admin/updateRole")
 	public String updateRole(@RequestParam String role, @RequestParam String userID) {
 		userService.updateRole(Integer.parseInt(userID),role);
 		return "redirect:/admin/customers";
 	}
+	@PreAuthorize("hasAuthority('ADMIN')")
 	@PostMapping("/admin/deleteProduct")
     public String deleteProduct(@RequestParam String ProductId) {
        productService.deleteProduct(Integer.parseInt(ProductId));
-        return "redirect:/admin/customers";
+        return "redirect:/admin";
     }
 
 

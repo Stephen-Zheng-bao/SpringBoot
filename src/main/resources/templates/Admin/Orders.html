@@ -31,26 +31,32 @@ Manage order (change status) -->
     </div>
     <br>
     <h1>Orders</h1>
+
+    <form method="post" th:action="@{/admin/orders/filterOrder}">
+        <h2>Filter</h2>
         <label for="status">
-            <form>
-                <select id="status" name="status">
-                    <option value="">All</option>
-                    <option th:each="status : ${orderStatus}"
-                    th:value="${status}"
-                            th:text="${status}"
-                    ></option>
+                <select id="status" name="name">
+                    <option>PROCESSING</option>
+                    <option>DISPACTCHED</option>
+                    <option>DELIVERED</option>
+                    <option>CANCELLED</option>
                 </select>
-                <button type="submit"></button>
-                </form>
+            <br>
+            <button type="submit">Filter</button>
+
         </label>
+    </form>
+    <h2>Search</h2>
+    <form method="post" th:action="@{/admin/orders/searchOrder}">
+        <div class="search" >
+
+                <input type="text" name="name" placeholder="Search">
+
+                <button type="submit">Search</button>
 
 
-        <div class="search">
-            <label>
-                <input type="text" placeholder="Search">
-                <i class="bi bi-search"></i>
-            </label>
         </div>
+    </form>
         
         
 

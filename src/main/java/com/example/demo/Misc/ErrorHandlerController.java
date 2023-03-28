@@ -21,8 +21,6 @@ public class ErrorHandlerController  implements ErrorController {
         if (status.toString().equals("404")){
             return "redirect:/?404";
         }
-
-        System.out.println(status.toString());
-        return "Welcome.html";
+        return null;
     }
 }

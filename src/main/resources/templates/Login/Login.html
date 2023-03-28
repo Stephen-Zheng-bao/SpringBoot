@@ -24,11 +24,11 @@
                     <form th:action="@{/login}" th:method="post">
 
                         <div th:if="${param.error}">
-                            <p class="text-danger">[[${session.SPRING_SECURITY_LAST_EXCEPTION.message}]]</p>
+                            <p class="error">Incorrect Username/Password</p>
                         </div>
-                        <h1 th:if="${error}">
-                            <p th:text="${error}"></p>
-                        </h1>
+                        <div th:if="${param.success}">
+                            <p class="success">You Created a User! Please Log in</p>
+                        </div>
                         <div class="user-details">
                           
                             <div class="input-box">
@@ -45,8 +45,6 @@
                                     <input type="submit"  value="Log-In">
                                   </div>
                               </span>
-                            <span  class="under-button1"><a onclick ="window.location.href = 'forgotpass.html'">Forgot your password? Click here!</a></span>
-                            
                           </div>
                         
                          

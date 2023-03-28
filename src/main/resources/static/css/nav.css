@@ -51,3 +51,21 @@ header {
 text-decoration: none;
 list-style-type:none;
 }
+
+.error{
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.alert{
+  padding: 20px;
+  background-color: #f17b1a;
+  color: white;
+}
+
+.success{
+  padding: 20px;
+  background-color: #1af137;
+  color: white;
+}

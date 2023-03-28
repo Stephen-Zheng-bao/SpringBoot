@@ -15,15 +15,16 @@
 
 <body>
 <header th:insert="~{Fragment/navbar :: copy}"></header>
-    <h1 th:if="${error}">
-        <p th:text="${error}"></p>
-    </h1>
+
     <!--This is where the nav bar is going to go once its fully completed-->
     <div class="wrapper signup">
         <div class="container">
     
             <div class="col-right">
                 <div class="signup-form">
+                    <div th:if="${param.error}">
+                        <p class="error">Email is Already in Database</p>
+                    </div>
                     <div class="title">Sign-Up here!</div>
                     <!--The start of the main sign up form-->
                     <form method="post" th:action="@{/addingUser}" th:object="${user}">

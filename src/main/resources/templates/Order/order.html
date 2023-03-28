@@ -12,11 +12,14 @@ x<!DOCTYPE html>
 <body>
 <header th:insert="~{Fragment/navbar :: copy}"></header>
 <h2>Order</h2>
-
+<div th:if="${param.Cancelled}">
+    <div class="error">You've cancelled your order</div>
+</div>
 <div th:each="order:${orders}">
     <br>
     <div class="container">
     <table>
+        <div th:with="Total='0'">
         <h3>Order Number: <span th:text="${order.key}"></span></h3>
 
         <tr>
@@ -28,6 +31,7 @@ x<!DOCTYPE html>
             <th>Status</th>
 
         </tr>
+
         <tr th:each="ord : ${order.value}">
             <div th:each="products:${product}">
                 <div th:if="${ord.getProductID == products.getProductID}">
@@ -43,22 +47,22 @@ x<!DOCTYPE html>
             <td th:text="${ord.getQuantity}"></td>
             <td th:text="${ord.getQuantity} * ${ord.getPrice}"></td>
             <td th:class="${ord.getStatus}" th:text="${ord.getStatus}">
-                <input type="hidden" th:with="status=${ord.getStatus}">
             </td>
 
         </tr>
 
 
     </table>
-        <h3>Total Price: <span th:text="${Total}"></span></h3>
-        <div th:if="${ status !='CANCELLED'}">
-            <form>
-                <input th:name ="orderNumber" type="hidden" th:value="${OrderID}">
+
+        <div th:if="${ order.value.get(0).getStatus !='CANCELLED'}">
+            <h3 >Cancel Order?</h3>
+            <form method="post" th:action="@{/cancelOrder}">
+                <input th:name ="orderNumber" type="hidden" th:value="${order.value.get(0).getOrderNumber}">
                 <button type="submit">Cancel Order</button>
             </form>
         </div>
     </div>
-
+</div>
 
 </div>
 

@@ -14,6 +14,18 @@
 <br>
 <div class="container">
 	<h1>BASKET</h1>
+	<div th:if="${param.ClearAll}">
+		<div class="error">You've Cleared the basket</div>
+	</div>
+	<div th:if="${param.Deleted}">
+		<div class="alert">You've deleted the product</div>
+	</div>
+	<div th:if="${param.success}">
+		<div class="success">You've successfully added the product</div>
+	</div>
+	<div th:if="${param.Stock1}">
+		<div class="success">You have Changed the Stock</div>
+	</div>
 	<table class="basket">
 		<tr>
 			<th>Image</th>

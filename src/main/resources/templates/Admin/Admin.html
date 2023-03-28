@@ -103,12 +103,7 @@
     
     <div class="cardHeader">
         <h1>Inventory Management</h1>
-        <div class="search" style= "margin-left: 50%;">
-          <label>
-              <input type="text" placeholder="Search">
-              <i class="bi bi-search"></i>
-          </label>
-      </div>
+
       
         <div class="Header">
             <h2>Products</h2>
@@ -123,14 +118,23 @@
 
 
         <form method="post" th:action="@{/admin/productAdd}" th:object="${product}" enctype="multipart/form-data">
-            <input id="productName" placeholder="name" type="text" th:field="*{productName}">
-            <input id="productType" placeholder="productType" type="text" th:field="*{productType}">
+            <span class="details">Product Name</span>
+            <input id="productName" placeholder="Product Name" type="text" th:field="*{productName}">
+                <span class="details">Product Type</span>
+            <input id="productType" placeholder="Product Type" type="text" th:field="*{productType}">
+                    <span class="details">Price (Make sure its 2DP)</span>
             <input id="price" placeholder="Price" type="text" th:field="*{price}">
+                        <span class="details">Description</span>
             <input id="description" placeholder="Description" type="text" th:field="*{description}">
+                            <span class="details">Stock</span>
             <input id="stock" placeholder="Stock" type="text" th:field="*{stock}">
+                                <span class="details">Upload your image</span>
             <input type="file" name="imageTest" >
-            <input id="gender" placeholder="Stock" type="text" th:field="*{gender}">
+                                    <span class="details">Gender</span>
+            <input id="gender" placeholder="Gender" type="text" th:field="*{gender}">
+                                       <br>
             <input id="submit" type="submit" name="Add to Inventory">
+
         </form>
     </div>
 
@@ -155,11 +159,17 @@
                     <td th:text="${product.productID}"></td>
                     <td th:text="${product.productName}"></td>
                     <td th:text="${product.productType}"></td>
-                    <td th:text="${product.Price}"></td>
-                    <td th:text="${product.Image}"></td>
+                    <td th:text="${product.price}"></td>
+                    <td>
+                        <img class="resize" th:src="@{images/}+${product.image}"></td>
                     <td th:text="${product.Description}"></td>
-                    <td th:class="'order'+${product.Stock}" th:text="${product.Stock}"></td>
-                    <td></td>
+                    <td th:class="'order'+${product.stock}" th:text="${product.stock}"></td>
+                    <td>
+                        <form th:action="@{/admin/deleteProduct}" method="post">
+                            <input type="hidden" th:name="ProductId" th:value="${product.productID}" />
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
                 </tr>
                 </tbody>
               </table>

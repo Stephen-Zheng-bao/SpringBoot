@@ -54,7 +54,7 @@ private final UserService userService;
     * */
     @PreAuthorize("hasAuthority('USER')")
     @PostMapping("/addToBasket")
-        public RedirectView addToBasket(@RequestParam String productID, @RequestParam String quantity, @RequestParam String price, RedirectAttributes redirectAttributes, HttpServletRequest request ){
+        public String  addToBasket(@RequestParam String productID, @RequestParam String quantity, @RequestParam String price, RedirectAttributes redirectAttributes, HttpServletRequest request ){
         System.out.println(quantity);
         Basket itemAdd;
         Optional<Basket> basket = basketService.getBasketByProductID(Integer.valueOf(productID),userService.getIDOfCurrentUser());
@@ -67,8 +67,12 @@ private final UserService userService;
             itemAdd.setQuantity(Integer.valueOf(quantity));
         }
         if ((productService.getStock(Integer.valueOf(productID))- itemAdd.getQuantity() < 0)){
-            redirectAttributes.addFlashAttribute("error","Out of Stock");
-            return new RedirectView(request.getHeader("Referer"),true);
+            return "redirect:/basket?Stock1";
+        }
+        System.out.println(productService.getStock(Integer.parseInt(productID)));
+        if (itemAdd.getQuantity()<1){
+            basketService.delete(itemAdd.getBasketID());
+            return "redirect:/basket?Deleted";
         }
         itemAdd.setProductID(Integer.valueOf(productID));
         //itemAdd.setQuantity(Integer.valueOf(quantity));
@@ -76,31 +80,17 @@ private final UserService userService;
         itemAdd.setUserID(userService.getIDOfCurrentUser());
         itemAdd.setPrice(price);
         basketService.createBasket(itemAdd);
-        redirectAttributes.addFlashAttribute("error","Out of Stock");
-        return new RedirectView(request.getHeader("Referer"),true);
+        return "redirect:/basket?success";
     }
     @PreAuthorize("hasAuthority('USER')")
     @PostMapping("/deleteBasket")
     public String delete(@RequestParam String basketid) {
         int userID = userService.getIDOfCurrentUser();
         basketService.delete(Integer.parseInt(basketid));
-        return "redirect:/basket";
+        return "redirect:/basket?Deleted";
     }
 
-    @PreAuthorize("hasAuthority('USER')")
-    @PostMapping("/increaseQ")
-    public String increaseQ(@RequestParam String basketid) {
-        int userID = userService.getIDOfCurrentUser();
-        basketService.increase(Integer.parseInt(basketid));
-        return "redirect:/basket";
-    }
-    @PreAuthorize("hasAuthority('USER')")
-    @PostMapping("/decreaseQ")
-    public String decreaseQ(@RequestParam String basketid){
-        int userID = userService.getIDOfCurrentUser();
-        basketService.decrease(Integer.parseInt(basketid));
-        return "redirect:/basket";
-    }
+
     @PreAuthorize("hasAuthority('USER')")
     @PostMapping("/clearAll")
     public String clearAll(){
@@ -109,7 +99,7 @@ private final UserService userService;
         for (basketItem item : basket){
             basketService.delete(item.getBasketID());
         }
-        return "redirect:/basket";
+        return "redirect:/basket?ClearAll";
     }
 }
 
