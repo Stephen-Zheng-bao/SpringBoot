@@ -87,7 +87,7 @@ public class OrdersController {
         if (stock<=5){
             EmailConfig mail= new EmailConfig();
             SimpleMailMessage msg = new SimpleMailMessage();
-            msg.setTo("statusjewellery4@gmail.com"); //who to send email to? Pass "to" as a parameter if it's gonna be different everytime? should be automatic though, so maybe just hardcode to send email to admin?
+            msg.setTo("astatus129@gmail.com"); //who to send email to? Pass "to" as a parameter if it's gonna be different everytime? should be automatic though, so maybe just hardcode to send email to admin?
             msg.setFrom("statusjewellery4@gmail.com");
             msg.setSubject("Stock alert");
             msg.setText("Item " + name+ "has" + stock + " Left !!"); //need to state name of item

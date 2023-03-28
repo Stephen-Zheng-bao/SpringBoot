@@ -28,13 +28,13 @@ import java.util.Optional;
         public ProductController(ProductService productService) {
             this.productService = productService;
         }
-        @GetMapping("filter/{name}")
+        @GetMapping("/filter/{name}")
         public String filter(@PathVariable String name,Model model) {
             List<Product> product = productService.fetchByType(name);
             model.addAttribute("product", product);
             return "Product/jewellery";
         }
-        @PostMapping("search")
+        @PostMapping("/search")
         public String search(@RequestParam String name,Model model) {
             List<Product> product = productService.fetchByName(name);
             model.addAttribute("product", product);
