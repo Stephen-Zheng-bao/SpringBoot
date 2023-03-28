@@ -16,18 +16,15 @@
     <div class="mainSection">
         
         <div class="bar">
-            
-            <img th:src="@{images/statusLOGO.png}" style="width:auto; height:380px; margin-left: 350px;">
-           
-           
-            
+
+            <img th:src="@{/images/statusLOGO.png}" style="display:block;width:33%; height:150px;">
 
         </div>
         
        
 
 
-
+<br>
         <h1>Business Performance</h1>
     <div class="Cards">
         
@@ -161,7 +158,7 @@
                     <td th:text="${product.Price}"></td>
                     <td th:text="${product.Image}"></td>
                     <td th:text="${product.Description}"></td>
-                    <td th:text="${product.Stock}"></td>
+                    <td th:class="'order'+${product.Stock}" th:text="${product.Stock}"></td>
                     <td></td>
                 </tr>
                 </tbody>

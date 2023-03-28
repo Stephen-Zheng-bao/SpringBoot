@@ -23,8 +23,14 @@ Manage order (change status) -->
 </div>
 
 <div class="mainSection">
-    
+
     <div class="bar">
+
+        <img th:src="@{/images/statusLOGO.png}" style="display:block;width:33%; height:150px;">
+
+    </div>
+    <br>
+    <h1>Orders</h1>
         <label for="status">
             <form>
                 <select id="status" name="status">
@@ -38,8 +44,7 @@ Manage order (change status) -->
                 </form>
         </label>
 
-        <img th:src="@{images/statusLOGO.png}" style="width:auto; height:380px; margin-left: 350px;">
-       
+
         <div class="search">
             <label>
                 <input type="text" placeholder="Search">
@@ -49,7 +54,7 @@ Manage order (change status) -->
         
         
 
-    </div>
+
     
    
    
@@ -118,27 +123,7 @@ Manage order (change status) -->
 
             </tr>
         </tbody>
-        <!--            <tr>
-                        <td>Name 1</td>
-                        <td>£100</td>
-                        <td><span class="delivered">Delivered</span></td>
-                        <td><button type="button">Change Order Status</button></td>
-                    </tr>
 
-                    <tr>
-                        <td>Product 2</td>
-                        <td>£499</td>
-                        <td><span class="processing">Processing</span></td>
-                        <td><button type="button">Change Order Status</button></td>
-
-                    </tr>
-
-                    <tr>
-                        <td>Product 3</td>
-                        <td>£200</td>
-                        <td><span class=" out-for-delivery">Out for delivery</span></td>
-                        <td><button type="button">Change Order Status</button></td>
-                    </tr>-->
 
     </table>
 </div>

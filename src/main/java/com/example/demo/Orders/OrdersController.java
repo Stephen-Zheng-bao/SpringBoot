@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class OrdersController {
@@ -36,18 +37,23 @@ public class OrdersController {
     @GetMapping("/order")
     public String viewOrder(Model model){
         model.addAttribute("orders", getUserOrders());
+        model.addAttribute("product",productService.getProduct());
         return "Order/order";
     }
     public HashMap<Integer, ArrayList<Orders>> getUserOrders(){
         int currentMax = ordersService.getNewID() ;
         System.out.println(currentMax);
         HashMap<Integer,ArrayList<Orders>> orders = new HashMap<Integer,ArrayList<Orders>>();
+        
         for (int i=0; i<currentMax;i++){
             List<Orders> listOfOrders = ordersService.getOrderByOrderNumber(i);
-            if (listOfOrders.get(1).getUserID().equals(userService.getIDOfCurrentUser())) {
+            if(listOfOrders.isEmpty()){}
+
+            else if (listOfOrders.get(0).getUserID().equals(userService.getIDOfCurrentUser())) {
                 orders.put(listOfOrders.get(0).getOrderNumber(), (ArrayList<Orders>) listOfOrders);
             }
         }
+
         return  orders;
     }
 

@@ -11,11 +11,16 @@
 </head>
 <body>
 <header th:insert="~{Fragment/navbar :: copy}"></header>
+<h2>Order</h2>
 
-<div class="container">
-    <h1>Order</h1>
+<div th:each="order:${orders}">
+    <br>
+    <div class="container">
     <table>
+        <h3>Order Number: <span th:text="${order.key}"></span></h3>
+
         <tr>
+            <th>Image</th>
             <th>Order ID</th>
             <th>Product ID</th>
             <th>Quantity</th>
@@ -23,16 +28,39 @@
             <th>Status</th>
 
         </tr>
-        <tr th:each="order : ${orders}">
-            <td th:text="${order.OrdersID}"></td>
-            <td th:text="${order.ProductID}"></td>
-            <td th:text="${order.Quantity}"></td>
-            <td th:text="${order.Price}"></td>
-            <td th:text="${order.Status}"></td>
+        <tr th:each="ord : ${order.value}">
+            <div th:each="products:${product}">
+                <div th:if="${ord.getProductID == products.getProductID}">
+                    <td ><img class="resize" th:src="@{/images/}+${products.getImage}"></td>
+                </div>
+
+            </div>
+
+            <td th:text="${ord.getOrdersID}">
+                <input type="hidden" th:with="OrderID=${ord.getOrdersID}">
+            </td>
+            <td th:text="${ord.getProductID}"></td>
+            <td th:text="${ord.getQuantity}"></td>
+            <td th:text="${ord.getQuantity} * ${ord.getPrice}"></td>
+            <td th:class="${ord.getStatus}" th:text="${ord.getStatus}">
+                <input type="hidden" th:with="status=${ord.getStatus}">
+            </td>
 
         </tr>
-    </table>
 
+
+    </table>
+        <h3>Total Price: <span th:text="${Total}"></span></h3>
+        <div th:if="${ status !='CANCELLED'}">
+            <form>
+                <input th:name ="orderNumber" type="hidden" th:value="${OrderID}">
+                <button type="submit">Cancel Order</button>
+            </form>
+        </div>
+    </div>
+
+
+</div>
 
 
 </html>

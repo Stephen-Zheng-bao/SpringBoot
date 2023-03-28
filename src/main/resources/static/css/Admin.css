@@ -351,6 +351,46 @@
     font-size: 14px;
     font-weight: 500;
   }
+  .order4 {
+    padding: 2px 4px;
+    background: #e9b10a;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .order3 {
+    padding: 2px 4px;
+    background: #e9b10a;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .order2 {
+    padding: 2px 4px;
+    background: #e9b10a;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .order1 {
+    padding: 2px 4px;
+    background: #e9b10a;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .order0 {
+    padding: 2px 4px;
+    background: #e90a0a;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+  }
   .CANCELLED {
     padding: 2px 4px;
     background: #e90a0a;
