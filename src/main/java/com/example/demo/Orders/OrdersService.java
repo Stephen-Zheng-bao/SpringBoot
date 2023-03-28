@@ -80,4 +80,8 @@ public class OrdersService {
 
 
     }
+
+    public List<Orders> getByStatus(String name) {
+        return ordersRepository.findByStatus("name");
+    }
 }

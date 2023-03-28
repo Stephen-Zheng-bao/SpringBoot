@@ -6,12 +6,14 @@ import com.example.demo.Basket.basketItem;
 import com.example.demo.Products.ProductService;
 import com.example.demo.User.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-
+import com.example.demo.Email.EmailConfig;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -73,7 +75,7 @@ public class OrdersController {
             order.setStatus("PROCESSING");
             order.setQuantity(item.getQuantity());
             productService.updateStock(item.getProduct(),productService.getStock(item.getProduct().getProductID()) - item.getQuantity());
-            generateReport(productService.getStock(item.getProduct().getProductID()));
+            generateReport(item.getProduct().getProductName(),productService.getStock(item.getProduct().getProductID()));
 
             ordersService.saveOrder(order);
             basketService.delete(item.getBasketID());
@@ -81,9 +83,16 @@ public class OrdersController {
         return ("redirect:/basket");
     }
 
-    private void generateReport(int stock) {
+    private void generateReport(String name,int stock) {
         if (stock<=5){
-
+            EmailConfig mail= new EmailConfig();
+            SimpleMailMessage msg = new SimpleMailMessage();
+            msg.setTo("statusjewellery4@gmail.com"); //who to send email to? Pass "to" as a parameter if it's gonna be different everytime? should be automatic though, so maybe just hardcode to send email to admin?
+            msg.setFrom("statusjewellery4@gmail.com");
+            msg.setSubject("Stock alert");
+            msg.setText("Item " + name+ "has" + stock + " Left !!"); //need to state name of item
+            JavaMailSender sender=mail.getJavaMailSender();
+            sender.send(msg);
         }
     }
 }

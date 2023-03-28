@@ -82,6 +82,12 @@ public class AdminController {
         model.addAttribute("order", new Orders());
 		return "Admin/Orders";
 	}
+	@PostMapping("/admin/orders/search")
+	public String search(@RequestParam String name,Model model) {
+		List<Orders> orders = orderService.getByStatus(name);
+		model.addAttribute("orders", orders);
+		return "Admin/Orders";
+	}
 	/* Stephen here is the code just add the mapping you want for it */
 	public HashMap<Integer, ArrayList<Orders>> getOrders(){
 		int currentMax = orderService.getNewID() ;

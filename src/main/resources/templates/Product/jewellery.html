@@ -91,7 +91,7 @@
 
 
                 <div th:each="prod : ${product}" class = "jewellery">
-                     <div th:href="@{product/{id}(id = ${prod.productID})}" class = "image">
+                     <div th:href="@{/product/{id}(id = ${prod.productID})}" class = "image">
                                 <img th:src="@{/images/}+${prod.image}">
                             </div>
                             <div class = "namePrice">
@@ -110,7 +110,7 @@
                             </div>
                     </form>
                     <div class = "buy1">
-                        <form th:action="@{product/{id}(id = ${prod.productID})}">
+                        <form th:action="@{/product/{id}(id = ${prod.productID})}">
                         <button style="left: 200px">Detail</button>
                         </form>
                     </div>
