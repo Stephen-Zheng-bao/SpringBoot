@@ -72,7 +72,7 @@ public class AdminController {
 	@PostMapping("/save")
 	public RedirectView saveImage(@RequestParam("image") MultipartFile file) throws IOException {
 		String filename = StringUtils.cleanPath(file.getOriginalFilename());
-		file.transferTo(new File(  System.getProperty("user.dir")+ "/src/main/resources/static/images/" + filename));
+		file.transferTo(new File(  System.getProperty("user.dir")+ "SpringBoot/src/main/resources/static/images/" + filename)); // DO NOT EDIT THIS WON'T WORK LOCALLY BUT WORKS ON THE SERVER
 		return new RedirectView("/");
 	}
 	@GetMapping("/admin/orders")
