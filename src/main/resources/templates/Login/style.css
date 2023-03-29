@@ -54,6 +54,7 @@ body {
     width: 400px;
     border-radius: 5px;
     background: linear-gradient(135deg, #000000, #e9d3af);
+    overflow: hidden;
   }
   .user-details .input-box input{
     height: 45px;
