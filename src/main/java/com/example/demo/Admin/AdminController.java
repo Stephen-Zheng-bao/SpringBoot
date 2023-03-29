@@ -60,7 +60,7 @@ public class AdminController {
 	public String createUser(@ModelAttribute Product product, Model model, BindingResult bindingResult,@RequestParam("imageTest") MultipartFile file) throws IOException {
 		System.out.println(product);
 		String filename = StringUtils.cleanPath(file.getOriginalFilename());
-		file.transferTo(new File(  System.getProperty("user.dir")+ "SpringBoot/src/main/resources/static/images/" + filename));
+		file.transferTo(new File(  System.getProperty("user.dir")+ "/src/main/resources/static/images/" + filename));
 		product.setImage(filename);
 		Product products = productService.createProduct(product);
 		return "redirect:/admin";}
@@ -73,7 +73,7 @@ public class AdminController {
 	@PostMapping("/save")
 	public RedirectView saveImage(@RequestParam("image") MultipartFile file) throws IOException {
 		String filename = StringUtils.cleanPath(file.getOriginalFilename());
-		file.transferTo(new File(  System.getProperty("user.dir")+ "SpringBoot/src/main/resources/static/images/" + filename)); // DO NOT EDIT THIS WON'T WORK LOCALLY BUT WORKS ON THE SERVER
+		file.transferTo(new File(  System.getProperty("user.dir")+ "/src/main/resources/static/images/" + filename)); // DO NOT EDIT THIS WON'T WORK LOCALLY BUT WORKS ON THE SERVER
 		return new RedirectView("/");
 	}
 	@PreAuthorize("hasAuthority('ADMIN')")
