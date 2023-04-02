@@ -14,6 +14,9 @@
 <br>
 <div class="container">
 	<h1>BASKET</h1>
+	<div th:if="${param.checkout}">
+		<div class="success">Item are now on there way</div>
+	</div>
 	<div th:if="${param.ClearAll}">
 		<div class="error">You've Cleared the basket</div>
 	</div>

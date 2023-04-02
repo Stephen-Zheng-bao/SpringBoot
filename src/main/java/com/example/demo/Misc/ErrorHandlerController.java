@@ -16,7 +16,7 @@ public class ErrorHandlerController  implements ErrorController {
         System.out.println(status.toString());
         if (status.toString().equals("403")){
 
-            return "redirect:/login?403";
+            return "redirect:/login?Deny";
         }
         if (status.toString().equals("404")){
             return "redirect:/?404";

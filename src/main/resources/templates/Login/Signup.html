@@ -89,7 +89,10 @@
                               <span class="under-button-link">
                                 <div class="button">
                                     <!--TODO make this work-->
-                                    <input type="submit" onclick="/login" value="Log-In">
+                                    <form th:action="@{/login}">
+                                    <input type="submit" th:href="@{/login}" value="Log-In" >
+
+                                    </form>
                                   </div>
                               </span>
 

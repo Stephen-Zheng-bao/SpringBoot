@@ -1,5 +1,7 @@
 package com.example.demo.Admin;
 
+import com.example.demo.Basket.Basket;
+import com.example.demo.Basket.BasketService;
 import com.example.demo.Orders.*;
 
 import java.io.File;
@@ -12,6 +14,7 @@ import java.util.List;
 import java.util.Optional;
 import  java.util.ArrayList;
 
+import jakarta.servlet.http.HttpServletRequest;
 import org.apache.tomcat.websocket.WsIOException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -27,6 +30,7 @@ import com.example.demo.Products.ProductService;
 import com.example.demo.User.User;
 import com.example.demo.User.UserService;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 
 @Controller
@@ -35,10 +39,12 @@ public class AdminController {
 	 private final UserService userService;
 	private final ProductService productService;
 	private final OrdersService orderService;
-	public AdminController(UserService userService, ProductService productService, OrdersService orderService) {
+	private final BasketService basketService;
+	public AdminController(UserService userService, ProductService productService, OrdersService orderService,BasketService basketService) {
 		this.userService = userService;
 		this.productService = productService;
 		this.orderService = orderService;
+		this.basketService = basketService;
 		
 	}
 	@PreAuthorize("hasAuthority('ADMIN')")
@@ -179,7 +185,38 @@ public class AdminController {
 		List<User> users = userService.fetchByName(name);
 		model.addAttribute("users", users);
 		return "Admin/Customers";
+
+
 	}
+	@PreAuthorize("hasAuthority('ADMIN')")
+	@GetMapping("/admin/filter")
+	public String filter(@RequestParam String name,Model model) {
+		List<Product> products = productService.fetchByType(name);
+		model.addAttribute("products", products);
+		model.addAttribute("product", new Product());
+		model.addAttribute("Revenue",orderService.orderRevenue());
+		model.addAttribute("Sale",orderService.orderTotals());
+		model.addAttribute("Process",orderService.orderProcessingTotal());
+		model.addAttribute("Dispactched",orderService.orderDispatchedTotal());
+		model.addAttribute("Delivered",orderService.orderDeliveredTotal());
+		model.addAttribute("Cancellations",orderService.orderCancellationTotal());
+		return "Admin/Admin";
+	}
+	@PreAuthorize("hasAuthority('ADMIN')")
+	@PostMapping("/admin/search")
+	public String search(@RequestParam String name,Model model) {
+		List<Product> products = productService.fetchByName(name);
+		model.addAttribute("products", products);
+		model.addAttribute("product", new Product());
+		model.addAttribute("Revenue",orderService.orderRevenue());
+		model.addAttribute("Sale",orderService.orderTotals());
+		model.addAttribute("Process",orderService.orderProcessingTotal());
+		model.addAttribute("Dispactched",orderService.orderDispatchedTotal());
+		model.addAttribute("Delivered",orderService.orderDeliveredTotal());
+		model.addAttribute("Cancellations",orderService.orderCancellationTotal());
+		return "Admin/Admin";
+	}
+
 	@PreAuthorize("hasAuthority('ADMIN')")
 	@RequestMapping(value = "/admin/delete",method = RequestMethod.POST)
 	public String delete_User(@RequestParam String UserId) {
@@ -198,8 +235,14 @@ public class AdminController {
        productService.deleteProduct(Integer.parseInt(ProductId));
         return "redirect:/admin";
     }
-
-
+	@PreAuthorize("hasAuthority('ADMIN')")
+	@PostMapping("/admin/addQua")
+	public String  addToBasket(@RequestParam String productID, @RequestParam String stock, RedirectAttributes redirectAttributes, HttpServletRequest request ) {
+		Product product = productService.fetchByID(Integer.valueOf(productID)).get();
+		product.setStock(String.valueOf(Integer.parseInt(product.getStock())+Integer.parseInt(stock)));
+		productService.updateProduct(product);
+		return "redirect:/admin";
+	}
 
 
 }

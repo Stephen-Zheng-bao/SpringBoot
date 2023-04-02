@@ -29,6 +29,9 @@
                         <div th:if="${param.success}">
                             <p class="success">You Created a User! Please Log in</p>
                         </div>
+                        <div th:if="${param.Deny}">
+                            <p class="error">Access deny. Please login as admin</p>
+                        </div>
                         <div class="user-details">
                           
                             <div class="input-box">

@@ -4,37 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85e89682-10e1-4d71-a799-27c8e74687d5" name="Changes" comment="Stock look 1% nicer, User Order looks 100% nice">
+    <list default="true" id="85e89682-10e1-4d71-a799-27c8e74687d5" name="Changes" comment="Font changer, Admin work, Filter and Search on Admin, error on most thing, nav hide based of auth, Cancelled order works">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Admin/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Basket/BasketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Basket/BasketController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Misc/ErrorHandlerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Misc/ErrorHandlerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Orders/OrdersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Orders/OrdersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Orders/OrdersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Orders/OrdersService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/User/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/User/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/User/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/User/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/User/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/User/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/Admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/Admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/BasketStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/BasketStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/basket.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/basket.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/contact.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/homestyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/homestyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/nav.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/prod.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/prod.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/product.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/product.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/sign.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/sign.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style2.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style2.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Admin/Admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Admin/Admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Admin/Customers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Admin/Customers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Admin/Orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Admin/Orders.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Basket/basket.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Basket/basket.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Fragment/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Fragment/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Homepage/Homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Homepage/Homepage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Login/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Login/Login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Login/Signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Login/Signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Order/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Order/order.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +181,13 @@
       <workItem from="1679865779740" duration="5114000" />
       <workItem from="1679911623491" duration="22015000" />
       <workItem from="1679997406775" duration="11895000" />
-      <workItem from="1680024594129" duration="19250000" />
+      <workItem from="1680024594129" duration="19493000" />
+      <workItem from="1680080856688" duration="2943000" />
+      <workItem from="1680180809990" duration="208000" />
+      <workItem from="1680181995205" duration="845000" />
+      <workItem from="1680375774018" duration="1336000" />
+      <workItem from="1680377798369" duration="1378000" />
+      <workItem from="1680432294301" duration="1200000" />
     </task>
     <task id="LOCAL-00001" summary="Now able to Add data and delete data from the HTML page while also seeing the document">
       <created>1676222879271</created>
@@ -297,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680012081675</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Font changer, Admin work, Filter and Search on Admin, error on most thing, nav hide based of auth, Cancelled order works">
+      <created>1680048542422</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1680048542422</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,6 +334,7 @@
     <MESSAGE value="Filter, Basket, Single product page, Some admin stuff" />
     <MESSAGE value="Moving stuff, Done Admin Order, image now work, admin look kinda nice" />
     <MESSAGE value="Stock look 1% nicer, User Order looks 100% nice" />
-    <option name="LAST_COMMIT_MESSAGE" value="Stock look 1% nicer, User Order looks 100% nice" />
+    <MESSAGE value="Font changer, Admin work, Filter and Search on Admin, error on most thing, nav hide based of auth, Cancelled order works" />
+    <option name="LAST_COMMIT_MESSAGE" value="Font changer, Admin work, Filter and Search on Admin, error on most thing, nav hide based of auth, Cancelled order works" />
   </component>
 </project>
